@@ -1098,9 +1098,9 @@
         "type": "multiple",
         "text": "Trong 4 câu thơ: 'Ngày sáu khắc tin mong nhạn vắng / Đêm năm canh tiếng lắng chuông rền / Lạnh lùng thay giấc cô miên / Mùi hương tịch mịch, bóng đèn thâm u', những nhận định nào sau đây là ĐÚNG về cách gieo vần? (Chọn các phương án đúng)",
         "options": [
-          "Tiếng 'vắng' (câu 1) hiệp vần lưng, vần liền với tiếng 'lắng' (câu 2) mang thanh Trắc",
-          "Tiếng 'rền' (câu 2) hiệp vần chân với tiếng 'miên' (câu 3) mang thanh Bằng",
-          "Tiếng 'miên' (câu 3) hiệp vần lưng với tiếng 'đèn' (câu 4) mang thanh Bằng",
+          "Tiếng 'vắng' (cuối câu 1) hiệp vần với tiếng 'lắng' (ở giữa câu 2 - vần lưng) mang thanh Trắc",
+          "Tiếng 'rền' (cuối câu 2) hiệp vần chân với tiếng 'miên' (cuối câu 3) mang thanh Bằng",
+          "Tiếng 'miên' (cuối câu 3) hiệp vần với tiếng 'đèn' (ở giữa câu 4 - vần lưng) mang thanh Bằng",
           "Đoạn thơ trên hoàn toàn không gieo vần theo quy luật song thất lục bát"
         ],
         "correct": [
@@ -2892,14 +2892,29 @@
       },
       begin() {
         if (!this.activeQuiz) return;
-        let qList = [...this.activeQuiz.questions];
+        let qList = this.activeQuiz.questions.map(q => {
+          const cleanQ = { ...q };
+          if (cleanQ._originalOptions) {
+            cleanQ.options = [...cleanQ._originalOptions];
+            delete cleanQ._originalIndices;
+            delete cleanQ._originalOptions;
+          } else {
+            cleanQ.options = Array.isArray(cleanQ.options) ? [...cleanQ.options] : [];
+          }
+          return cleanQ;
+        });
         if (document.getElementById('toggle-shuffle-questions')?.checked) qList = Utils.shuffle(qList);
         if (document.getElementById('toggle-shuffle-options')?.checked) {
           qList = qList.map(q => {
             if (q.type === 'single' || q.type === 'multiple') {
               const opts = q.options.map((opt, idx) => ({ opt, originalIdx: idx }));
               const sh = Utils.shuffle(opts);
-              return { ...q, options: sh.map(o => o.opt), _originalIndices: sh.map(o => o.originalIdx) };
+              return {
+                ...q,
+                _originalOptions: [...q.options],
+                options: sh.map(o => o.opt),
+                _originalIndices: sh.map(o => o.originalIdx)
+              };
             }
             return q;
           });
@@ -3047,8 +3062,11 @@
         if (next === 2 && (q.type === 'single' || q.type === 'boolean')) {
           const items = document.querySelectorAll('#question-options-container .option-item');
           let count = 0;
+          let tgt = q.correct;
+          if (q.type === 'boolean' && typeof tgt === 'boolean') tgt = tgt ? 0 : 1;
+          if (q._originalIndices) tgt = q._originalIndices.indexOf(q.correct);
           items.forEach((item, idx) => {
-            if (idx !== q.correct && count < 2) { item.classList.add('dimmed'); count++; }
+            if (idx !== tgt && count < 2) { item.classList.add('dimmed'); count++; }
           });
         }
         this.renderHintBox();
@@ -3115,7 +3133,15 @@
 
         const existingWrong = Storage.get('wrong_questions', []);
         const mergedWrong = [...existingWrong];
-        wrongList.forEach(wq => { if (!mergedWrong.some(m => m.text === wq.text)) mergedWrong.push(wq); });
+        wrongList.forEach(wq => {
+          const cleanWq = { ...wq };
+          if (cleanWq._originalOptions) {
+            cleanWq.options = [...cleanWq._originalOptions];
+            delete cleanWq._originalIndices;
+            delete cleanWq._originalOptions;
+          }
+          if (!mergedWrong.some(m => m.text === cleanWq.text)) mergedWrong.push(cleanWq);
+        });
         Storage.set('wrong_questions', mergedWrong);
 
         if (this.activeQuiz.id !== 'custom') {
@@ -3267,15 +3293,22 @@
           const uAns = this.userAnswers[origIdx];
           const isRight = QuizRunner.checkQuestionCorrectness(q, uAns);
           let uText = 'Bỏ trống', cText = '';
+          const origOpts = q._originalOptions || q.options;
           if (q.type === 'single' || q.type === 'boolean') {
-            if (uAns !== undefined) uText = q.options[uAns];
-            cText = q.options[q.correct];
+            if (uAns !== undefined && q.options[uAns] !== undefined) uText = q.options[uAns];
+            let tgt = q.correct;
+            if (q.type === 'boolean' && typeof tgt === 'boolean') tgt = tgt ? 0 : 1;
+            cText = (origOpts && origOpts[tgt] !== undefined) ? origOpts[tgt] : '';
           } else if (q.type === 'multiple') {
-            if (Array.isArray(uAns) && uAns.length > 0) uText = uAns.map(i => q.options[i]).join(', ');
-            cText = q.correct.map(i => q.options[i]).join(', ');
+            if (Array.isArray(uAns) && uAns.length > 0) {
+              uText = uAns.map(i => q.options[i]).filter(Boolean).join(', ');
+            }
+            if (Array.isArray(q.correct)) {
+              cText = q.correct.map(i => (origOpts ? origOpts[i] : q.options[i])).filter(Boolean).join(', ');
+            }
           } else if (q.type === 'fill') {
             if (uAns) uText = uAns;
-            cText = q.correct.join(' HOẶC ');
+            cText = Array.isArray(q.correct) ? q.correct.join(' HOẶC ') : q.correct;
           }
           return `
             <div class="review-card">
