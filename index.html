@@ -3327,7 +3327,7 @@
           const origIdx = this.questions.indexOf(q);
           const uAns = this.userAnswers[origIdx];
           const isRight = QuizRunner.checkQuestionCorrectness(q, uAns);
-          let uText = 'Bỏ trống', cText = '';
+          let uText = 'Bỏ trống', cText = '', feedbackNote = '', badgeLabel = isRight ? '✓ ĐÚNG' : '⚠️ CẦN LƯU Ý', badgeClass = isRight ? 'badge-success' : 'badge-warning';
           const origOpts = q._originalOptions || q.options;
           if (q.type === 'single' || q.type === 'boolean') {
             if (uAns !== undefined && q.options[uAns] !== undefined) uText = q.options[uAns];
@@ -3335,11 +3335,22 @@
             if (q.type === 'boolean' && typeof tgt === 'boolean') tgt = tgt ? 0 : 1;
             cText = (origOpts && origOpts[tgt] !== undefined) ? origOpts[tgt] : '';
           } else if (q.type === 'multiple') {
-            if (Array.isArray(uAns) && uAns.length > 0) {
-              uText = uAns.map(i => q.options[i]).filter(Boolean).join(', ');
+            const arrAns = Array.isArray(uAns) ? uAns : [];
+            if (arrAns.length > 0) {
+              uText = arrAns.map(i => q.options[i]).filter(Boolean).join(', ');
             }
+            let tgt = q.correct;
+            if (q._originalIndices) tgt = q.correct.map(c => q._originalIndices.indexOf(c));
             if (Array.isArray(q.correct)) {
               cText = q.correct.map(i => (origOpts ? origOpts[i] : q.options[i])).filter(Boolean).join(', ');
+            }
+            if (!isRight && arrAns.length > 0) {
+              let matchCount = 0, wrongCount = 0;
+              arrAns.forEach(a => { if (tgt.includes(a)) matchCount++; else wrongCount++; });
+              if (wrongCount === 0 && matchCount > 0 && matchCount < tgt.length) {
+                badgeLabel = `⚠️ ĐÚNG ${matchCount}/${tgt.length} ĐÁP ÁN (THIẾU)`;
+                feedbackNote = `<div style="font-size:0.875rem; color:#F59E0B; background:rgba(245,158,11,0.12); padding:10px 14px; border-radius:8px; border-left:3px solid #F59E0B; margin-top:8px;">💡 <strong>Bạn đã chọn đúng ${matchCount}/${tgt.length} đáp án</strong> và không chọn nhầm câu sai nào. Hãy lưu ý chọn đủ tất cả các phương án đúng để đạt điểm tối đa câu này nhé!</div>`;
+              }
             }
           } else if (q.type === 'fill') {
             if (uAns) uText = uAns;
@@ -3349,12 +3360,13 @@
             <div class="review-card">
               <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
                 <span style="font-weight:700; color:var(--text-muted);">Câu ${origIdx + 1}</span>
-                <span class="badge ${isRight ? 'badge-success' : 'badge-warning'}">${isRight ? '✓ ĐÚNG' : '⚠️ CẦN LƯU Ý'}</span>
+                <span class="badge ${badgeClass}">${badgeLabel}</span>
               </div>
               <h3 style="font-size:1.15rem; font-weight:600; margin-bottom:16px;">${Utils.escapeHTML(q.text)}</h3>
               <div style="font-size:0.9375rem; display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
                 <div><strong style="color:var(--text-muted);">Đáp án của bạn:</strong> <span style="color:${isRight ? 'var(--success)' : 'var(--warning)'}; font-weight:600;">${Utils.escapeHTML(uText)}</span></div>
                 <div><strong style="color:var(--text-muted);">Đáp án đúng:</strong> <span style="color:var(--success); font-weight:600;">${Utils.escapeHTML(cText)}</span></div>
+                ${feedbackNote}
               </div>
               <div class="review-explanation"><strong>💡 Lời giải chi tiết:</strong><br>${Utils.escapeHTML(q.explanation)}</div>
             </div>
