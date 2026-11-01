@@ -3638,7 +3638,7 @@
           return { success: true, localOnly: true };
         }
         try {
-          await this.db.collection('leaderboard').add({
+          const addPromise = this.db.collection('leaderboard').add({
             studentName: data.studentName,
             quizId: data.quizId,
             quizTitle: data.quizTitle,
@@ -3649,9 +3649,11 @@
             createdDateStr: new Date().toLocaleDateString('vi-VN'),
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
           });
+          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 3500));
+          await Promise.race([addPromise, timeoutPromise]);
           return { success: true, localOnly: false };
         } catch (e) {
-          console.warn("Firestore write error (check security rules):", e);
+          console.warn("Firestore write error (check security rules or timeout):", e);
           return { success: true, localOnly: true, error: e.message };
         }
       },
