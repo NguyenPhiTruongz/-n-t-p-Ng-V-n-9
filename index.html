@@ -553,12 +553,12 @@
             <div class="mode-card selected" id="mode-card-practice" onclick="QuizRunner.setMode('practice')">
               <div style="font-size:1.75rem;">🌱</div>
               <h3 style="font-size:1.15rem; font-weight:700;">Chế độ Luyện Tập</h3>
-              <p style="font-size:0.875rem; color:var(--text-muted);">Không giới hạn thời gian. Xem đáp án và giải thích chi tiết ngay sau mỗi câu.</p>
+              <p style="font-size:0.875rem; color:var(--text-muted);">Không giới hạn thời gian, tự do dùng gợi ý. Nộp bài xong mới xem điểm và lời giải chi tiết.</p>
             </div>
             <div class="mode-card" id="mode-card-exam" onclick="QuizRunner.setMode('exam')">
               <div style="font-size:1.75rem;">⏱️</div>
               <h3 style="font-size:1.15rem; font-weight:700;">Chế độ Kiểm Tra</h3>
-              <p style="font-size:0.875rem; color:var(--text-muted);">Đồng hồ đếm ngược êm dịu. Hạn chế gợi ý. Nộp bài xong mới xem điểm và lời giải.</p>
+              <p style="font-size:0.875rem; color:var(--text-muted);">Đồng hồ đếm ngược êm dịu, hạn chế gợi ý. Nộp bài xong mới xem điểm và lời giải chi tiết.</p>
             </div>
           </div>
 
@@ -3016,10 +3016,6 @@
         this.userAnswers[this.currentIndex] = idx;
         this.renderQuestion();
         this.saveSession();
-        if (this.mode === 'practice') {
-          const isRight = this.checkQuestionCorrectness(this.questions[this.currentIndex], idx);
-          Toast.show(isRight ? "Chính xác! Làm rất tốt 🌱" : "Chưa hoàn toàn đúng rồi, bạn có thể xem gợi ý nhé.", isRight ? "success" : "info", 1800);
-        }
       },
       handleMultipleOptionClick(idx) {
         Utils.haptic(25);
