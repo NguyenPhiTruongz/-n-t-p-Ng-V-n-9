@@ -356,7 +356,91 @@
     .btn:active { transform: scale(0.97); }
     .chip:active { transform: scale(0.96); }
     .palette-btn:active { transform: scale(0.94); }
+
+    /* LEADERBOARD & PODIUM STYLES */
+    .podium-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) {
+      .podium-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch;
+      }
+    }
+    .podium-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+    .podium-first {
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-surface) 100%);
+      border-color: #F59E0B;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+      transform: translateY(-8px);
+    }
+    @media (max-width: 600px) {
+      .podium-first { transform: none; }
+    }
+    .podium-medal { font-size: 2rem; margin-bottom: 6px; }
+    .podium-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: 3px solid;
+      margin-bottom: 8px;
+    }
+    .podium-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; color: var(--text-main); }
+    .podium-score { font-weight: 800; font-size: 1.4rem; color: var(--primary); margin-bottom: 4px; }
+    .podium-time { font-size: 0.8125rem; color: var(--text-muted); }
+
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9375rem;
+    }
+    .leaderboard-table th {
+      padding: 14px 18px;
+      border-bottom: 2px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .leaderboard-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: middle;
+    }
+    .leaderboard-table tr:hover td {
+      background: var(--bg-surface-elevated);
+    }
+
   </style>
+  <!-- Firebase SDK v10 (Compat Mode) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 </head>
 <body>
   <canvas id="confetti-canvas"></canvas>
@@ -376,6 +460,7 @@
 
         <nav class="desktop-nav" aria-label="Điều hướng chính">
           <button class="nav-link active" data-screen="dashboard" onclick="Router.navigate('dashboard')">Trang chủ</button>
+          <button class="nav-link" data-screen="leaderboard" onclick="Router.navigate('leaderboard')">🏆 Bảng vàng</button>
           <button class="nav-link" data-screen="flashcards" onclick="Router.navigate('flashcards')">Flashcards</button>
           <button class="nav-link" data-screen="relax" onclick="Router.navigate('relax')">Góc tập trung</button>
           <button class="nav-link" data-screen="builder" onclick="Router.navigate('builder')">Tạo bộ đề</button>
@@ -604,6 +689,23 @@
             <div class="stat-card"><span class="stat-val" style="color:var(--accent);" id="result-xp-earned">+85 XP</span><span class="stat-label">Kinh nghiệm</span></div>
           </div>
 
+          
+          <!-- CARD LƯU ĐIỂM LÊN BẢNG VÀNG -->
+          <div class="card" id="lb-submit-box" style="margin:24px 0 16px; padding:20px; background:var(--bg-surface-elevated); border:2px dashed var(--primary); text-align:left;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+              <span style="font-size:1.8rem;">🏆</span>
+              <div>
+                <h3 style="font-size:1.1rem; font-weight:700;">Ghi Danh Lên Bảng Vàng Lớp Học</h3>
+                <p style="font-size:0.84rem; color:var(--text-muted);">Chia sẻ điểm số để cùng thi đua với các bạn trong lớp nhé!</p>
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+              <input type="text" id="input-student-name" class="input-control" style="flex:1; min-width:200px;" placeholder="Nhập họ và tên / Biệt danh của bạn...">
+              <button class="btn btn-primary" id="btn-submit-leaderboard" onclick="QuizRunner.submitToLeaderboard()">Lưu điểm ngay 🚀</button>
+              <button class="btn btn-secondary" onclick="Router.navigate('leaderboard')">Xem Bảng Vàng</button>
+            </div>
+          </div>
+
           <div class="results-buttons-wrap">
             <button class="btn btn-primary btn-lg" onclick="QuizRunner.showReviewScreen()">Xem đáp án chi tiết</button>
             <button class="btn btn-secondary btn-lg" onclick="QuizRunner.retakeCurrent()">Làm lại bài</button>
@@ -631,6 +733,32 @@
         </div>
 
         <div id="review-questions-list"></div>
+      </section>
+
+      
+      <!-- MÀN HÌNH BẢNG VÀNG XẾP HẠNG (LEADERBOARD) -->
+      <section id="screen-leaderboard" class="screen">
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; margin-bottom:20px;">
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:700; margin-bottom:4px;">🏆 Bảng Vàng Lớp Học (Cloud Firebase)</h2>
+            <p style="color:var(--text-muted); font-size:0.9375rem;">Thi đua điểm cao trực tuyến cùng bạn bè trong kỳ thi Ngữ Văn 9</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="LeaderboardManager.render()" style="gap:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Làm mới bảng vàng
+          </button>
+        </div>
+
+        <div class="filter-chips" style="margin-bottom:24px; overflow-x:auto; padding-bottom:6px;">
+          <button class="chip lb-filter-chip active" onclick="LeaderboardManager.filter('all')">Tất cả đề</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-stlb-doc-hieu')">1. Song Thất Lục Bát</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-ba-tac-pham')">2. Ba Tác Phẩm</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-tu-han-viet')">3. Từ Hán Việt</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-nlxh-moi-truong')">4. Nghị Luận Xã Hội</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-de-thi-thu')">5. Đề Thi Thử</button>
+        </div>
+
+        <div id="leaderboard-podium" class="podium-grid"></div>
+        <div id="leaderboard-list"></div>
       </section>
 
       <!-- MÀN HÌNH 8: FLASHCARDS -->
@@ -781,6 +909,10 @@
       <button class="mobile-nav-item active" data-screen="dashboard" onclick="Router.navigate('dashboard')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span>Trang chủ</span>
+      </button>
+      <button class="mobile-nav-item" data-screen="leaderboard" onclick="Router.navigate('leaderboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34c0-.77.45-1.46 1.15-1.78l1.7-.76c.7-.32 1.15-1.01 1.15-1.78V4h4v6.34c0 .77.45 1.46 1.15 1.78l1.7.76c.7.32 1.15 1.01 1.15 1.78V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"/></svg>
+        <span>Bảng vàng</span>
       </button>
       <button class="mobile-nav-item" data-screen="flashcards" onclick="Router.navigate('flashcards')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
@@ -2573,6 +2705,7 @@
           if (screenId === 'dashboard') QuizManager.renderDashboard();
           if (screenId === 'flashcards') FlashcardManager.render();
           if (screenId === 'builder') QuizBuilder.renderTable();
+          if (screenId === 'leaderboard') LeaderboardManager.render();
         }
       }
     };
@@ -3019,6 +3152,15 @@
       showResultScreen(data) {
         Router.navigate('results');
         Confetti.fire();
+        this.lastResultData = data;
+        const savedName = Storage.get('student_name', '');
+        const inputName = document.getElementById('input-student-name');
+        if (inputName) inputName.value = savedName;
+        const btnSubmitLb = document.getElementById('btn-submit-leaderboard');
+        if (btnSubmitLb) {
+          btnSubmitLb.disabled = false;
+          btnSubmitLb.innerHTML = 'Lưu điểm ngay 🚀';
+        }
         document.getElementById('result-score-10').textContent = data.score.toFixed(1);
         document.getElementById('result-score-percent').textContent = `${data.percent}%`;
         document.getElementById('result-correct-count').textContent = data.correct;
@@ -3037,6 +3179,41 @@
       },
       showReviewScreen() { ReviewManager.init(this.questions, this.userAnswers); Router.navigate('review'); },
       retakeCurrent() { this.begin(); },
+      async submitToLeaderboard() {
+        const inputName = document.getElementById('input-student-name');
+        const name = (inputName?.value || '').trim();
+        if (!name) {
+          Toast.show('Vui lòng nhập tên hoặc biệt danh của bạn!', 'warning');
+          inputName?.focus();
+          return;
+        }
+        Storage.set('student_name', name);
+        const btn = document.getElementById('btn-submit-leaderboard');
+        if (btn) {
+          btn.disabled = true;
+          btn.innerHTML = 'Đang lưu điểm...';
+        }
+
+        const dataToSubmit = {
+          studentName: name,
+          quizId: this.activeQuiz?.id || 'van-9-hk1',
+          quizTitle: this.activeQuiz?.title || 'Ngữ Văn 9',
+          score: this.lastResultData ? this.lastResultData.score : 10,
+          correctCount: this.lastResultData ? this.lastResultData.correct : 10,
+          totalQuestions: this.questions.length || 10,
+          timeTakenSeconds: this.lastResultData ? this.lastResultData.timeTaken : 120
+        };
+
+        const res = await FirebaseService.submitScore(dataToSubmit);
+        if (btn) {
+          btn.innerHTML = '✓ Đã ghi danh Bảng Vàng';
+        }
+        if (res.localOnly) {
+          Toast.show('Đã lưu điểm vào bảng vàng! 🌟', 'success', 3000);
+        } else {
+          Toast.show('Đã đưa điểm của bạn lên Bảng Vàng lớp học! 🚀', 'success', 3000);
+        }
+      },
       retakeWrongOnly() {
         const wrongs = this.questions.filter((q, i) => !this.checkQuestionCorrectness(q, this.userAnswers[i]));
         if (wrongs.length === 0) return Toast.show("Không có câu nào sai để làm lại!", "success");
@@ -3333,6 +3510,182 @@
     });
 
     
+    
+    /* 16. FIREBASE SERVICE & REALTIME LEADERBOARD */
+    const FIREBASE_CONFIG = {
+      apiKey: "AIzaSyD5Et3P1k2xwie7AreNHQY1Fn-eaGZVPHI",
+      authDomain: "calmlearn-23aff.firebaseapp.com",
+      projectId: "calmlearn-23aff",
+      storageBucket: "calmlearn-23aff.firebasestorage.app",
+      messagingSenderId: "422504471247",
+      appId: "1:422504471247:web:a819f8461d8f794732b5ba",
+      measurementId: "G-93DNR7SCRF"
+    };
+
+    const FirebaseService = {
+      db: null,
+      isReady: false,
+      init() {
+        try {
+          if (typeof firebase !== 'undefined') {
+            if (!firebase.apps || firebase.apps.length === 0) {
+              firebase.initializeApp(FIREBASE_CONFIG);
+            }
+            this.db = firebase.firestore();
+            this.isReady = true;
+            console.log("Firebase Firestore connected successfully");
+          }
+        } catch (e) {
+          console.warn("Firebase initialization failed, using local storage:", e);
+          this.isReady = false;
+        }
+      },
+      async submitScore(data) {
+        this.saveLocalLeaderboard(data);
+        if (!this.isReady || !this.db) {
+          return { success: true, localOnly: true };
+        }
+        try {
+          await this.db.collection('leaderboard').add({
+            studentName: data.studentName,
+            quizId: data.quizId,
+            quizTitle: data.quizTitle,
+            score: Number(data.score),
+            correctCount: Number(data.correctCount),
+            totalQuestions: Number(data.totalQuestions),
+            timeTakenSeconds: Number(data.timeTakenSeconds),
+            createdDateStr: new Date().toLocaleDateString('vi-VN'),
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          });
+          return { success: true, localOnly: false };
+        } catch (e) {
+          console.warn("Firestore write error (check security rules):", e);
+          return { success: true, localOnly: true, error: e.message };
+        }
+      },
+      saveLocalLeaderboard(data) {
+        const list = Storage.get('local_leaderboard', []);
+        list.unshift({ ...data, createdDateStr: new Date().toLocaleDateString('vi-VN') });
+        Storage.set('local_leaderboard', list.slice(0, 100));
+      },
+      async getScores(quizId = 'all') {
+        if (this.isReady && this.db) {
+          try {
+            let col = this.db.collection('leaderboard');
+            let snap;
+            if (quizId !== 'all') {
+              snap = await col.where('quizId', '==', quizId).limit(50).get();
+            } else {
+              snap = await col.limit(60).get();
+            }
+            if (snap && !snap.empty) {
+              const list = [];
+              snap.forEach(doc => list.push({ id: doc.id, ...doc.data() }));
+              list.sort((a, b) => (Number(b.score) - Number(a.score)) || (Number(a.timeTakenSeconds) - Number(b.timeTakenSeconds)));
+              return list;
+            }
+          } catch (e) {
+            console.warn("Firestore fetch error, fallback to local:", e);
+          }
+        }
+        return this.getLocalScores(quizId);
+      },
+      getLocalScores(quizId = 'all') {
+        const list = Storage.get('local_leaderboard', []);
+        let filtered = quizId === 'all' ? list : list.filter(item => item.quizId === quizId);
+        filtered.sort((a, b) => (Number(b.score) - Number(a.score)) || (Number(a.timeTakenSeconds) - Number(b.timeTakenSeconds)));
+        return filtered;
+      }
+    };
+
+    const LeaderboardManager = {
+      currentQuizFilter: 'all',
+      async filter(quizId) {
+        this.currentQuizFilter = quizId;
+        document.querySelectorAll('.lb-filter-chip').forEach(c => c.classList.remove('active'));
+        if (event && event.target) event.target.classList.add('active');
+        await this.render();
+      },
+      async render() {
+        const listEl = document.getElementById('leaderboard-list');
+        const podiumEl = document.getElementById('leaderboard-podium');
+        if (!listEl) return;
+
+        listEl.innerHTML = '<div style="text-align:center; padding:30px; color:var(--text-muted);">Đang tải bảng vàng...</div>';
+        if (podiumEl) podiumEl.innerHTML = '';
+
+        const scores = await FirebaseService.getScores(this.currentQuizFilter);
+
+        if (!scores || scores.length === 0) {
+          listEl.innerHTML = `
+            <div class="card" style="text-align:center; padding:40px 20px; color:var(--text-muted);">
+              <div style="font-size:3rem; margin-bottom:12px;">🌟</div>
+              <h3 style="font-size:1.2rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">Chưa có bạn nào ghi danh!</h3>
+              <p style="font-size:0.9375rem; margin-bottom:20px;">Hãy là người đầu tiên làm bài kiểm tra và xuất hiện trên bảng vàng lớp học nhé.</p>
+              <button class="btn btn-primary" onclick="Router.navigate('dashboard')">Làm bài kiểm tra ngay</button>
+            </div>
+          `;
+          return;
+        }
+
+        // Top 3 Podium
+        if (scores.length >= 1 && podiumEl) {
+          const top3 = scores.slice(0, 3);
+          const podiumOrder = top3.length === 3 ? [top3[1], top3[0], top3[2]] : (top3.length === 2 ? [top3[1], top3[0]] : [top3[0]]);
+          const ranks = top3.length === 3 ? [2, 1, 3] : (top3.length === 2 ? [2, 1] : [1]);
+          const medals = { 1: '🥇', 2: '🥈', 3: '🥉' };
+          const colors = { 1: '#F59E0B', 2: '#94A3B8', 3: '#D97706' };
+
+          podiumEl.innerHTML = podiumOrder.map((item, idx) => {
+            const rank = ranks[idx];
+            const isFirst = rank === 1;
+            const initial = (item.studentName || 'H').charAt(0).toUpperCase();
+            return `
+              <div class="podium-card ${isFirst ? 'podium-first' : ''}">
+                <div class="podium-medal">${medals[rank]}</div>
+                <div class="podium-avatar" style="border-color:${colors[rank]}">${Utils.escapeHTML(initial)}</div>
+                <div class="podium-name">${Utils.escapeHTML(item.studentName)}</div>
+                <div class="podium-score">${Number(item.score).toFixed(1)} <span style="font-size:0.8rem; font-weight:500;">điểm</span></div>
+                <div class="podium-time">⏱️ ${Utils.formatTime(item.timeTakenSeconds || 0)}</div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        const tableScores = scores.length > 3 ? scores.slice(3) : scores;
+        const startRank = scores.length > 3 ? 4 : 1;
+
+        listEl.innerHTML = `
+          <div class="card" style="padding:0; overflow-x:auto;">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th style="width:60px; text-align:center;">Hạng</th>
+                  <th>Học sinh</th>
+                  <th>Bộ đề thi</th>
+                  <th style="text-align:center;">Điểm số</th>
+                  <th style="text-align:center;">Thời gian</th>
+                  <th style="text-align:right;">Ngày thi</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tableScores.map((s, idx) => `
+                  <tr>
+                    <td style="text-align:center; font-weight:700; color:var(--text-muted);">#${startRank + idx}</td>
+                    <td style="font-weight:600;"><span style="display:inline-block; width:28px; height:28px; line-height:28px; text-align:center; border-radius:50%; background:var(--primary-light); color:var(--primary); font-size:0.8rem; margin-right:8px;">${Utils.escapeHTML((s.studentName || 'H').charAt(0).toUpperCase())}</span>${Utils.escapeHTML(s.studentName)}</td>
+                    <td><span class="badge badge-primary">${Utils.escapeHTML(s.quizTitle || 'Ngữ Văn 9')}</span></td>
+                    <td style="text-align:center; font-weight:700; color:var(--primary); font-size:1.05rem;">${Number(s.score).toFixed(1)}/10</td>
+                    <td style="text-align:center; color:var(--text-muted);">${Utils.formatTime(s.timeTakenSeconds || 0)}</td>
+                    <td style="text-align:right; font-size:0.8125rem; color:var(--text-subtle);">${s.createdDateStr || 'Gần đây'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    };
+
     /* 15. TOUCH SWIPE CONTROLLER CHO MOBILE */
     const TouchSwipe = {
       init() {
@@ -3395,7 +3748,7 @@
     };
 
     window.addEventListener('DOMContentLoaded', () => {
-      AppTheme.init(); AppSettings.init(); Confetti.init();
+      AppTheme.init(); AppSettings.init(); Confetti.init(); FirebaseService.init();
       QuizManager.init(); FlashcardManager.init(); RelaxCorner.init();
       QuizRunner.checkPendingResume();
       TouchSwipe.init();
