@@ -1456,7 +1456,11 @@
           "giấc ngủ cô đơn",
           "giấc ngủ lẻ loi",
           "giấc ngủ trằn trọc một mình",
-          "giấc ngủ trong cô đơn"
+          "giấc ngủ trong cô đơn",
+          "ngủ cô độc lẻ loi một mình",
+          "ngủ cô độc",
+          "ngủ lẻ loi",
+          "ngủ một mình"
         ],
         "hints": [
           "'Cô' là đơn độc, lẻ loi; 'miên' là ngủ.",
@@ -2767,14 +2771,14 @@
       quizzes: [], currentSubject: 'all', searchQuery: '',
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v3_ngu_van_9_chuan_ngu_nghia') {
+        if (ver !== 'v4_ngu_van_9_cham_thong_minh') {
           this.quizzes = DEFAULT_QUIZZES;
           Storage.set('quizzes', this.quizzes);
           Storage.set('flashcards', DEFAULT_FLASHCARDS);
           Storage.set('wrong_questions', []);
           Storage.set('flagged_questions', []);
           Storage.remove('pending_quiz_session');
-          Storage.set('app_data_version', 'v3_ngu_van_9_chuan_ngu_nghia');
+          Storage.set('app_data_version', 'v4_ngu_van_9_cham_thong_minh');
         } else {
           const saved = Storage.get('quizzes', null);
           this.quizzes = (saved && Array.isArray(saved) && saved.length > 0) ? saved : DEFAULT_QUIZZES;
@@ -3206,9 +3210,71 @@
           ans.forEach(a => { if (tgt.includes(a)) match++; else wrong++; });
           return Math.max(0, (match - wrong) / tgt.length);
         } else if (q.type === 'fill') {
-          if (!ans) return 0.0;
-          const norm = Utils.normalizeString(ans);
-          return q.correct.some(c => Utils.normalizeString(c) === norm) ? 1.0 : 0.0;
+          if (!ans || typeof ans !== 'string') return 0.0;
+          const userNorm = Utils.normalizeString(ans)
+            .replace(/^(là|nghĩa là|có nghĩa là|chính là|đó là|điền|từ)\s+/i, '')
+            .replace(/[.,;:!?\-_()]/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+          if (!userNorm) return 0.0;
+
+          // 1. Khớp chính xác hoặc bao hàm chuỗi đáp án mẫu
+          for (const rawC of q.correct) {
+            const cNorm = Utils.normalizeString(rawC).replace(/[.,;:!?\-_()]/g, ' ').replace(/\s+/g, ' ').trim();
+            if (userNorm === cNorm) return 1.0;
+            if (cNorm.length >= 3 && userNorm.includes(cNorm)) return 1.0;
+            if (userNorm.length >= 4 && cNorm.includes(userNorm)) return 1.0;
+          }
+
+          // 2. Nhận diện ngữ nghĩa thông minh theo chủ đề câu hỏi (Fuzzy & Semantic Match)
+          // Câu hỏi về "cô miên": có từ chỉ ngủ VÀ từ chỉ cô đơn/lẻ loi/cô độc/một mình
+          if (q.text.includes('cô miên')) {
+            const hasSleep = /ngủ|giấc/.test(userNorm);
+            const hasLonely = /cô|đơn|lẻ|độc|mình|quạnh|trằn trọc/.test(userNorm);
+            if (hasSleep && hasLonely) return 1.0;
+          }
+
+          // Câu hỏi về "đoạn trường": có ruột và đứt/cắt/nát/đau
+          if (q.text.includes('đoạn trường') || q.text.includes('Đoạn trường')) {
+            if (/ruột/.test(userNorm) && /đứt|cắt|nát|đau|xé|tan/.test(userNorm)) return 1.0;
+          }
+
+          // Câu hỏi về "quan san": có cửa ải / núi / xa xôi / cách trở
+          if (q.text.includes('quan san')) {
+            if (/cửa ải|núi|xa xôi|cách trở|hiểm trở|biên ải/.test(userNorm)) return 1.0;
+          }
+
+          // Câu hỏi về "thanh gì": có "bằng"
+          if (q.text.includes('thanh gì')) {
+            if (/\bbằng\b|\bb\b/.test(userNorm) && !/\btrắc\b|\bt\b/.test(userNorm)) return 1.0;
+          }
+
+          // Câu hỏi về "vần gì": có "chân" hoặc "cước"
+          if (q.text.includes('vần gì')) {
+            if (/chân|cước/.test(userNorm)) return 1.0;
+          }
+
+          // Câu hỏi điền từ "cùng"
+          if (q.text.includes('trông lại')) {
+            if (/cùng/.test(userNorm)) return 1.0;
+          }
+
+          // Câu hỏi điền từ "bạc" (hồng nhan)
+          if (q.text.includes('hồng nhan')) {
+            if (/\bbạc\b/.test(userNorm)) return 1.0;
+          }
+
+          // 3. Khớp từ khóa (token overlap >= 60%)
+          const userTokens = userNorm.split(' ').filter(w => w.length > 1);
+          for (const rawC of q.correct) {
+            const cTokens = Utils.normalizeString(rawC).split(' ').filter(w => w.length > 1);
+            if (cTokens.length === 0) continue;
+            let matched = 0;
+            cTokens.forEach(t => { if (userTokens.includes(t)) matched++; });
+            if (matched / cTokens.length >= 0.6) return 1.0;
+          }
+
+          return 0.0;
         }
         return 0.0;
       },
@@ -3383,7 +3449,7 @@
       cards: [], currentIndex: 0, isFlipped: false,
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v3_ngu_van_9_chuan_ngu_nghia') {
+        if (ver !== 'v4_ngu_van_9_cham_thong_minh') {
           this.cards = DEFAULT_FLASHCARDS;
           Storage.set('flashcards', this.cards);
         } else {
