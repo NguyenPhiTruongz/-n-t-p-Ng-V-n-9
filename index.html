@@ -532,6 +532,13 @@
             </div>
             <span class="btn btn-sm btn-secondary">Xem lại</span>
           </div>
+          <div class="review-action-card" onclick="Router.navigate('leaderboard')" style="border-color:var(--primary); background:var(--primary-light);">
+            <div>
+              <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:4px; color:var(--primary);">🏆 Bảng vàng lớp học</h3>
+              <p style="font-size:0.875rem; color:var(--text-muted);">Xem bảng xếp hạng điểm thi đua</p>
+            </div>
+            <span class="btn btn-sm btn-primary">Vào xem</span>
+          </div>
         </div>
       </section>
 
@@ -2903,6 +2910,7 @@
         this.hintUsage = {};
         this.flagged = new Set();
         this.timeRemaining = (this.activeQuiz.timeLimitMinutes || 15) * 60;
+        this.startTime = Date.now();
         this.saveSession();
 
         Router.navigate('quiz-player');
@@ -3124,7 +3132,8 @@
         st.completed++; st.totalScore += finalScore; st.xp += xp;
         Storage.set('user_stats', st);
 
-        this.showResultScreen({ score: finalScore, percent, correct: correctCount, wrong: wrongCount, timeSpent: (this.activeQuiz.timeLimitMinutes * 60) - this.timeRemaining, xp });
+        const elapsedSec = this.startTime ? Math.max(1, Math.round((Date.now() - this.startTime) / 1000)) : Math.max(1, (this.activeQuiz.timeLimitMinutes * 60) - this.timeRemaining);
+        this.showResultScreen({ score: finalScore, percent, correct: correctCount, wrong: wrongCount, timeSpent: elapsedSec, timeTaken: elapsedSec, xp });
       },
       calculateQuestionRatio(q, ans) {
         if (q.type === 'single' || q.type === 'boolean') {
@@ -3198,7 +3207,7 @@
           score: this.lastResultData ? this.lastResultData.score : 10,
           correctCount: this.lastResultData ? this.lastResultData.correct : 10,
           totalQuestions: this.questions.length || 10,
-          timeTakenSeconds: this.lastResultData ? this.lastResultData.timeTaken : 120
+          timeTakenSeconds: this.lastResultData ? Number(this.lastResultData.timeSpent || this.lastResultData.timeTaken || 60) : 60
         };
 
         const res = await FirebaseService.submitScore(dataToSubmit);
