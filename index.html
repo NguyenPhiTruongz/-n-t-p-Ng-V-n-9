@@ -6,30 +6,71 @@
   <title>CalmLearn - Không Gian Học Tập Tương Tác Giảm Căng Thẳng</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-app:#F8FAF9; --bg-surface:#FFFFFF; --bg-surface-elevated:#F1F5F4; --bg-surface-subtle:#E8EFEF;
-      --text-main:#1E293B; --text-muted:#64748B; --text-subtle:#94A3B8;
-      --primary:#0D9488; --primary-hover:#0F766E; --primary-light:#CCFBF1; --primary-glow:rgba(13,148,136,0.15);
-      --accent:#F97316; --accent-soft:#FFEDD5;
-      --success:#10B981; --success-bg:#ECFDF5; --warning:#F59E0B; --warning-bg:#FFFBEB; --danger:#E11D48; --danger-bg:#FFF1F2;
-      --border-subtle:#E2E8F0; --border-hover:#CBD5E1; --border-focus:#0D9488;
-      --shadow-sm:0 2px 4px rgba(15,23,42,0.04); --shadow-md:0 8px 20px rgba(15,23,42,0.06); --shadow-lg:0 16px 32px rgba(15,23,42,0.08);
-      --radius-sm:8px; --radius-md:14px; --radius-lg:20px; --radius-xl:26px; --radius-pill:9999px;
-      --font-family:'Be Vietnam Pro',-apple-system,BlinkMacSystemFont,sans-serif;
-      --line-height-relaxed:1.65; --letter-spacing:-0.01em;
-      --transition:all 0.25s cubic-bezier(0.22,1,0.36,1);
+      --bg-app: #F8FAF9;
+      --bg-surface: #FFFFFF;
+      --bg-surface-elevated: #F1F5F4;
+      --bg-surface-subtle: #E8EFEF;
+      --text-main: #181818;
+      --text-muted: #666666;
+      --text-subtle: #8A8A8A;
+      --primary: #2EB886;
+      --primary-hover: #269E73;
+      --primary-light: rgba(46, 184, 134, 0.12);
+      --primary-glow: rgba(46, 184, 134, 0.20);
+      --accent: #2EB886;
+      --accent-soft: rgba(46, 184, 134, 0.12);
+      --success: #2EB886;
+      --success-bg: rgba(46, 184, 134, 0.12);
+      --warning: #F59E0B;
+      --warning-bg: rgba(245, 158, 11, 0.12);
+      --danger: #E11D48;
+      --danger-bg: rgba(225, 29, 72, 0.12);
+      --border-subtle: #E2E8F0;
+      --border-hover: #CBD5E1;
+      --border-focus: #2EB886;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.09);
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --radius-pill: 9999px;
+      --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Geist Mono', monospace;
+      --line-height-relaxed: 1.6;
+      --letter-spacing: -0.015em;
+      --transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
     [data-theme="dark"] {
-      --bg-app:#0F172A; --bg-surface:#1E293B; --bg-surface-elevated:#283548; --bg-surface-subtle:#334155;
-      --text-main:#F8FAFC; --text-muted:#94A3B8; --text-subtle:#64748B;
-      --primary:#14B8A6; --primary-hover:#2DD4BF; --primary-light:rgba(20,184,166,0.15); --primary-glow:rgba(20,184,166,0.25);
-      --accent:#FB923C; --accent-soft:rgba(251,146,60,0.15);
-      --success:#34D399; --success-bg:rgba(52,211,153,0.12); --warning:#FBBF24; --warning-bg:rgba(251,191,36,0.12);
-      --danger:#FB7185; --danger-bg:rgba(251,113,133,0.12);
-      --border-subtle:#334155; --border-hover:#475569; --border-focus:#14B8A6;
-      --shadow-sm:0 2px 4px rgba(0,0,0,0.2); --shadow-md:0 8px 24px rgba(0,0,0,0.3); --shadow-lg:0 16px 36px rgba(0,0,0,0.4);
+      --bg-app: #181818;
+      --bg-surface: #1F1F1F;
+      --bg-surface-elevated: #272727;
+      --bg-surface-subtle: #313131;
+      --text-main: #F5F5F5;
+      --text-muted: #9B9B9B;
+      --text-subtle: #737373;
+      --primary: #2EB886;
+      --primary-hover: #3ED49D;
+      --primary-light: rgba(46, 184, 134, 0.14);
+      --primary-glow: rgba(46, 184, 134, 0.25);
+      --accent: #2EB886;
+      --accent-soft: rgba(46, 184, 134, 0.14);
+      --success: #2EB886;
+      --success-bg: rgba(46, 184, 134, 0.14);
+      --warning: #F59E0B;
+      --warning-bg: rgba(245, 158, 11, 0.14);
+      --danger: #FB7185;
+      --danger-bg: rgba(251, 113, 133, 0.14);
+      --border-subtle: #313131;
+      --border-hover: #424242;
+      --border-focus: #2EB886;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.55);
     }
     body.dyslexia-mode { --letter-spacing:0.08em; --line-height-relaxed:1.85; word-spacing:0.15em; }
     body[data-font-size="small"] { font-size:14px; }
@@ -45,7 +86,7 @@
     #app-container { display:flex; flex-direction:column; min-height:100dvh; padding-bottom:calc(72px + env(safe-area-inset-bottom,0px)); }
     @media (min-width:1025px) { #app-container { padding-bottom:0; } }
     .app-header { position:sticky; top:0; z-index:40; background:rgba(255,255,255,0.88); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--border-subtle); transition:var(--transition); }
-    [data-theme="dark"] .app-header { background:rgba(30,41,59,0.88); }
+    [data-theme="dark"] .app-header { background:rgba(31,31,31,0.92); }
     .header-inner { max-width:1280px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand-logo { display:flex; align-items:center; gap:10px; font-size:1.25rem; font-weight:700; color:var(--primary); text-decoration:none; }
     .brand-icon { width:38px; height:38px; border-radius:var(--radius-md); background:var(--primary-light); display:grid; place-items:center; color:var(--primary); flex-shrink:0; }
@@ -59,7 +100,7 @@
     .btn-icon:hover { color:var(--primary); background:var(--primary-light); transform:translateY(-1px); }
     .btn-icon:active { transform:scale(0.96); }
     .mobile-bottom-nav { position:fixed; bottom:0; left:0; right:0; height:calc(64px + env(safe-area-inset-bottom,0px)); padding-bottom:env(safe-area-inset-bottom,0px); background:rgba(255,255,255,0.95); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-top:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:space-around; z-index:50; }
-    [data-theme="dark"] .mobile-bottom-nav { background:rgba(30,41,59,0.95); }
+    [data-theme="dark"] .mobile-bottom-nav { background:rgba(31,31,31,0.95); }
     @media (min-width:1025px) { .mobile-bottom-nav { display:none; } }
     .mobile-nav-item { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; color:var(--text-muted); font-size:0.72rem; font-weight:500; width:20%; height:100%; transition:var(--transition); }
     .mobile-nav-item.active { color:var(--primary); font-weight:600; }
@@ -69,7 +110,10 @@
     .screen.active { display:block; opacity:1; transform:translateY(0); }
     .card { background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-subtle); box-shadow:var(--shadow-sm); padding:24px; transition:var(--transition); }
     .card:hover { box-shadow:var(--shadow-md); }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 20px; border-radius:var(--radius-pill); font-size:0.9375rem; font-weight:600; transition:var(--transition); min-height:44px; user-select:none; white-space:nowrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px; border-radius:var(--radius-md); font-size:14px; font-weight:600; line-height:20px; transition:var(--transition); min-height:38px; user-select:none; white-space:nowrap; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn:active { transform:scale(0.98); }
+    .btn:focus-visible { outline:2px solid var(--border-focus); outline-offset:2px; }
     .btn:active { transform:scale(0.98); }
     .btn-primary { background:var(--primary); color:#FFF; box-shadow:0 4px 12px var(--primary-glow); }
     .btn-primary:hover { background:var(--primary-hover); box-shadow:0 6px 16px var(--primary-glow); }
@@ -88,14 +132,121 @@
     .input-control { width:100%; padding:12px 16px; border-radius:var(--radius-md); border:1px solid var(--border-subtle); background:var(--bg-surface); font-size:1rem; transition:var(--transition); }
     .input-control:focus { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-glow); outline:none; }
     .hero-greeting { margin-bottom:28px; }
-    .hero-greeting h1 { font-size:clamp(1.5rem, 3.5vw, 2.2rem); font-weight:700; margin-bottom:6px; letter-spacing:-0.02em; }
+    .hero-greeting h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+      background: linear-gradient(90deg, #000000 0%, #666666 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    [data-theme="dark"] .hero-greeting h1 {
+      background: linear-gradient(90deg, #FFFFFF 0%, #9B9B9B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-greeting p { text-wrap: pretty; }
+    .quiz-timer, .stat-val, .podium-score, .palette-btn, #header-streak-count, #header-xp-count, .chip-count, .subject-count-pill, #fc-index {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+    /* AI DESIGN - SUBJECT CATALOG & SECTIONS */
+    .subject-section {
+      background: var(--bg-surface);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      padding: 24px;
+      margin-bottom: 32px;
+      transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .subject-section:hover {
+      border-color: var(--border-hover);
+    }
+    .subject-section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .subject-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .subject-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .subject-heading {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-wrap: balance;
+    }
+    .subject-tagline {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .subject-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      max-width: 760px;
+      text-wrap: pretty;
+      margin-top: 4px;
+    }
+    .subject-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chip-count {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-surface-elevated);
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+    .chip.active .chip-count {
+      background: var(--primary);
+      color: white;
+    }
+    .subject-count-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
     .stats-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:16px; margin-bottom:28px; }
     .stat-card { background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-subtle); padding:16px 20px; display:flex; flex-direction:column; gap:4px; }
     .stat-val { font-size:1.75rem; font-weight:700; color:var(--primary); }
     .stat-label { font-size:0.8125rem; color:var(--text-muted); font-weight:500; }
     .xp-container { background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-subtle); padding:18px 24px; margin-bottom:28px; display:flex; flex-direction:column; gap:10px; }
     .progress-bar-bg { height:10px; background:var(--bg-surface-elevated); border-radius:var(--radius-pill); overflow:hidden; }
-    .progress-bar-fill { height:100%; background:linear-gradient(90deg, var(--primary), #2DD4BF); border-radius:var(--radius-pill); transition:width 0.4s ease; }
+    .progress-bar-fill { height:100%; background:var(--primary); border-radius:var(--radius-pill); transition:width 0.4s ease; }
     .filter-bar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-bottom:24px; }
     .filter-chips { display:flex; flex-wrap:wrap; gap:8px; }
     .chip { padding:7px 16px; border-radius:var(--radius-pill); background:var(--bg-surface); border:1px solid var(--border-subtle); font-size:0.875rem; font-weight:500; color:var(--text-muted); transition:var(--transition); }
@@ -176,7 +327,7 @@
     .breathing-box { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 20px; min-height:380px; }
     .breathing-circle-wrapper { position:relative; width:220px; height:220px; display:grid; place-items:center; margin:20px 0; }
     .breathing-outer-ring { position:absolute; inset:0; border-radius:50%; border:2px dashed var(--primary); opacity:0.4; }
-    .breathing-circle { width:90px; height:90px; border-radius:50%; background:radial-gradient(circle, var(--primary), #2DD4BF); box-shadow:0 0 32px var(--primary-glow); transition:transform 4s ease-in-out, opacity 4s ease-in-out; display:grid; place-items:center; color:white; font-weight:700; font-size:1.1rem; }
+    .breathing-circle { width:90px; height:90px; border-radius:50%; background:var(--primary); box-shadow:0 0 32px var(--primary-glow); transition:transform 4s ease-in-out, opacity 4s ease-in-out; display:grid; place-items:center; color:white; font-weight:700; font-size:1.1rem; }
     .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.5); backdrop-filter:blur(6px); z-index:200; display:none; place-items:center; padding:20px; opacity:0; transition:opacity 0.25s ease; }
     .modal-overlay.active { display:grid; opacity:1; }
     .modal-content { background:var(--bg-surface); border-radius:var(--radius-xl); border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg); max-width:540px; width:100%; padding:28px; max-height:90vh; overflow-y:auto; }
@@ -386,7 +537,7 @@
       position: relative;
     }
     .podium-first {
-      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-surface) 100%);
+      background: var(--bg-surface-elevated);
       border-color: #F59E0B;
       box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
       transform: translateY(-8px);
@@ -409,7 +560,7 @@
       margin-bottom: 8px;
     }
     .podium-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; color: var(--text-main); }
-    .podium-score { font-weight: 800; font-size: 1.4rem; color: var(--primary); margin-bottom: 4px; }
+    .podium-score { font-weight: 700; font-size: 1.4rem; color: var(--primary); margin-bottom: 4px; }
     .podium-time { font-size: 0.8125rem; color: var(--text-muted); }
 
     .leaderboard-table {
@@ -504,11 +655,11 @@
 
         <div class="filter-bar">
           <div class="filter-chips" id="subject-filter-chips">
-            <button class="chip active" onclick="QuizManager.filterSubject('all')">Tất cả</button>
-            <button class="chip" onclick="QuizManager.filterSubject('Ngữ Văn 9')">Ngữ Văn 9</button>
-            <button class="chip" onclick="QuizManager.filterSubject('Toán Học')">Toán Học</button>
-            <button class="chip" onclick="QuizManager.filterSubject('Tiếng Anh')">Tiếng Anh</button>
-            <button class="chip" onclick="QuizManager.filterSubject('Khoa Học')">Khoa Học</button>
+            <button class="chip active" data-sub="all" onclick="QuizManager.filterSubject('all')"><span>✨</span> <span>Tất cả môn</span><span class="chip-count">8</span></button>
+            <button class="chip" data-sub="Ngữ Văn 9" onclick="QuizManager.filterSubject('Ngữ Văn 9')"><span>📚</span> <span>Ngữ Văn 9</span><span class="chip-count">5</span></button>
+            <button class="chip" data-sub="Khoa Học Tự Nhiên 9" onclick="QuizManager.filterSubject('Khoa Học Tự Nhiên 9')"><span>🔬</span> <span>KHTN 9</span><span class="chip-count">1</span></button>
+            <button class="chip" data-sub="Lịch Sử & Địa Lí 9" onclick="QuizManager.filterSubject('Lịch Sử & Địa Lí 9')"><span>🌏</span> <span>LS&ĐL 9</span><span class="chip-count">1</span></button>
+            <button class="chip" data-sub="Tin Học 9" onclick="QuizManager.filterSubject('Tin Học 9')"><span>💻</span> <span>Tin Học 9</span><span class="chip-count">1</span></button>
           </div>
           <div style="min-width:220px;">
             <input type="text" class="input-control" placeholder="Tìm bộ đề hoặc chủ đề..." oninput="QuizManager.search(this.value)">
@@ -748,7 +899,7 @@
         <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; margin-bottom:20px;">
           <div>
             <h2 style="font-size:1.7rem; font-weight:700; margin-bottom:4px;">🏆 Bảng Vàng Lớp Học</h2>
-            <p style="color:var(--text-muted); font-size:0.9375rem;">Thi đua điểm cao trực tuyến cùng bạn bè trong kỳ thi Ngữ Văn 9</p>
+            <p style="color:var(--text-muted); font-size:0.9375rem;">Thi đua điểm cao trực tuyến cùng bạn bè trong kỳ thi giữa kì 4 môn học</p>
           </div>
           <button class="btn btn-secondary btn-sm" onclick="LeaderboardManager.render()" style="gap:6px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Làm mới bảng vàng
@@ -762,6 +913,9 @@
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-tu-han-viet')">3. Từ Hán Việt</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-nlxh-moi-truong')">4. Nghị Luận Xã Hội</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-de-thi-thu')">5. Đề Thi Thử</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('khtn-9-on-thi-giua-ki-1')">6. KHTN 9</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-giua-ki-1-full')">7. LS&ĐL 9</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('tin-9-giua-ki-1-full')">8. Tin Học 9</button>
         </div>
 
         <div id="leaderboard-podium" class="podium-grid"></div>
@@ -773,6 +927,14 @@
         <div style="max-width:680px; margin:0 auto; text-align:center;">
           <h2 style="font-size:1.7rem; font-weight:700; margin-bottom:6px;">Thẻ Ghi Nhớ Flashcards</h2>
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:24px;">Lật thẻ bằng chạm hoặc phím Space. Đánh giá trí nhớ theo Leitner 3 hộp.</p>
+
+          <div class="filter-chips" id="fc-subject-filter-chips" style="justify-content:center; margin-bottom:16px;">
+            <button class="chip active" data-sub="all" onclick="FlashcardManager.filterSubject('all')">Tất cả (39)</button>
+            <button class="chip" data-sub="Ngữ Văn 9" onclick="FlashcardManager.filterSubject('Ngữ Văn 9')">Ngữ Văn 9 (28)</button>
+            <button class="chip" data-sub="Khoa Học Tự Nhiên 9" onclick="FlashcardManager.filterSubject('Khoa Học Tự Nhiên 9')">KHTN 9 (5)</button>
+            <button class="chip" data-sub="Lịch Sử & Địa Lí 9" onclick="FlashcardManager.filterSubject('Lịch Sử & Địa Lí 9')">LS&ĐL 9 (4)</button>
+            <button class="chip" data-sub="Tin Học 9" onclick="FlashcardManager.filterSubject('Tin Học 9')">Tin Học 9 (2)</button>
+          </div>
 
           <div class="leitner-boxes-bar">
             <span class="leitner-box-item active">Hộp 1: Cần ôn (<span id="box-count-1">0</span>)</span>
@@ -2281,6 +2443,1273 @@
         "explanation": "Một bài văn NLXH điểm giỏi đòi hỏi tư duy logic mạch lạc, dẫn chứng thực tế sống động (có số liệu, tên tuổi, xuất xứ rõ ràng), phân tích sắc sảo và hành động thiết thực của bản thân người viết."
       }
     ]
+  },
+  {
+    "id": "khtn-9-on-thi-giua-ki-1",
+    "subject": "Khoa Học Tự Nhiên 9",
+    "title": "KHTN 9 - Đề Cương Ôn Thi Giữa Kì 1 (Quang học, Điện học & Dụng cụ thí nghiệm)",
+    "difficulty": "Trung bình",
+    "timeLimitMinutes": 20,
+    "description": "Bao quát kiến thức trọng tâm giữa kì 1: Khúc xạ ánh sáng, lăng kính, thấu kính, định luật Ôm, điện trở dây dẫn, công và công suất cơ học.",
+    "questions": [
+      {
+        "id": 1,
+        "type": "single",
+        "text": "Bộ ống dẫn khí bằng thuỷ tinh được dùng để làm gì trong phòng thí nghiệm?",
+        "options": [
+          "Lắp ráp các ống thuỷ tinh",
+          "Lắp ráp các bộ thí nghiệm",
+          "Lắp ráp các bình chứa hoá chất",
+          "Lắp ráp các dụng cụ thuỷ tinh"
+        ],
+        "correct": 1,
+        "hints": [
+          "Ống dẫn khí đóng vai trò liên kết giữa các bình, ống nghiệm.",
+          "Dùng để lắp ghép thành một hệ thống thí nghiệm hoàn chỉnh."
+        ],
+        "explanation": "Bộ ống dẫn khí bằng thuỷ tinh dùng để lắp ráp các bộ thí nghiệm thu và dẫn khí."
+      },
+      {
+        "id": 2,
+        "type": "single",
+        "text": "Ống dẫn bằng cao su được dùng để làm gì?",
+        "options": [
+          "Kết nối giữa các ống nghiệm",
+          "Kết nối giữa các bình cầu",
+          "Kết nối giữa các ống dẫn thuỷ tinh",
+          "Kết nối giữa các dụng cụ thuỷ tinh"
+        ],
+        "correct": 2,
+        "hints": [
+          "Cao su có tính đàn hồi và kín khí.",
+          "Dùng để nối các đoạn ống dẫn bằng thuỷ tinh với nhau."
+        ],
+        "explanation": "Ống cao su mềm dẻo dùng để kết nối giữa các ống dẫn thuỷ tinh trong các hệ thống dẫn khí, chất lỏng."
+      },
+      {
+        "id": 3,
+        "type": "single",
+        "text": "Nút cao su trong phòng thí nghiệm được dùng để:",
+        "options": [
+          "Nút các ống nghiệm và lắp các ống dẫn",
+          "Nút các lọ hoá chất và lắp bình cầu",
+          "Nút các lọ hoá chất và lắp ống thuỷ tinh",
+          "Nút các lọ hoá chất và lắp các bộ thí nghiệm"
+        ],
+        "correct": 3,
+        "hints": [
+          "Nút cao su đậy kín bình chứa hoặc có đục lỗ để xuyên ống dẫn.",
+          "Được dùng để nút lọ hoá chất và lắp các bộ thí nghiệm."
+        ],
+        "explanation": "Nút cao su có tác dụng đậy kín các lọ hoá chất và có thể khoan lỗ để lắp các bộ thí nghiệm."
+      },
+      {
+        "id": 4,
+        "type": "single",
+        "text": "Trong các hoá chất sau, hoá chất nào là hoá chất nguy hiểm cần đặc biệt cẩn trọng khi sử dụng?",
+        "options": [
+          "Đồng phôi bào (Cu)",
+          "Dung dịch amonia (NH3)",
+          "Dung dịch sulfuric acid (H2SO4) 98%",
+          "Ethylic alcohol (C2H5OH)"
+        ],
+        "correct": 2,
+        "hints": [
+          "Đây là acid đặc có tính háo nước cực mạnh và gây bỏng sâu.",
+          "H2SO4 98% (sulfuric acid đặc)."
+        ],
+        "explanation": "Sulfuric acid đặc (H2SO4 98%) là hoá chất nguy hiểm, ăn mòn cực mạnh và háo nước, khi tiếp xúc với da sẽ gây bỏng nặng."
+      },
+      {
+        "id": 5,
+        "type": "single",
+        "text": "Các màu chính trong quang phổ của ánh sáng trắng theo thứ tự là:",
+        "options": [
+          "Trắng, đỏ, vàng, lục, lam, chàm, tím",
+          "Đỏ, cam, vàng, lục, lam, chàm, tím",
+          "Hồng, vàng, cam, lục, lam, chàm, tím",
+          "Cam, vàng, đỏ, chàm, lục, lam, trắng"
+        ],
+        "correct": 1,
+        "hints": [
+          "Nhớ 7 màu cầu vồng quen thuộc.",
+          "Bắt đầu từ Đỏ và kết thúc ở Tím."
+        ],
+        "explanation": "Quang phổ ánh sáng trắng gồm dải 7 màu chính liên tục biến thiên từ Đỏ, cam, vàng, lục, lam, chàm đến tím."
+      },
+      {
+        "id": 6,
+        "type": "single",
+        "text": "Một vật hấp thụ hoàn toàn tất cả các ánh sáng màu chiếu tới nó thì ta sẽ thấy vật có màu gì?",
+        "options": [
+          "Trắng",
+          "Xanh",
+          "Lục",
+          "Đen"
+        ],
+        "correct": 3,
+        "hints": [
+          "Mắt ta nhìn thấy màu sắc do ánh sáng phản xạ từ vật tới mắt.",
+          "Khi không có ánh sáng nào phản xạ đến mắt, vật có màu đen."
+        ],
+        "explanation": "Vật màu đen là vật hấp thụ tất cả các ánh sáng màu chiếu vào nó, không có ánh sáng phản xạ tới mắt."
+      },
+      {
+        "id": 7,
+        "type": "single",
+        "text": "Thấu kính hội tụ là thấu kính có đặc điểm hình học nào sau đây?",
+        "options": [
+          "Phần rìa mỏng hơn phần giữa",
+          "Phần rìa dày hơn phần giữa",
+          "Có giới hạn bởi 2 mặt cong",
+          "Có giới hạn bởi 2 mặt phẳng"
+        ],
+        "correct": 0,
+        "hints": [
+          "Thấu kính phân kì có rìa dày hơn giữa.",
+          "Thấu kính hội tụ (thấu kính rìa mỏng) có phần rìa mỏng hơn phần giữa."
+        ],
+        "explanation": "Thấu kính hội tụ có phần rìa mỏng hơn phần giữa (còn gọi là thấu kính rìa mỏng)."
+      },
+      {
+        "id": 8,
+        "type": "single",
+        "text": "Quang tâm O là một điểm nằm trên trục chính ở trong thấu kính sao cho các tia sáng truyền qua đó đều:",
+        "options": [
+          "Truyền thẳng",
+          "Truyền lên",
+          "Truyền xuống",
+          "Không truyền đi tiếp mà phản xạ lại mặt trước của thấu kính"
+        ],
+        "correct": 0,
+        "hints": [
+          "Tia sáng đi qua quang tâm O luôn tiếp tục truyền theo hướng ban đầu.",
+          "Tia tới qua quang tâm thì tia ló truyền thẳng."
+        ],
+        "explanation": "Tia tới đi qua quang tâm O của thấu kính luôn truyền thẳng, không bị đổi hướng."
+      },
+      {
+        "id": 9,
+        "type": "single",
+        "text": "Công thức tính chiều dài l của dây điện trở từ công thức R = ρ.(l/S) là:",
+        "options": [
+          "l = (R . S) / ρ",
+          "l = (R . ρ) / S",
+          "l = R . ρ . S",
+          "l = R . ρ"
+        ],
+        "correct": 0,
+        "hints": [
+          "Biến đổi: R = ρ . l / S => R . S = ρ . l.",
+          "Do đó l = R . S / ρ."
+        ],
+        "explanation": "Từ R = ρ.(l/S) suy ra chiều dài l = (R . S) / ρ."
+      },
+      {
+        "id": 10,
+        "type": "single",
+        "text": "Cường độ dòng điện chạy qua một đoạn dây dẫn phụ thuộc như thế nào vào hiệu điện thế giữa hai đầu dây dẫn đó?",
+        "options": [
+          "Không thay đổi khi hiệu điện thế thay đổi",
+          "Tỉ lệ nghịch với hiệu điện thế",
+          "Tỉ lệ thuận với hiệu điện thế",
+          "Có lúc tăng, có lúc giảm tùy theo hiệu điện thế tăng ít hay nhiều"
+        ],
+        "correct": 2,
+        "hints": [
+          "Hệ thức định luật Ohm: I = U / R.",
+          "I tỉ lệ thuận với U."
+        ],
+        "explanation": "Theo định luật Ohm, cường độ dòng điện chạy qua dây dẫn tỉ lệ thuận với hiệu điện thế đặt vào hai đầu dây."
+      },
+      {
+        "id": 11,
+        "type": "single",
+        "text": "Điện trở tương đương của đoạn mạch gồm các điện trở mắc song song luôn có đặc điểm:",
+        "options": [
+          "Luôn lớn hơn điện trở thành phần",
+          "Luôn nhỏ hơn điện trở thành phần",
+          "Lớn hơn điện trở thành phần nhỏ nhất nhưng nhỏ hơn điện trở thành phần lớn nhất",
+          "Lớn hơn hay nhỏ hơn các điện trở thành phần tùy trường hợp"
+        ],
+        "correct": 1,
+        "hints": [
+          "Công thức nghịch đảo: 1/Rtd = 1/R1 + 1/R2...",
+          "R tương đương song song luôn nhỏ hơn mỗi điện trở thành phần."
+        ],
+        "explanation": "Trong đoạn mạch mắc song song, điện trở tương đương luôn nhỏ hơn từng điện trở thành phần."
+      },
+      {
+        "id": 12,
+        "type": "single",
+        "text": "Với 5 điện trở bằng nhau R1 = R2 = R3 = R4 = R5 = 10 Ω mắc song song nhau. Điện trở tương đương của mạch là:",
+        "options": [
+          "10 Ω",
+          "7 Ω",
+          "2 Ω",
+          "4 Ω"
+        ],
+        "correct": 2,
+        "hints": [
+          "Mắc song song n điện trở giống nhau R: Rtd = R / n.",
+          "Ở đây R = 10 Ω, n = 5."
+        ],
+        "explanation": "Rtd = R / n = 10 / 5 = 2 Ω."
+      },
+      {
+        "id": 13,
+        "type": "single",
+        "text": "Công thức tính chiết suất n của một môi trường trong suốt so với chân không là:",
+        "options": [
+          "n = c . v",
+          "n = c / v",
+          "n = v / c",
+          "n = v + c"
+        ],
+        "correct": 1,
+        "hints": [
+          "c là tốc độ ánh sáng trong chân không (3.10^8 m/s), v là tốc độ ánh sáng trong môi trường.",
+          "Chiết suất tuyệt đối n = c / v luôn >= 1."
+        ],
+        "explanation": "Chiết suất tuyệt đối của môi trường: n = c / v, trong đó c là tốc độ ánh sáng trong chân không, v là tốc độ ánh sáng trong môi trường đó."
+      },
+      {
+        "id": 14,
+        "type": "single",
+        "text": "Khi quan sát chiếc đũa cắm nghiêng vào cốc nước, ta thấy chiếc đũa bị gãy khúc tại mặt phân cách giữa hai môi trường. Hiện tượng này xảy ra do:",
+        "options": [
+          "Hiện tượng tán sắc ánh sáng",
+          "Hiện tượng khúc xạ ánh sáng",
+          "Hiện tượng phản xạ toàn phần",
+          "Hiện tượng hấp thụ ánh sáng của nước"
+        ],
+        "correct": 1,
+        "hints": [
+          "Tia sáng truyền từ nước ra không khí bị lệch phương tại mặt phân cách.",
+          "Đó là hiện tượng khúc xạ ánh sáng."
+        ],
+        "explanation": "Chiếc đũa như bị gãy khúc là do hiện tượng khúc xạ ánh sáng: tia sáng từ phần đũa ngập trong nước bị gãy khúc khi truyền qua mặt phân cách giữa nước và không khí trước khi tới mắt."
+      },
+      {
+        "id": 15,
+        "type": "single",
+        "text": "Trong hiện tượng khúc xạ ánh sáng, công thức định luật khúc xạ ánh sáng liên hệ giữa góc tới i và góc khúc xạ r là:",
+        "options": [
+          "sin i / sin r = n2 / n1",
+          "sin r / sin i = n2 / n1",
+          "sin i / sin r = n1 / n2",
+          "sin i = sin r"
+        ],
+        "correct": 0,
+        "hints": [
+          "n1 . sin i = n2 . sin r.",
+          "Suy ra sin i / sin r = n2 / n1 = n21."
+        ],
+        "explanation": "Định luật khúc xạ ánh sáng: n1 . sin i = n2 . sin r, tương đương sin i / sin r = n2 / n1."
+      },
+      {
+        "id": 16,
+        "type": "single",
+        "text": "Vào ban đêm, nếu dùng đèn pin chiếu chùm ánh sáng đỏ từ đèn laser vào bông hoa cúc màu vàng thì ta nhìn thấy bông hoa cúc có màu gì?",
+        "options": [
+          "Màu vàng",
+          "Có màu đỏ và màu vàng",
+          "Màu đỏ",
+          "Màu đen"
+        ],
+        "correct": 3,
+        "hints": [
+          "Cánh hoa cúc màu vàng chỉ phản xạ ánh sáng vàng và hấp thụ các màu khác.",
+          "Ánh sáng đỏ chiếu tới bị cánh hoa hấp thụ hoàn toàn."
+        ],
+        "explanation": "Hoa cúc vàng hấp thụ ánh sáng đỏ, không phản xạ ánh sáng nào tới mắt nên trong đêm tối dưới ánh sáng đỏ, ta thấy hoa có màu đen."
+      },
+      {
+        "id": 17,
+        "type": "single",
+        "text": "Chiếu chùm ánh sáng trắng có các màu đỏ, cam, vàng chiếu qua tấm kính lọc màu vàng. Chùm sáng sau khi qua tấm lọc màu vàng sẽ có màu gì?",
+        "options": [
+          "Màu vàng",
+          "Màu đỏ",
+          "Có màu đỏ và màu vàng",
+          "Màu đen"
+        ],
+        "correct": 0,
+        "hints": [
+          "Kính lọc màu nào thì cho ánh sáng màu đó đi qua tốt nhất.",
+          "Tấm lọc màu vàng hấp thụ đỏ, cam và cho màu vàng đi qua."
+        ],
+        "explanation": "Tấm lọc màu vàng cho ánh sáng màu vàng truyền qua tốt và hấp thụ các màu khác, do đó chùm sáng thu được có màu vàng."
+      },
+      {
+        "id": 18,
+        "type": "single",
+        "text": "Đặt một vật sáng AB vuông góc với trục chính của một thấu kính hội tụ có tiêu cự f = 15 cm, AB nằm cách thấu kính một khoảng d = 10 cm. Ảnh của AB tạo bởi thấu kính có đặc điểm gì?",
+        "options": [
+          "Ảnh thật, ngược chiều, lớn hơn vật",
+          "Ảnh thật, ngược chiều, bé hơn vật",
+          "Ảnh ảo, cùng chiều, bé hơn vật",
+          "Ảnh ảo, cùng chiều, lớn hơn vật"
+        ],
+        "correct": 3,
+        "hints": [
+          "Khoảng cách từ vật đến thấu kính d = 10 cm < tiêu cự f = 15 cm.",
+          "Vật đặt trong khoảng tiêu cự của thấu kính hội tụ luôn cho ảnh ảo, cùng chiều, lớn hơn vật."
+        ],
+        "explanation": "Khi đặt vật trong khoảng tiêu cự của thấu kính hội tụ (d < f), thấu kính cho ảnh ảo, cùng chiều và lớn hơn vật."
+      },
+      {
+        "id": 19,
+        "type": "single",
+        "text": "Kính lúp đơn giản dùng để quan sát các vật nhỏ được cấu tạo bởi một:",
+        "options": [
+          "Thấu kính hội tụ có tiêu cự ngắn",
+          "Lăng kính thuỷ tinh có góc chiết quang là góc vuông",
+          "Thấu kính phân kì có tiêu cự ngắn",
+          "Lăng kính thuỷ tinh có góc chiết quang nhỏ"
+        ],
+        "correct": 0,
+        "hints": [
+          "Kính lúp phải phóng to ảnh của vật.",
+          "Kính lúp là một thấu kính hội tụ có tiêu cự ngắn."
+        ],
+        "explanation": "Kính lúp là thấu kính hội tụ có tiêu cự ngắn (thường dưới vài cm), dùng để quan sát các vật nhỏ."
+      },
+      {
+        "id": 20,
+        "type": "single",
+        "text": "Đơn vị đo của điện trở trong hệ đo lường quốc tế (SI) là:",
+        "options": [
+          "Oát (W)",
+          "Ohm (Ω)",
+          "Joule (J)",
+          "Mét (m)"
+        ],
+        "correct": 1,
+        "hints": [
+          "Đặt theo tên nhà vật lý Georg Ohm.",
+          "Kí hiệu là Ω."
+        ],
+        "explanation": "Điện trở có đơn vị là Ohm, kí hiệu là Ω."
+      },
+      {
+        "id": 21,
+        "type": "single",
+        "text": "Dụng cụ nào sau đây thường được dùng để lấy một lượng nhỏ hoá chất lỏng trong phòng thí nghiệm?",
+        "options": [
+          "Bình tam giác",
+          "Ống hút nhỏ giọt",
+          "Phễu chiết",
+          "Cốc thuỷ tinh"
+        ],
+        "correct": 1,
+        "hints": [
+          "Dụng cụ có bóp cao su để hút từng giọt chất lỏng.",
+          "Ống hút nhỏ giọt (pipet)."
+        ],
+        "explanation": "Ống hút nhỏ giọt chuyên dùng để lấy từng lượng nhỏ chất lỏng chính xác theo giọt."
+      },
+      {
+        "id": 22,
+        "type": "single",
+        "text": "Khi viết báo cáo một vấn đề khoa học, nội dung nào sau đây phản ánh kết quả thu được và ý nghĩa của nghiên cứu?",
+        "options": [
+          "Mở đầu",
+          "Mục tiêu nghiên cứu",
+          "Kết luận và kiến nghị",
+          "Danh mục tài liệu tham khảo"
+        ],
+        "correct": 2,
+        "hints": [
+          "Phần tổng kết lại toàn bộ kết quả nghiên cứu.",
+          "Nằm ở phần Kết luận và kiến nghị."
+        ],
+        "explanation": "Phần Kết luận và kiến nghị nêu bật các kết quả chính đã thu được từ nghiên cứu và giá trị thực tiễn của đề tài."
+      },
+      {
+        "id": 23,
+        "type": "single",
+        "text": "Trường hợp nào sau đây lực tác dụng thực hiện công cơ học?",
+        "options": [
+          "Lực đỡ tạ của vận động viên khi đang giữ yên tạ trên cao",
+          "Lực kéo của con ngựa làm xe chuyển động trên đường",
+          "Người đẩy bức tường bê tông nhưng tường không di chuyển",
+          "Trọng lực tác dụng lên cuốn sách nằm yên trên mặt bàn"
+        ],
+        "correct": 1,
+        "hints": [
+          "Công cơ học chỉ xuất hiện khi có lực tác dụng VÀ vật dịch chuyển theo phương của lực (A = F.s).",
+          "Xe chuyển động nhờ lực kéo của ngựa."
+        ],
+        "explanation": "Công cơ học được thực hiện khi có lực tác dụng vào vật và vật chuyển dời theo phương của lực. Con ngựa kéo xe chuyển động đã sinh công cơ học."
+      },
+      {
+        "id": 24,
+        "type": "single",
+        "text": "Cơ năng của một vật bao gồm:",
+        "options": [
+          "Chỉ gồm động năng của vật",
+          "Chỉ gồm thế năng của vật",
+          "Tổng động năng và thế năng của vật",
+          "Hiệu giữa động năng và thế năng của vật"
+        ],
+        "correct": 2,
+        "hints": [
+          "Cơ năng = Động năng + Thế năng.",
+          "W = Wd + Wt."
+        ],
+        "explanation": "Cơ năng của một vật là tổng của động năng và thế năng của vật đó."
+      },
+      {
+        "id": 25,
+        "type": "single",
+        "text": "Phát biểu nào sau đây là ĐÚNG khi nói về công và công suất?",
+        "options": [
+          "Máy nào sinh ra công lớn hơn thì chắc chắn có công suất lớn hơn",
+          "Công suất cho biết tốc độ thực hiện công nhanh hay chậm của người hoặc máy",
+          "Vật ở vị trí càng cao so với mặt đất thì động năng của vật càng lớn",
+          "Thế năng trọng trường chỉ phụ thuộc vào khối lượng, không phụ thuộc vào độ cao"
+        ],
+        "correct": 1,
+        "hints": [
+          "Công suất P = A / t.",
+          "Công suất đặc trưng cho tốc độ thực hiện công."
+        ],
+        "explanation": "Công suất được xác định bằng công thực hiện được trong một đơn vị thời gian, cho biết mức độ thực hiện công nhanh hay chậm."
+      },
+      {
+        "id": 26,
+        "type": "single",
+        "text": "Hiện tượng tán sắc ánh sáng được quan sát rõ nhất khi cho một chùm ánh sáng trắng truyền qua:",
+        "options": [
+          "Tấm kính phẳng trong suốt",
+          "Lăng kính thuỷ tinh",
+          "Gương phẳng",
+          "Tấm bìa màu đen"
+        ],
+        "correct": 1,
+        "hints": [
+          "Thí nghiệm tán sắc ánh sáng kinh điển của Newton dùng dụng cụ này.",
+          "Lăng kính thuỷ tinh có hình lăng trụ tam giác."
+        ],
+        "explanation": "Khi chùm sáng trắng truyền qua lăng kính thuỷ tinh, do các ánh sáng màu bị lệch với các góc khác nhau nên tạo ra dải màu cầu vồng tán sắc rõ rệt."
+      },
+      {
+        "id": 27,
+        "type": "single",
+        "text": "Khi nhìn thấy một bông hoa có màu đỏ dưới ánh sáng mặt trời, điều đó có nghĩa là bông hoa đã:",
+        "options": [
+          "Hấp thụ ánh sáng màu đỏ và phản xạ các ánh sáng màu khác",
+          "Tán sắc ánh sáng màu đỏ thành nhiều màu sắc khác nhau",
+          "Phản xạ tốt ánh sáng màu đỏ và hấp thụ các ánh sáng màu khác",
+          "Tự phát ra ánh sáng màu đỏ"
+        ],
+        "correct": 2,
+        "hints": [
+          "Mắt nhìn thấy màu nào thì vật phản xạ tốt màu đó.",
+          "Vật phản xạ ánh sáng đỏ tới mắt."
+        ],
+        "explanation": "Vật có màu đỏ khi chiếu ánh sáng trắng vào vì nó phản xạ tốt ánh sáng màu đỏ tới mắt và hấp thụ hầu hết các ánh sáng màu khác."
+      },
+      {
+        "id": 28,
+        "type": "single",
+        "text": "Hiện tượng phản xạ toàn phần chỉ có thể xảy ra khi ánh sáng truyền:",
+        "options": [
+          "Từ môi trường chiết quang kém sang môi trường chiết quang hơn",
+          "Từ môi trường chiết quang hơn sang môi trường chiết quang kém với góc tới i ≥ igh",
+          "Vuông góc với mặt phân cách giữa hai môi trường",
+          "Với góc tới luôn bằng 0°"
+        ],
+        "correct": 1,
+        "hints": [
+          "Cần 2 điều kiện: truyền từ môi trường chiết quang hơn sang kém hơn (n1 > n2) và góc tới i >= igh.",
+          "Thoả mãn cả 2 điều kiện trên."
+        ],
+        "explanation": "Điều kiện xảy ra phản xạ toàn phần: ánh sáng truyền từ môi trường chiết quang hơn sang môi trường chiết quang kém hơn và góc tới thoả mãn i ≥ igh."
+      },
+      {
+        "id": 29,
+        "type": "single",
+        "text": "Đoạn mạch gồm hai điện trở R1 và R2 mắc nối tiếp thì điện trở tương đương Rtd của đoạn mạch được tính bằng:",
+        "options": [
+          "Rtd = R1 + R2",
+          "Rtd = R1 . R2",
+          "Rtd = (R1 . R2) / (R1 + R2)",
+          "1 / Rtd = R1 + R2"
+        ],
+        "correct": 0,
+        "hints": [
+          "Đoạn mạch nối tiếp: điện trở cộng dồn.",
+          "Rtd = R1 + R2."
+        ],
+        "explanation": "Trong đoạn mạch mắc nối tiếp, điện trở tương đương bằng tổng các điện trở thành phần: Rtd = R1 + R2."
+      },
+      {
+        "id": 30,
+        "type": "single",
+        "text": "Có ba điện trở bằng nhau cùng có giá trị R1 = R2 = R3 = 30 Ω mắc song song với nhau. Điện trở tương đương của đoạn mạch này là:",
+        "options": [
+          "90 Ω",
+          "10 Ω",
+          "30 Ω",
+          "15 Ω"
+        ],
+        "correct": 1,
+        "hints": [
+          "Mắc song song 3 điện trở bằng nhau: Rtd = R / 3.",
+          "Rtd = 30 / 3 = 10 Ω."
+        ],
+        "explanation": "Ba điện trở mắc song song: 1/Rtd = 1/30 + 1/30 + 1/30 = 3/30 => Rtd = 10 Ω."
+      }
+    ]
+  },
+  {
+    "id": "lsdl-9-giua-ki-1-full",
+    "subject": "Lịch Sử & Địa Lí 9",
+    "title": "LS&ĐL 9 - Đề Cương Ôn Tập Giữa Kì 1 (Lịch Sử Thế Giới & Địa Lí Dân Cư - Kinh Tế VN)",
+    "difficulty": "Trung bình",
+    "timeLimitMinutes": 20,
+    "description": "Chuẩn ma trận đề cương giữa kì 1: Phong trào cách mạng thế giới và Việt Nam (1919-1945), Dân cư, Các vùng kinh tế và Ngành nông - lâm - thủy sản.",
+    "questions": [
+      {
+        "id": 1,
+        "type": "single",
+        "text": "Có bao nhiêu đế quốc đã câu kết với các thế lực phản cách mạng trong nước để tấn công vào nước Nga xô viết năm 1917?",
+        "options": [
+          "13 đế quốc",
+          "14 đế quốc",
+          "21 đế quốc",
+          "42 đế quốc"
+        ],
+        "correct": 1,
+        "hints": [
+          "14 nước đế quốc liên minh tấn công nước Nga Xô viết non trẻ.",
+          "Số lượng là 14."
+        ],
+        "explanation": "14 nước đế quốc (Anh, Pháp, Mĩ, Nhật...) đã câu kết với thế lực phản động trong nước bao vây và tấn công nước Nga Xô viết."
+      },
+      {
+        "id": 2,
+        "type": "single",
+        "text": "Liên Xô đạt nhiều thành tựu trong xây dựng chủ nghĩa xã hội vào khoảng thời gian nào?",
+        "options": [
+          "Từ năm 1917 - 1919",
+          "Từ năm 1919 - 1920",
+          "Từ năm 1920 - 1921",
+          "Từ năm 1922 đến năm 1945"
+        ],
+        "correct": 3,
+        "hints": [
+          "Liên bang Cộng hòa XHCN Xô viết thành lập tháng 12/1922.",
+          "Giai đoạn thực hiện các kế hoạch 5 năm đến khi kết thúc CTTG 2."
+        ],
+        "explanation": "Giai đoạn 1922 - 1945 là thời kỳ Liên Xô thực hiện công cuộc xây dựng CNXH với các kế hoạch 5 năm đạt nhiều kỳ tích."
+      },
+      {
+        "id": 3,
+        "type": "single",
+        "text": "Đâu KHÔNG PHẢI là thành tựu của Liên Xô về KINH TẾ trong giai đoạn 1922 đến năm 1945?",
+        "options": [
+          "Trở thành cường quốc công nghiệp sau 2 kế hoạch 5 năm xây dựng chủ nghĩa xã hội",
+          "Giai cấp bóc lột bị xoá bỏ, còn lại giai cấp công nhân và nông dân tập thể",
+          "Sản xuất công nghiệp đứng đầu châu Âu, đứng thứ hai thế giới",
+          "Sản lượng công nghiệp tăng trưởng vượt bậc"
+        ],
+        "correct": 1,
+        "hints": [
+          "Đọc kỹ câu hỏi: không phải thành tựu về KINH TẾ.",
+          "Xoá bỏ giai cấp bóc lột là thành tựu về XÃ HỘI."
+        ],
+        "explanation": "Giai cấp bóc lột bị xoá bỏ là thành tựu về mặt Xã hội, không thuộc lĩnh vực Kinh tế."
+      },
+      {
+        "id": 4,
+        "type": "single",
+        "text": "Tác động lớn nhất của 'Chính sách mới' (New Deal) của Tổng thống Ru-dơ-ven đối với chế độ chính trị nước Mỹ là gì?",
+        "options": [
+          "Duy trì chế độ dân chủ tư sản",
+          "Giải quyết triệt để nạn thất nghiệp",
+          "Tạo thêm nhiều việc làm cho thanh niên",
+          "Xoá dịu hoàn toàn mâu thuẫn giai cấp"
+        ],
+        "correct": 0,
+        "hints": [
+          "Đưa nước Mĩ thoát khỏi nguy cơ phát xít hóa.",
+          "Giúp nước Mĩ duy trì chế độ dân chủ."
+        ],
+        "explanation": "Chính sách mới của Ru-dơ-ven đã giúp nước Mĩ vượt qua khủng hoảng kinh tế và quan trọng nhất là duy trì chế độ dân chủ tư sản, ngăn chặn nguy cơ chủ nghĩa phát xít."
+      },
+      {
+        "id": 5,
+        "type": "single",
+        "text": "Cuộc đại suy thoái kinh tế ở Mĩ bắt đầu vào thời gian nào và trong lĩnh vực gì?",
+        "options": [
+          "Tháng 7 - 1929 trong lĩnh vực công nghiệp",
+          "Tháng 8 - 1929 trong lĩnh vực nông nghiệp",
+          "Tháng 9 - 1929 trong lĩnh vực giao thông",
+          "Tháng 10 - 1929 trong lĩnh vực tài chính ngân hàng"
+        ],
+        "correct": 3,
+        "hints": [
+          "Ngày 'Thứ Năm đen tối' tại thị trường chứng khoán Phố Wall.",
+          "Bắt đầu vào tháng 10 năm 1929 trong ngành tài chính ngân hàng."
+        ],
+        "explanation": "Cuộc đại suy thoái kinh tế ở Mĩ bùng nổ vào ngày 24/10/1929 tại thị trường chứng khoán Phố Wall (lĩnh vực tài chính ngân hàng)."
+      },
+      {
+        "id": 6,
+        "type": "single",
+        "text": "Sự kiện nào đã chấm dứt sự phục hồi của nền kinh tế Nhật Bản sau Chiến tranh thế giới thứ nhất?",
+        "options": [
+          "Cuộc bạo động lúa gạo năm 1918",
+          "Khủng hoảng tài chính năm 1927",
+          "Đảng Cộng sản Nhật Bản thành lập năm 1922",
+          "Trận động đất lịch sử ở Tô-ky-ô năm 1923"
+        ],
+        "correct": 1,
+        "hints": [
+          "Năm 1927, cuộc khủng hoảng tài chính làm hàng loạt ngân hàng đóng cửa.",
+          "Khủng hoảng tài chính 1927."
+        ],
+        "explanation": "Năm 1927, cuộc khủng hoảng tài chính ở Tô-ky-ô làm 30 ngân hàng phải đóng cửa, chấm dứt thời kỳ phục hồi ngắn ngủi của kinh tế Nhật."
+      },
+      {
+        "id": 7,
+        "type": "single",
+        "text": "Phong trào Ngũ tứ ở Trung Quốc (4/5/1919) được mở đầu bằng cuộc biểu tình của tầng lớp nào?",
+        "options": [
+          "Biểu tình của 3000 học sinh, sinh viên ở Bắc Kinh",
+          "Biểu tình của 3000 nông dân Bắc Kinh",
+          "Biểu tình của công nhân thành phố Thượng Hải",
+          "Biểu tình của binh lính và tiểu thương"
+        ],
+        "correct": 0,
+        "hints": [
+          "Phong trào nổ ra tại quảng trường Thiên An Môn.",
+          "Lực lượng tiên phong là 3000 học sinh, sinh viên Bắc Kinh."
+        ],
+        "explanation": "Ngày 4/5/1919, 3000 học sinh, sinh viên Bắc Kinh biểu tình phản đối Hội nghị Véc-xai, mở đầu cho Phong trào Ngũ tứ."
+      },
+      {
+        "id": 8,
+        "type": "single",
+        "text": "Khối phát xít trong Chiến tranh thế giới thứ hai bao gồm trục 3 quốc gia nào?",
+        "options": [
+          "Anh, Đức, Nhật Bản",
+          "Mĩ, Pháp, Anh",
+          "Liên Xô, Anh, Pháp",
+          "Đức, I-ta-li-a, Nhật Bản"
+        ],
+        "correct": 3,
+        "hints": [
+          "Trục phát xít Béc-lin - Rô-ma - Tô-ky-ô.",
+          "Đức, Ý (Italia) và Nhật."
+        ],
+        "explanation": "Khối phát xít bao gồm trục liên minh 3 nước: Đức, I-ta-li-a và Nhật Bản."
+      },
+      {
+        "id": 9,
+        "type": "single",
+        "text": "Ngày 6 và ngày 9/8/1945, quân đội Mĩ đã ném bom nguyên tử xuống hai thành phố nào của Nhật Bản?",
+        "options": [
+          "Na-gôi-a, Tô-ki-ô",
+          "Hi-rô-si-ma, Na-ga-xa-ki",
+          "Tô-ki-ô, Ô-xa-ca",
+          "Hi-rô-si-ma, Na-gôi-a"
+        ],
+        "correct": 1,
+        "hints": [
+          "Ngày 6/8 thả xuống Hi-rô-si-ma, ngày 9/8 thả xuống Na-ga-xa-ki.",
+          "Hai thành phố chịu thảm họa nguyên tử."
+        ],
+        "explanation": "Mĩ ném quả bom nguyên tử đầu tiên xuống Hi-rô-si-ma (6/8/1945) và quả thứ hai xuống Na-ga-xa-ki (9/8/1945)."
+      },
+      {
+        "id": 10,
+        "type": "single",
+        "text": "Ai là người trực tiếp lãnh đạo cuộc bãi công lịch sử của công nhân Ba Son (Sài Gòn) vào tháng 8/1925?",
+        "options": [
+          "Tôn Đức Thắng",
+          "Phan Bội Châu",
+          "Nguyễn An Ninh",
+          "Phan Châu Trinh"
+        ],
+        "correct": 0,
+        "hints": [
+          "Chủ tịch nước Tôn Đức Thắng thành lập Công hội bí mật ở Sài Gòn.",
+          "Đồng chí Tôn Đức Thắng."
+        ],
+        "explanation": "Đồng chí Tôn Đức Thắng là người sáng lập Công hội và trực tiếp lãnh đạo cuộc bãi công của hơn 1000 thợ máy xưởng Ba Son (8/1925)."
+      },
+      {
+        "id": 11,
+        "type": "single",
+        "text": "Sự kiện nào đánh dấu phong trào công nhân Việt Nam bắt đầu chuyển từ đấu tranh tự phát sang đấu tranh tự giác?",
+        "options": [
+          "Sự xuất hiện của 3 tổ chức cộng sản năm 1929",
+          "Cuộc bãi công của công nhân Ba Son tháng 8/1925",
+          "Đảng Cộng sản Việt Nam thành lập đầu năm 1930",
+          "Hội Việt Nam Cách mạng Thanh niên thành lập tháng 6/1925"
+        ],
+        "correct": 1,
+        "hints": [
+          "Cuộc bãi công Ba Son đấu tranh không chỉ vì quyền lợi kinh tế mà còn có tính quốc tế vô sản.",
+          "Bãi công Ba Son (8/1925)."
+        ],
+        "explanation": "Bãi công Ba Son (8/1925) trì hoãn chiến hạm Mi-sơ-lê đưa lính sang đàn áp cách mạng Trung Quốc, đánh dấu bước chuyển sang tự giác."
+      },
+      {
+        "id": 12,
+        "type": "single",
+        "text": "Hội nghị thành lập Đảng Cộng sản Việt Nam bắt đầu họp vào ngày nào dưới sự chủ trì của lãnh tụ Nguyễn Ái Quốc?",
+        "options": [
+          "Ngày 8 - 2 - 1930",
+          "Ngày 14 - 2 - 1930",
+          "Ngày 6 - 2 - 1930",
+          "Ngày 6 - 1 - 1930"
+        ],
+        "correct": 3,
+        "hints": [
+          "Khai mạc tại Cửu Long (Hương Cảng, Trung Quốc) từ ngày 6/1/1930.",
+          "Ngày 6 tháng 1 năm 1930."
+        ],
+        "explanation": "Hội nghị hợp nhất các tổ chức cộng sản bắt đầu họp từ ngày 6/1/1930 tại Cửu Long (Hương Cảng) do Nguyễn Ái Quốc chủ trì."
+      },
+      {
+        "id": 13,
+        "type": "single",
+        "text": "Trong khu vực Đông Nam Á, dân số nước ta hiện nay xếp thứ mấy?",
+        "options": [
+          "Xếp thứ ba (sau In-đô-nê-xi-a và Phi-líp-pin)",
+          "Xếp thứ tư (sau In-đô-nê-xi-a, Phi-líp-pin và Thái Lan)",
+          "Xếp thứ hai (sau In-đô-nê-xi-a)",
+          "Xếp thứ nhất"
+        ],
+        "correct": 0,
+        "hints": [
+          "Dân số VN vượt 100 triệu người.",
+          "Đứng thứ 3 Đông Nam Á sau Indonesia và Philippines."
+        ],
+        "explanation": "Tại Đông Nam Á, Việt Nam có quy mô dân số đứng thứ 3 (sau In-đô-nê-xi-a và Phi-líp-pin)."
+      },
+      {
+        "id": 14,
+        "type": "single",
+        "text": "Mặc dù tỉ lệ gia tăng tự nhiên đã giảm nhưng mỗi năm nước ta vẫn tăng thêm khoảng 1 triệu người. Nguyên nhân chủ yếu là do:",
+        "options": [
+          "Quy mô dân số lớn và cơ cấu dân số trẻ",
+          "Tỉ lệ người già trong dân số tăng nhanh",
+          "Chất lượng y tế phát triển vượt bậc",
+          "Lượng người nhập cư từ nước ngoài vào đông"
+        ],
+        "correct": 0,
+        "hints": [
+          "Quy mô gốc dân số đã lớn (hơn 100 triệu người).",
+          "Số phụ nữ trong độ tuổi sinh đẻ còn cao do cơ cấu dân số trẻ."
+        ],
+        "explanation": "Do quy mô dân số nước ta lớn và cơ cấu dân số trẻ nên dù tỉ lệ gia tăng tự nhiên giảm, số người tăng tuyệt đối hàng năm vẫn rất cao."
+      },
+      {
+        "id": 15,
+        "type": "single",
+        "text": "Hai vùng chuyên canh cây công nghiệp lớn nhất ở nước ta hiện nay là:",
+        "options": [
+          "Đông Nam Bộ và Trung du miền núi Bắc Bộ",
+          "Trung du miền núi Bắc Bộ và Tây Nguyên",
+          "Đông Nam Bộ và Tây Nguyên",
+          "Tây Nguyên và Duyên hải Nam Trung Bộ"
+        ],
+        "correct": 2,
+        "hints": [
+          "Đông Nam Bộ là thủ phủ cao su, điều, tiêu.",
+          "Tây Nguyên là thủ phủ cà phê."
+        ],
+        "explanation": "Đông Nam Bộ và Tây Nguyên là hai vùng chuyên canh cây công nghiệp lâu năm lớn nhất cả nước."
+      },
+      {
+        "id": 16,
+        "type": "single",
+        "text": "Trong cơ cấu giá trị sản xuất ngành trồng trọt ở nước ta, loại cây trồng nào vẫn chiếm tỉ trọng cao nhất?",
+        "options": [
+          "Cây lương thực (lúa gạo, ngô)",
+          "Cây rau đậu",
+          "Cây công nghiệp",
+          "Cây ăn quả"
+        ],
+        "correct": 0,
+        "hints": [
+          "Nước ta là nước xuất khẩu gạo hàng đầu thế giới.",
+          "Cây lương thực giữ vai trò nòng cốt."
+        ],
+        "explanation": "Cây lương thực (chủ yếu là lúa) luôn chiếm tỉ trọng cao nhất trong cơ cấu giá trị sản xuất ngành trồng trọt của nước ta."
+      },
+      {
+        "id": 17,
+        "type": "single",
+        "text": "Vai trò quan trọng hàng đầu của việc bảo vệ và phát triển rừng đầu nguồn ở nước ta là gì?",
+        "options": [
+          "Tạo cảnh quan du lịch sinh thái",
+          "Điều hoà nguồn nước của các dòng sông, chống lũ lụt và xói mòn",
+          "Cung cấp nguồn gỗ quý phục vụ xuất khẩu",
+          "Mở rộng diện tích đất làm nương rẫy"
+        ],
+        "correct": 1,
+        "hints": [
+          "Rừng đầu nguồn nằm ở thượng lưu các con sông lớn.",
+          "Có vai trò giữ nước, chống sạt lở xói mòn và điều hòa dòng chảy."
+        ],
+        "explanation": "Rừng đầu nguồn giữ vai trò đặc biệt quan trọng trong việc giữ nước, điều hoà nguồn nước ngầm và dòng chảy các sông, phòng chống lũ quét và xói mòn đất."
+      }
+    ]
+  },
+  {
+    "id": "tin-9-giua-ki-1-full",
+    "subject": "Tin Học 9",
+    "title": "Tin Học 9 - Đề Cương Ôn Tập Giữa Kì 1 (Bộ Xử Lý Thông Tin & Đạo Đức Môi Trường Số)",
+    "difficulty": "Trung bình",
+    "timeLimitMinutes": 15,
+    "description": "Bao quát kiến thức chuẩn đề cương HK1: Thiết bị tích hợp vi xử lý, Tiêu chí đánh giá thông tin, An toàn dữ liệu và Đạo đức pháp luật trên Internet.",
+    "questions": [
+      {
+        "id": 1,
+        "type": "single",
+        "text": "Thiết bị gia dụng nào dưới đây thường KHÔNG tích hợp bộ vi xử lý thông tin?",
+        "options": [
+          "Máy giặt biến tần tự động",
+          "Robot hút bụi thông minh",
+          "Nồi cơm điện cơ truyền thống",
+          "Điều hòa nhiệt độ inverter"
+        ],
+        "correct": 2,
+        "hints": [
+          "Nồi cơm điện cơ chỉ sử dụng rơ-le nhiệt cơ học đóng ngắt mạch điện.",
+          "Không có chip xử lý hay bảng mạch lập trình."
+        ],
+        "explanation": "Nồi cơm điện cơ truyền thống hoạt động dựa trên cảm ứng nhiệt cơ học (nam châm nhiệt), không tích hợp bộ vi xử lý thông tin."
+      },
+      {
+        "id": 2,
+        "type": "single",
+        "text": "Hệ thống máy bay không người lái (drone) trang bị bộ xử lý hình ảnh và cảm biến đang được ứng dụng hiệu quả nhất trong lĩnh vực nào để phun thuốc trừ sâu và giám sát cây trồng?",
+        "options": [
+          "Giao thông vận tải",
+          "Nông nghiệp công nghệ cao",
+          "Truyền thông giải trí",
+          "Tài chính ngân hàng"
+        ],
+        "correct": 1,
+        "hints": [
+          "Theo dõi sự phát triển của hoa màu và phun phân bón, thuốc trừ sâu.",
+          "Ứng dụng trong nông nghiệp thông minh."
+        ],
+        "explanation": "Drone nông nghiệp là giải pháp công nghệ cao giúp tự động hóa quá trình phun thuốc, gieo hạt và quản lý sức khỏe cây trồng trên diện tích lớn."
+      },
+      {
+        "id": 3,
+        "type": "single",
+        "text": "Lợi ích cốt lõi nhất của việc tích hợp bộ xử lý thông tin vào các máy móc công nghiệp là gì?",
+        "options": [
+          "Hạ thấp chi phí chế tạo ban đầu của cỗ máy",
+          "Loại bỏ hoàn toàn nhu cầu sử dụng nguồn điện",
+          "Tối ưu hóa và tự động hóa quy trình vận hành",
+          "Giảm hoàn toàn nguy cơ hao mòn cơ khí của thiết bị"
+        ],
+        "correct": 2,
+        "hints": [
+          "Giúp máy móc tự động điều chỉnh và làm việc chính xác không cần người can thiệp.",
+          "Tự động hóa vận hành."
+        ],
+        "explanation": "Bộ vi xử lý giúp máy móc công nghiệp có khả năng tự động hóa dây chuyền, giám sát thông số và tối ưu hóa hiệu suất vận hành."
+      },
+      {
+        "id": 4,
+        "type": "single",
+        "text": "Đặc điểm nào dưới đây là hạn chế lớn nhất của máy tính mà con người vượt trội hoàn toàn?",
+        "options": [
+          "Khả năng lưu trữ khối lượng dữ liệu khổng lồ",
+          "Khả năng làm việc liên tục không mệt mỏi",
+          "Tư duy sáng tạo nghệ thuật dựa trên cảm xúc cá nhân",
+          "Tốc độ xử lý phép tính số học phức tạp"
+        ],
+        "correct": 2,
+        "hints": [
+          "Máy tính xử lý logic và tính toán cực nhanh nhưng không có trái tim và cảm xúc.",
+          "Con người vượt trội ở trực giác và sáng tạo cảm xúc."
+        ],
+        "explanation": "Máy tính không có cảm xúc, không thể đồng cảm hay sáng tạo nghệ thuật dựa trên trải nghiệm cảm xúc cá nhân như con người."
+      },
+      {
+        "id": 5,
+        "type": "single",
+        "text": "Trong công tác phòng chống thiên tai và biến đổi khí hậu, siêu máy tính được ứng dụng chủ yếu vào việc gì?",
+        "options": [
+          "Ngăn chặn hiện tượng động đất phát sinh dưới lòng đất",
+          "Thay đổi trực tiếp quỹ đạo di chuyển của các cơn bão",
+          "Tự động dập tắt ngay các đám cháy rừng lớn",
+          "Xử lý dữ liệu khí tượng để mô phỏng và dự báo sớm thời tiết"
+        ],
+        "correct": 3,
+        "hints": [
+          "Tính toán hàng triệu phép tính khí tượng để đưa ra dự báo đường đi của bão.",
+          "Mô phỏng và dự báo."
+        ],
+        "explanation": "Siêu máy tính xử lý lượng dữ liệu khổng lồ từ vệ tinh và trạm khí tượng để mô phỏng chính xác khí quyển và dự báo sớm đường đi bão lũ."
+      },
+      {
+        "id": 6,
+        "type": "single",
+        "text": "Nguồn thông tin nào sau đây về kỳ thi tuyển sinh là đáng tin cậy nhất?",
+        "options": [
+          "Trang web của ca sĩ nổi tiếng",
+          "Video review trên mạng xã hội Tiktok",
+          "Trang thông tin điện tử chính thức của Sở Giáo dục & Đào tạo",
+          "Bài đăng trên nhóm Facebook của học sinh"
+        ],
+        "correct": 2,
+        "hints": [
+          "Nguồn tin chính thống từ cơ quan quản lý nhà nước.",
+          "Website chính thức của Sở GD&ĐT."
+        ],
+        "explanation": "Website chính thức của cơ quan quản lý (Sở GD&ĐT, Bộ GD&ĐT) là nguồn tin có tính xác thực, pháp lý và đáng tin cậy cao nhất."
+      },
+      {
+        "id": 7,
+        "type": "single",
+        "text": "Yếu tố nào sau đây KHÔNG THUỘC các tiêu chí cơ bản để đánh giá chất lượng thông tin?",
+        "options": [
+          "Tính cập nhật (tính mới) của sự kiện",
+          "Tính đầy đủ của nội dung",
+          "Số lượt tương tác (like, share, view)",
+          "Tính chính xác của dữ liệu"
+        ],
+        "correct": 2,
+        "hints": [
+          "Lượt like hay view cao không đồng nghĩa với thông tin đúng.",
+          "Các tin giật gân sai sự thật thường có lượt xem rất lớn."
+        ],
+        "explanation": "Số lượt like, share không phải là tiêu chí đánh giá chất lượng thông tin. Bốn tiêu chí chuẩn là: Tính mới, Tính chính xác, Tính đầy đủ, Tính sử dụng được."
+      },
+      {
+        "id": 8,
+        "type": "single",
+        "text": "Tính cập nhật (tính mới) của thông tin được thể hiện rõ nhất qua khía cạnh nào?",
+        "options": [
+          "Khả năng ứng dụng vào nhiều tình huống khác nhau",
+          "Mức độ uy tín của tác giả biên soạn bài viết",
+          "Số lượng từ ngữ được trình bày chi tiết trong văn bản",
+          "Thời điểm thu thập và công bố dữ liệu có còn phù hợp với hiện tại hay không"
+        ],
+        "correct": 3,
+        "hints": [
+          "Cho biết thông tin có bị lỗi thời, lạc hậu hay không.",
+          "Gắn liền với thời điểm phát hành."
+        ],
+        "explanation": "Tính mới cho biết thông tin có bị lỗi thời hay không, thể hiện qua mốc thời gian thu thập và tính thời sự của dữ liệu."
+      },
+      {
+        "id": 9,
+        "type": "single",
+        "text": "Hành vi nào sau đây vi phạm nghiêm trọng quy định của pháp luật về an toàn thông tin mạng?",
+        "options": [
+          "Tạo tài khoản mạng xã hội giả mạo người khác để vay tiền hoặc bôi nhọ danh dự",
+          "Đổi mật khẩu tài khoản cá nhân định kỳ để tăng cường bảo mật",
+          "Cài đặt phần mềm diệt virus có bản quyền cho máy tính",
+          "Từ chối cung cấp mã OTP ngân hàng cho người lạ gọi điện đến"
+        ],
+        "correct": 0,
+        "hints": [
+          "Giả mạo danh tính người khác để trục lợi hoặc xúc phạm danh dự.",
+          "Hành vi lừa đảo và vi phạm Luật An ninh mạng."
+        ],
+        "explanation": "Giả mạo tài khoản người khác để lừa đảo hoặc bôi nhọ là hành vi vi phạm Luật An toàn thông tin mạng và Bộ luật Hình sự."
+      },
+      {
+        "id": 10,
+        "type": "single",
+        "text": "Bạn A phát hiện bạn cùng bàn quên đăng xuất tài khoản mạng xã hội trên máy tính phòng thực hành tin học. Hành động đúng đắn và chuẩn mực nhất của bạn A là gì?",
+        "options": [
+          "Đăng một dòng trạng thái hài hước để trêu chọc bạn bè",
+          "Tự ý đọc tin nhắn riêng tư vì tò mò",
+          "Nhắc bạn và giúp bạn đăng xuất ngay khỏi thiết bị để bảo vệ quyền riêng tư",
+          "Đổi mật khẩu tài khoản để phạt bạn vì tội bất cẩn"
+        ],
+        "correct": 2,
+        "hints": [
+          "Tôn trọng quyền riêng tư và dữ liệu cá nhân của người khác.",
+          "Giúp bạn đăng xuất an toàn."
+        ],
+        "explanation": "Hành vi có văn hóa và đúng chuẩn mực đạo đức là nhắc nhở bạn và giúp bạn đăng xuất tài khoản để bảo mật thông tin."
+      },
+      {
+        "id": 11,
+        "type": "boolean",
+        "text": "Tự ý tải về một hình ảnh có bản quyền trên Internet rồi đăng lên trang cá nhân và nhận là của mình là hành vi hoàn toàn hợp pháp và không vi phạm đạo đức.",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 1,
+        "hints": [
+          "Đây là hành vi vi phạm Luật Sở hữu trí tuệ.",
+          "Tuyên bố quyền tác giả giả dối."
+        ],
+        "explanation": "Sai. Hành vi sử dụng tác phẩm của người khác mà không xin phép và nhận là của mình là hành vi vi phạm bản quyền tác giả."
+      },
+      {
+        "id": 12,
+        "type": "boolean",
+        "text": "Việc sử dụng Internet giúp mọi người có thể tìm kiếm, học tập và bổ sung kiến thức của mình gần như mọi lúc, mọi nơi.",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 0,
+        "hints": [
+          "Internet mở ra kho tàng tri thức khổng lồ toàn cầu.",
+          "Phát biểu hoàn toàn đúng."
+        ],
+        "explanation": "Đúng. Internet kết nối toàn cầu và cung cấp khả năng tiếp cận kho tri thức nhân loại 24/7."
+      },
+      {
+        "id": 13,
+        "type": "single",
+        "text": "Nam rất giỏi tin học, Nam hack được tài khoản của nhân viên trong trường và đăng hình ảnh bậy lên website của trường. Hành vi của Nam thuộc loại nào?",
+        "options": [
+          "Hành vi vi phạm pháp luật và an toàn thông tin mạng",
+          "Hành vi thiếu đạo đức nhưng không vi phạm pháp luật",
+          "Hành vi thiếu văn hoá nhưng được pháp luật cho phép",
+          "Hành vi đúng đắn thể hiện tài năng lập trình cần phát huy"
+        ],
+        "correct": 0,
+        "hints": [
+          "Xâm nhập trái phép hệ thống thông tin của tổ chức là vi phạm Luật An ninh mạng.",
+          "Hành vi có thể bị xử lý hình sự."
+        ],
+        "explanation": "Hành vi hack tài khoản và phá hoại trang thông tin của trường học vi phạm nghiêm trọng Luật An ninh mạng và Điều 288 Bộ luật Hình sự."
+      },
+      {
+        "id": 14,
+        "type": "single",
+        "text": "Đâu KHÔNG PHẢI là ứng dụng của máy tính trong lĩnh vực giải trí?",
+        "options": [
+          "Nghe nhạc trực tuyến",
+          "Chơi trò chơi điện tử (game online)",
+          "Chẩn đoán bệnh tật và phẫu thuật y khoa",
+          "Xem phim độ phân giải cao trên các nền tảng số"
+        ],
+        "correct": 2,
+        "hints": [
+          "Chẩn đoán và phẫu thuật thuộc lĩnh vực y tế, chăm sóc sức khỏe.",
+          "Không thuộc danh mục giải trí."
+        ],
+        "explanation": "Chẩn đoán bệnh tật là ứng dụng tiêu biểu của máy tính và trí tuệ nhân tạo trong y tế, không phải giải trí."
+      },
+      {
+        "id": 15,
+        "type": "single",
+        "text": "Khi nói 'Máy tính không cần nghỉ ngơi!', câu nói này nhấn mạnh khả năng nào của máy tính?",
+        "options": [
+          "Khả năng tính toán với tốc độ cực nhanh",
+          "Khả năng làm việc bền bỉ, liên tục không biết mệt mỏi",
+          "Khả năng tự đưa ra quyết tâm học tập",
+          "Khả năng trung thành tuyệt đối với mọi mệnh lệnh"
+        ],
+        "correct": 1,
+        "hints": [
+          "Máy tính là thiết bị điện tử có thể vận hành 24/7.",
+          "Tính toán bền bỉ."
+        ],
+        "explanation": "Máy tính có khả năng làm việc liên tục, bền bỉ mà không bị suy giảm năng suất như con người."
+      },
+      {
+        "id": 16,
+        "type": "single",
+        "text": "Điền từ còn thiếu: Máy tính có khả năng tính toán ..., bền bỉ, chính xác; lưu trữ dữ liệu với dung lượng ...; kết nối toàn cầu với tốc độ ...",
+        "options": [
+          "nhanh — lớn — cao",
+          "lớn — vô hạn — nhanh",
+          "nhanh — vô hạn — lớn",
+          "cao — nhanh — lớn"
+        ],
+        "correct": 0,
+        "hints": [
+          "Tính toán nhanh, lưu trữ dung lượng lớn, kết nối tốc độ cao.",
+          "Thứ tự: nhanh, lớn, cao."
+        ],
+        "explanation": "Đặc điểm cơ bản của máy tính: tính toán nhanh, dung lượng lưu trữ lớn, kết nối mạng toàn cầu tốc độ cao."
+      },
+      {
+        "id": 17,
+        "type": "single",
+        "text": "Phương án nào sau đây KHÔNG PHẢI là tác động tiêu cực của công nghệ kĩ thuật số đến đời sống con người?",
+        "options": [
+          "Nhờ trí tuệ nhân tạo làm hộ toàn bộ bài tập về nhà mà không tự suy nghĩ",
+          "Lướt mạng xã hội liên tục nhiều giờ liền gây ảnh hưởng giấc ngủ",
+          "Thường xuyên sử dụng phần mềm soạn thảo văn bản để làm báo cáo học tập",
+          "Vừa ăn cơm vừa dán mắt vào màn hình xem video"
+        ],
+        "correct": 2,
+        "hints": [
+          "Soạn thảo văn bản giúp tăng hiệu suất làm việc và học tập.",
+          "Đây là tác động tích cực."
+        ],
+        "explanation": "Sử dụng phần mềm soạn thảo văn bản phục vụ học tập là ứng dụng tích cực, hỗ trợ nâng cao hiệu quả công việc."
+      },
+      {
+        "id": 18,
+        "type": "single",
+        "text": "Thiết bị gia dụng nào dưới đây KHÔNG gắn bộ xử lý thông tin?",
+        "options": [
+          "Ti vi kỹ thuật số thông minh",
+          "Điện thoại thông minh (smartphone)",
+          "Ô tô tự hành có hệ thống hỗ trợ lái",
+          "Bếp gas cơ thông thường"
+        ],
+        "correct": 3,
+        "hints": [
+          "Bếp gas cơ bật bằng đánh lửa cơ học magnetto hoặc pin đơn giản.",
+          "Không có vi mạch xử lý tín hiệu."
+        ],
+        "explanation": "Bếp gas cơ thông thường hoạt động hoàn toàn bằng cơ học, không có bộ vi xử lý thông tin."
+      },
+      {
+        "id": 19,
+        "type": "single",
+        "text": "Máy chụp cắt lớp vi tính (CT scanner) là thiết bị hiện đại được gắn bộ xử lý thông tin. Thiết bị này được ứng dụng chủ yếu trong ngành nào?",
+        "options": [
+          "Y tế và chẩn đoán hình ảnh bệnh học",
+          "Giáo dục và đào tạo từ xa",
+          "Nông nghiệp công nghệ cao",
+          "Truyền thông và giải trí đa phương tiện"
+        ],
+        "correct": 0,
+        "hints": [
+          "Dùng để chụp quét các lát cắt bên trong cơ thể người bệnh.",
+          "Lĩnh vực y tế."
+        ],
+        "explanation": "Máy chụp cắt lớp là thiết bị y tế dùng tia X và vi xử lý máy tính để tái tạo hình ảnh 3D giải phẫu cơ thể người."
+      },
+      {
+        "id": 20,
+        "type": "single",
+        "text": "Điền từ thích hợp vào chỗ trống: Các thiết bị gắn bộ xử lý thông tin giúp con người ... trong đời sống và sản xuất.",
+        "options": [
+          "tự động hóa các hoạt động và quy trình",
+          "tiết kiệm hoàn toàn 100% điện năng tiêu thụ",
+          "tiết kiệm tối đa chi phí mua sắm thiết bị ban đầu",
+          "nâng cao khả năng lập trình phần mềm tự nhiên"
+        ],
+        "correct": 0,
+        "hints": [
+          "Bộ vi xử lý giúp thiết bị tự vận hành theo chương trình cài đặt sẵn.",
+          "Tự động hóa."
+        ],
+        "explanation": "Lợi ích cốt lõi của thiết bị gắn bộ vi xử lý là khả năng tự động hóa, giảm thao tác thủ công của con người."
+      },
+      {
+        "id": 21,
+        "type": "single",
+        "text": "Đâu KHÔNG PHẢI là khả năng của máy tính hiện nay mà con người vượt trội hơn hẳn?",
+        "options": [
+          "Tốc độ tính toán các biểu thức số học phức tạp",
+          "Khả năng tính toán chính xác tuyệt đối không sai sót",
+          "Đồng cảm, thấu hiểu cảm xúc và sáng tạo nghệ thuật đích thực",
+          "Khả năng kết nối dữ liệu mạng với tốc độ cao"
+        ],
+        "correct": 2,
+        "hints": [
+          "Cảm xúc, trực giác và sự đồng cảm là năng lực độc nhất của con người.",
+          "Máy tính không có cảm xúc."
+        ],
+        "explanation": "Máy tính vượt trội về tốc độ và độ chuẩn xác số học, nhưng không có cảm xúc, trực giác và khả năng đồng cảm như con người."
+      },
+      {
+        "id": 22,
+        "type": "single",
+        "text": "Máy tính có thể hỗ trợ hiệu quả các hoạt động của con người trong những lĩnh vực nào sau đây?",
+        "options": [
+          "Khoa học kỹ thuật và công nghệ",
+          "Khám phá không gian và nghiên cứu vũ trụ",
+          "Giao thông vận tải và logistics hiện đại",
+          "Tất cả các lĩnh vực kể trên"
+        ],
+        "correct": 3,
+        "hints": [
+          "Máy tính hiện diện và hỗ trợ đắc lực trong hầu hết mọi lĩnh vực hiện đại.",
+          "Chọn cả 3 đáp án."
+        ],
+        "explanation": "Máy tính đã thâm nhập sâu rộng và là công cụ không thể thiếu trong khoa học kĩ thuật, vũ trụ, giao thông và mọi mặt đời sống."
+      },
+      {
+        "id": 23,
+        "type": "single",
+        "text": "Khi em thấy một người nổi tiếng quảng cáo một sản phẩm chăm sóc sức khỏe trên mạng xã hội, cách ứng xử đúng đắn và sáng suốt nhất là gì?",
+        "options": [
+          "Chia sẻ ngay thông tin cho người thân vì người nổi tiếng luôn nói thật",
+          "Mua và sử dụng ngay vì có người nổi tiếng bảo chứng",
+          "Chủ động đánh giá chất lượng thông tin, kiểm chứng giấy phép và nguồn gốc sản phẩm trước khi quyết định",
+          "Chửi bới người nổi tiếng trên phần bình luận của video"
+        ],
+        "correct": 2,
+        "hints": [
+          "Cần có tư duy phản biện trước các thông tin quảng cáo mạng.",
+          "Đánh giá chất lượng và kiểm chứng."
+        ],
+        "explanation": "Người dùng mạng thông thái luôn thẩm định và kiểm tra nguồn gốc, tính xác thực của thông tin quảng cáo trước khi tin dùng."
+      },
+      {
+        "id": 24,
+        "type": "single",
+        "text": "Tiêu chí 'Tính đầy đủ' của thông tin được hiểu chính xác là gì?",
+        "options": [
+          "Thông tin thể hiện sự bao quát nhiều khía cạnh, đem lại cái nhìn toàn diện về vấn đề",
+          "Thông tin được lưu trữ ở định dạng dễ truy cập nhất",
+          "Thông tin vừa được đăng tải trong vòng 24 giờ qua",
+          "Thông tin chỉ gồm một câu kết luận duy nhất"
+        ],
+        "correct": 0,
+        "hints": [
+          "Bao quát các khía cạnh liên quan giúp đưa ra quyết định chuẩn xác.",
+          "Cái nhìn toàn diện."
+        ],
+        "explanation": "Tính đầy đủ đòi hỏi thông tin phải bao quát các góc nhìn, dữ kiện cần thiết để người nhận có bức tranh hoàn chỉnh về sự việc."
+      },
+      {
+        "id": 25,
+        "type": "single",
+        "text": "Hành vi nào dưới đây khi tham gia môi trường mạng là vi phạm pháp luật và có thể bị phạt hành chính hoặc hình sự?",
+        "options": [
+          "Đăng ảnh kỷ niệm chuyến du lịch cùng gia đình",
+          "Tự ý đánh cắp, phát tán thông tin cá nhân hoặc mật khẩu tài khoản của người khác",
+          "Tìm kiếm tài liệu học tập trên cổng thông tin của Bộ GD&ĐT",
+          "Tham gia nhóm học tập trực tuyến cùng các bạn trong lớp"
+        ],
+        "correct": 1,
+        "hints": [
+          "Xâm phạm bí mật đời tư và dữ liệu cá nhân là hành vi bị pháp luật nghiêm cấm.",
+          "Đánh cắp và phát tán dữ liệu người khác."
+        ],
+        "explanation": "Theo Luật An toàn thông tin mạng và Nghị định 15/2020/NĐ-CP, hành vi thu thập, phát tán trái phép dữ liệu cá nhân bị xử phạt nặng."
+      },
+      {
+        "id": 26,
+        "type": "single",
+        "text": "Hành động nào sau đây là ứng xử có văn hóa, đúng đạo đức và không vi phạm pháp luật trên không gian mạng?",
+        "options": [
+          "Tải ảnh của người khác về rồi tự nhận là ảnh do mình chụp để khoe khoang",
+          "Dùng lời lẽ xúc phạm, hạ nhục người khác khi tranh luận trên mạng xã hội",
+          "Gửi lời chúc mừng sinh nhật lịch sự, chân thành đến bạn bè",
+          "Phát tán clip ghi cảnh đánh nhau của học sinh để câu tương tác"
+        ],
+        "correct": 2,
+        "hints": [
+          "Hành vi văn minh, tôn trọng người khác.",
+          "Chúc mừng sinh nhật lịch sự."
+        ],
+        "explanation": "Giao tiếp văn minh, tôn trọng bạn bè và không xâm phạm quyền lợi của ai là biểu hiện rõ nét của văn hóa số chuẩn mực."
+      }
+    ]
   }
 ];
 
@@ -2290,196 +3719,312 @@
     "box": 1,
     "cat": "Hán Việt",
     "front": "Hà lương",
-    "back": "'Hà' = sông, 'lương' = cầu. Cây cầu bắc qua sông; trong văn học cổ biểu tượng cho chốn chia ly, tiễn biệt người ra trận."
+    "back": "'Hà' = sông, 'lương' = cầu. Cây cầu bắc qua sông; trong văn học cổ biểu tượng cho chốn chia ly, tiễn biệt người ra trận.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 2,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Đoạn trường",
-    "back": "'Đoạn' = đứt, 'trường' = ruột. Nỗi đau đớn xót xa đến quặn thắt tâm can, thống khổ tột cùng."
+    "back": "'Đoạn' = đứt, 'trường' = ruột. Nỗi đau đớn xót xa đến quặn thắt tâm can, thống khổ tột cùng.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 3,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Chinh phụ",
-    "back": "Người phụ nữ có chồng đi tòng quân, chiến đấu nơi chiến trường biên ải xa xôi."
+    "back": "Người phụ nữ có chồng đi tòng quân, chiến đấu nơi chiến trường biên ải xa xôi.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 4,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Đồng vọng",
-    "back": "'Đồng' = cùng, 'vọng' = ngóng trông xa xăm. Cùng hướng lòng trông ngóng, nhớ thương nhau dù cách trở đôi ngả."
+    "back": "'Đồng' = cùng, 'vọng' = ngóng trông xa xăm. Cùng hướng lòng trông ngóng, nhớ thương nhau dù cách trở đôi ngả.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 5,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Dạ vũ",
-    "back": "'Dạ' = đêm, 'vũ' = mưa. Cơn mưa ban đêm; gợi không gian tịch mịch, lạnh lẽo nơi cung cấm hoang vắng."
+    "back": "'Dạ' = đêm, 'vũ' = mưa. Cơn mưa ban đêm; gợi không gian tịch mịch, lạnh lẽo nơi cung cấm hoang vắng.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 6,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Thu phong",
-    "back": "'Thu' = mùa thu, 'phong' = ngọn gió. Làn gió heo may mùa thu buốt giá, khơi dậy nỗi sầu muộn và đơn chiếc."
+    "back": "'Thu' = mùa thu, 'phong' = ngọn gió. Làn gió heo may mùa thu buốt giá, khơi dậy nỗi sầu muộn và đơn chiếc.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 7,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Cô miên",
-    "back": "'Cô' = đơn độc lẻ loi, 'miên' = ngủ. Giấc ngủ quạnh hiu, trằn trọc một mình trong đêm dài buốt giá."
+    "back": "'Cô' = đơn độc lẻ loi, 'miên' = ngủ. Giấc ngủ quạnh hiu, trằn trọc một mình trong đêm dài buốt giá.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 8,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Tha hương",
-    "back": "'Tha' = khác, 'hương' = quê nhà. Sống ở nơi đất khách quê người, xa cách cội nguồn bản quán."
+    "back": "'Tha' = khác, 'hương' = quê nhà. Sống ở nơi đất khách quê người, xa cách cội nguồn bản quán.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 9,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Bóng dương",
-    "back": "'Dương' = mặt trời (thái dương). Bóng mặt trời sắp lặn lúc hoàng hôn tà bóng, gợi thời khắc buồn xa xứ."
+    "back": "'Dương' = mặt trời (thái dương). Bóng mặt trời sắp lặn lúc hoàng hôn tà bóng, gợi thời khắc buồn xa xứ.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 10,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Quan san",
-    "back": "'Quan' = cửa ải hiểm trở, 'san' (sơn) = núi non. Chỉ không gian đèo ải muôn dặm cách biệt giữa tiền tuyến và hậu phương."
+    "back": "'Quan' = cửa ải hiểm trở, 'san' (sơn) = núi non. Chỉ không gian đèo ải muôn dặm cách biệt giữa tiền tuyến và hậu phương.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 11,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Hàn ôn",
-    "back": "'Hàn' = lạnh, 'ôn' = ấm. Chuyện trò ân cần hỏi han sức khỏe và cảnh ngộ buồn vui của nhau."
+    "back": "'Hàn' = lạnh, 'ôn' = ấm. Chuyện trò ân cần hỏi han sức khỏe và cảnh ngộ buồn vui của nhau.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 12,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Phong trần",
-    "back": "'Phong' = gió, 'trần' = bụi cát. Ẩn dụ cho kiếp sống bươn chải, dãi dầu sương gió, chịu nhiều gian truân thử thách."
+    "back": "'Phong' = gió, 'trần' = bụi cát. Ẩn dụ cho kiếp sống bươn chải, dãi dầu sương gió, chịu nhiều gian truân thử thách.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 13,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Thương hải tang điền",
-    "back": "'Thương hải' = biển xanh, 'tang điền' = ruộng dâu tằm. Biển xanh biến thành nương dâu; tượng trưng cho cuộc đời dâu bể, đổi thay to lớn."
+    "back": "'Thương hải' = biển xanh, 'tang điền' = ruộng dâu tằm. Biển xanh biến thành nương dâu; tượng trưng cho cuộc đời dâu bể, đổi thay to lớn.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 14,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Hoá công",
-    "back": "Đấng Tạo hoá mầu nhiệm, ông Trời sắp đặt cơ mưu và số mệnh trớ trêu cho cõi nhân gian."
+    "back": "Đấng Tạo hoá mầu nhiệm, ông Trời sắp đặt cơ mưu và số mệnh trớ trêu cho cõi nhân gian.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 15,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Khuê các",
-    "back": "'Khuê' = phòng phụ nữ, 'các' = gác son lộng lẫy. Chốn phòng the kín đáo, cao sang của phụ nữ quý tộc thời phong kiến."
+    "back": "'Khuê' = phòng phụ nữ, 'các' = gác son lộng lẫy. Chốn phòng the kín đáo, cao sang của phụ nữ quý tộc thời phong kiến.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 16,
     "box": 1,
     "cat": "Hán Việt",
     "front": "Hồng nhan bạc mệnh",
-    "back": "'Hồng nhan' = má hồng (người đẹp); 'Bạc mệnh' = phận mỏng, số phận hẩm hiu bất hạnh nhiều truân chuyên."
+    "back": "'Hồng nhan' = má hồng (người đẹp); 'Bạc mệnh' = phận mỏng, số phận hẩm hiu bất hạnh nhiều truân chuyên.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 17,
     "box": 1,
     "cat": "Thơ STLB",
     "front": "Cấu trúc Song thất lục bát",
-    "back": "Cặp câu 7 chữ (song thất) đi trước, cặp câu 6 - 8 chữ (lục bát) đi sau, luân phiên kéo dài đến hết bài thơ."
+    "back": "Cặp câu 7 chữ (song thất) đi trước, cặp câu 6 - 8 chữ (lục bát) đi sau, luân phiên kéo dài đến hết bài thơ.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 18,
     "box": 1,
     "cat": "Thơ STLB",
     "front": "Quy luật gieo vần cặp câu 7",
-    "back": "Tiếng thứ 7 câu 1 (thanh Trắc) hiệp vần lưng với tiếng thứ 5 câu 2; Tiếng thứ 7 câu 2 (thanh Bằng) hiệp vần chân với tiếng thứ 6 câu lục."
+    "back": "Tiếng thứ 7 câu 1 (thanh Trắc) hiệp vần lưng với tiếng thứ 5 câu 2; Tiếng thứ 7 câu 2 (thanh Bằng) hiệp vần chân với tiếng thứ 6 câu lục.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 19,
     "box": 1,
     "cat": "Thơ STLB",
     "front": "Luật Bằng - Trắc cặp câu 7",
-    "back": "Tiếng thứ 3 và thứ 5 đối lập thanh B - T (hoặc T - B). Tiếng thứ 7 bắt buộc luôn là thanh Bằng để hiệp vần."
+    "back": "Tiếng thứ 3 và thứ 5 đối lập thanh B - T (hoặc T - B). Tiếng thứ 7 bắt buộc luôn là thanh Bằng để hiệp vần.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 20,
     "box": 1,
     "cat": "Tu Từ",
     "front": "Phép đối tương phản vs tương hỗ",
-    "back": "Tương phản: hai vế trái ngược nhau (đi >< về, ngày >< đêm); Tương hỗ: hai vế cùng chiều bổ sung hỗ trợ ý nghĩa trọn vẹn cho nhau."
+    "back": "Tương phản: hai vế trái ngược nhau (đi >< về, ngày >< đêm); Tương hỗ: hai vế cùng chiều bổ sung hỗ trợ ý nghĩa trọn vẹn cho nhau.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 21,
     "box": 1,
     "cat": "Tu Từ",
     "front": "Điệp thanh Bằng vs Điệp thanh Trắc",
-    "back": "Điệp thanh Bằng: âm điệu nhẹ nhàng, trầm buồn, êm ái triền miên. Điệp thanh Trắc: âm điệu dồn dập, căng thẳng, đau đớn, trắc trở."
+    "back": "Điệp thanh Bằng: âm điệu nhẹ nhàng, trầm buồn, êm ái triền miên. Điệp thanh Trắc: âm điệu dồn dập, căng thẳng, đau đớn, trắc trở.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 22,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "1 cây xanh trưởng thành",
-    "back": "Hấp thụ trung bình ~22 kg CO2 mỗi năm và nhả đủ lượng oxy cho 4 người trưởng thành hô hấp mỗi ngày."
+    "back": "Hấp thụ trung bình ~22 kg CO2 mỗi năm và nhả đủ lượng oxy cho 4 người trưởng thành hô hấp mỗi ngày.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 23,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Đề án 1 tỷ cây xanh VN",
-    "back": "Giai đoạn 2021-2025 Việt Nam trồng đạt 1,439 tỷ cây, hoàn thành vượt mức 143,9% so với mục tiêu đề ra."
+    "back": "Giai đoạn 2021-2025 Việt Nam trồng đạt 1,439 tỷ cây, hoàn thành vượt mức 143,9% so với mục tiêu đề ra.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 24,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Rừng Amazon 50 năm qua",
-    "back": "Lá phổi xanh của Trái Đất đã bị tàn phá suy giảm khoảng 17% tổng diện tích trong vòng 50 năm qua."
+    "back": "Lá phổi xanh của Trái Đất đã bị tàn phá suy giảm khoảng 17% tổng diện tích trong vòng 50 năm qua.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 25,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Nghiên cứu ĐH Groningen",
-    "back": "Trong một không gian sạch sẽ không rác và không vẽ bậy, tỷ lệ người tự giác giữ vệ sinh chung tăng hơn 50%."
+    "back": "Trong một không gian sạch sẽ không rác và không vẽ bậy, tỷ lệ người tự giác giữ vệ sinh chung tăng hơn 50%.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 26,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Văn hóa Souji Nhật Bản",
-    "back": "Thầy cô và học sinh cùng tự tay lau dọn trường lớp mỗi ngày, rèn tính tự giác, khiêm tốn và tôn trọng người lao động."
+    "back": "Thầy cô và học sinh cùng tự tay lau dọn trường lớp mỗi ngày, rèn tính tự giác, khiêm tốn và tôn trọng người lao động.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 27,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Báo cáo EC về xe đạp",
-    "back": "Nếu chuyển sang đi xe đạp cho các chuyến đi dưới 5 km, lượng khí CO2 phát thải từ giao thông sẽ giảm khoảng 75%."
+    "back": "Nếu chuyển sang đi xe đạp cho các chuyến đi dưới 5 km, lượng khí CO2 phát thải từ giao thông sẽ giảm khoảng 75%.",
+    "subject": "Ngữ Văn 9"
   },
   {
     "id": 28,
     "box": 1,
     "cat": "Dẫn chứng NLXH",
     "front": "Cam kết COP26 của Việt Nam",
-    "back": "Việt Nam đưa ra cam kết mạnh mẽ tại Hội nghị COP26: đưa mức phát thải ròng về 0 ('Net Zero') vào năm 2050."
+    "back": "Việt Nam đưa ra cam kết mạnh mẽ tại Hội nghị COP26: đưa mức phát thải ròng về 0 ('Net Zero') vào năm 2050.",
+    "subject": "Ngữ Văn 9"
+  },
+  {
+    "id": 29,
+    "box": 1,
+    "cat": "KHTN - Quang",
+    "front": "Định luật khúc xạ ánh sáng",
+    "back": "Tia khúc xạ nằm trong mặt phẳng tới. Hệ thức: n1 . sin i = n2 . sin r (sin i / sin r = n2/n1).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 30,
+    "box": 1,
+    "cat": "KHTN - Quang",
+    "front": "Điều kiện phản xạ toàn phần",
+    "back": "1. Ánh sáng truyền từ môi trường chiết quang hơn sang kém hơn (n1 > n2).\n2. Góc tới i ≥ igh (với sin igh = n2/n1).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 31,
+    "box": 1,
+    "cat": "KHTN - Điện",
+    "front": "Định luật Ohm cho đoạn mạch",
+    "back": "Cường độ dòng điện I tỉ lệ thuận với hiệu điện thế U và tỉ lệ nghịch với điện trở R: I = U / R.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 32,
+    "box": 1,
+    "cat": "KHTN - Điện",
+    "front": "Điện trở mạch song song",
+    "back": "1/Rtd = 1/R1 + 1/R2. Nếu hai điện trở: Rtd = (R1.R2)/(R1 + R2). Rtd luôn nhỏ hơn từng điện trở thành phần.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 33,
+    "box": 1,
+    "cat": "KHTN - Cơ",
+    "front": "Công thức công và công suất cơ học",
+    "back": "Công cơ học: A = F . s (Joule).\nCông suất: P = A / t = F . v (Watt).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 34,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Sự kiện Ba Son (8/1925)",
+    "back": "Do Tôn Đức Thắng lãnh đạo, bãi công giữ tàu chiến Pháp; đánh dấu phong trào công nhân chuyển từ tự phát sang tự giác.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 35,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Hội nghị thành lập Đảng (1930)",
+    "back": "Khai mạc 6/1/1930 tại Cửu Long (Hương Cảng, Trung Quốc) do Nguyễn Ái Quốc chủ trì, hợp nhất thành Đảng Cộng sản Việt Nam.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 36,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Đặc điểm dân số Việt Nam",
+    "back": "Dân số đông (trên 100 triệu, thứ 3 Đông Nam Á, 15 thế giới), cơ cấu dân số trẻ, mật độ cao nhưng phân bố không đều giữa đồng bằng và miền núi.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 37,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Hai vùng chuyên canh cây công nghiệp lớn nhất",
+    "back": "Đông Nam Bộ (cao su, điều, hồ tiêu) và Tây Nguyên (cà phê, cao su, chè).",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 38,
+    "box": 1,
+    "cat": "Tin Học 9",
+    "front": "4 tiêu chí đánh giá chất lượng thông tin",
+    "back": "1. Tính mới (cập nhật)\n2. Tính chính xác (đúng đắn, có căn cứ)\n3. Tính đầy đủ (toàn diện)\n4. Tính sử dụng được (phù hợp, liên quan).",
+    "subject": "Tin Học 9"
+  },
+  {
+    "id": 39,
+    "box": 1,
+    "cat": "Tin Học 9",
+    "front": "Ứng xử chuẩn mực trong môi trường số",
+    "back": "Tuân thủ pháp luật và bản quyền, tôn trọng quyền riêng tư của người khác, bảo mật thông tin cá nhân và giao tiếp lành mạnh có văn hóa.",
+    "subject": "Tin Học 9"
   }
 ];
 
@@ -2767,18 +4312,53 @@
     };
 
     /* 9. QUIZ MANAGER */
+    const SUBJECT_CONFIG = [
+      {
+        id: 'Ngữ Văn 9',
+        name: 'Ngữ Văn 9',
+        icon: '📚',
+        badge: 'GDPT 2018',
+        tagline: 'Đọc hiểu Song thất lục bát • 3 thi phẩm trung đại • Tiếng Việt & NLXH',
+        desc: '5 bộ đề trọng tâm: Thể thơ Song thất lục bát, Chinh phụ ngâm - Tiếng đàn mưa - Cung oán ngâm khúc, Từ Hán Việt & Biện pháp tu từ, 4 chủ đề Nghị luận xã hội môi trường, và Đề thi thử giữa kì 1.'
+      },
+      {
+        id: 'Khoa Học Tự Nhiên 9',
+        name: 'Khoa Học Tự Nhiên 9',
+        icon: '🔬',
+        badge: 'Vật Lí • Hoá Học • KHTN',
+        tagline: 'Quang học • Điện học • Công cơ học & An toàn phòng thí nghiệm',
+        desc: '30 câu hỏi chuẩn đề cương giữa kì 1: Khúc xạ ánh sáng, thấu kính hội tụ - phân kì, định luật Ohm, điện trở dây dẫn, công và công suất cơ học, dụng cụ hoá học và thao tác an toàn.'
+      },
+      {
+        id: 'Lịch Sử & Địa Lí 9',
+        name: 'Lịch Sử & Địa Lí 9',
+        icon: '🌏',
+        badge: 'Lịch Sử • Địa Lí VN',
+        tagline: 'Phong trào 1919-1945 • CTTG 2 • Dân cư kinh tế & Nông lâm nghiệp',
+        desc: '17 câu hỏi bao quát: Phong trào cách mạng thế giới và Việt Nam 1919-1945, sự kiện Ba Son 1925, thành lập ĐCSVN 1930, đại suy thoái Mĩ, đặc điểm dân số và các vùng kinh tế trọng điểm VN.'
+      },
+      {
+        id: 'Tin Học 9',
+        name: 'Tin Học 9',
+        icon: '💻',
+        badge: 'Công Nghệ Kỹ Thuật Số',
+        tagline: 'Thiết bị thông minh • 4 tiêu chí thông tin & Đạo đức không gian số',
+        desc: '26 câu hỏi toàn diện đề cương HK1: Thiết bị tích hợp bộ vi xử lý thông tin, vai trò siêu máy tính, 4 tiêu chí đánh giá chất lượng thông tin, an toàn thông tin mạng, bản quyền và văn hóa số.'
+      }
+    ];
+
     const QuizManager = {
       quizzes: [], currentSubject: 'all', searchQuery: '',
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v4_ngu_van_9_cham_thong_minh') {
+        if (ver !== 'v5_multi_subject_ai_design') {
           this.quizzes = DEFAULT_QUIZZES;
           Storage.set('quizzes', this.quizzes);
           Storage.set('flashcards', DEFAULT_FLASHCARDS);
           Storage.set('wrong_questions', []);
           Storage.set('flagged_questions', []);
           Storage.remove('pending_quiz_session');
-          Storage.set('app_data_version', 'v4_ngu_van_9_cham_thong_minh');
+          Storage.set('app_data_version', 'v5_multi_subject_ai_design');
         } else {
           const saved = Storage.get('quizzes', null);
           this.quizzes = (saved && Array.isArray(saved) && saved.length > 0) ? saved : DEFAULT_QUIZZES;
@@ -2814,50 +4394,111 @@
       renderQuizCards() {
         const c = document.getElementById('quiz-cards-container');
         if (!c) return;
-        const filtered = this.quizzes.filter(q => {
-          const matchSub = (this.currentSubject === 'all' || q.subject === this.currentSubject);
-          const matchSearch = q.title.toLowerCase().includes(this.searchQuery.toLowerCase()) || q.description.toLowerCase().includes(this.searchQuery.toLowerCase());
-          return matchSub && matchSearch;
+        const query = (this.searchQuery || '').trim().toLowerCase();
+
+        const subjectsToRender = (this.currentSubject === 'all')
+          ? SUBJECT_CONFIG
+          : SUBJECT_CONFIG.filter(s => s.id === this.currentSubject);
+
+        let totalVisible = 0;
+        let htmlSections = '';
+
+        subjectsToRender.forEach(subj => {
+          const subjQuizzes = this.quizzes.filter(q => {
+            const matchSub = (q.subject === subj.id);
+            const matchSearch = !query || q.title.toLowerCase().includes(query) || q.description.toLowerCase().includes(query);
+            return matchSub && matchSearch;
+          });
+
+          if (subjQuizzes.length === 0 && query) return;
+          totalVisible += subjQuizzes.length;
+
+          const totalQuestions = subjQuizzes.reduce((acc, q) => acc + (q.questions ? q.questions.length : 0), 0);
+
+          const cardsHtml = (subjQuizzes.length === 0)
+            ? `<div style="grid-column:1/-1; text-align:center; padding:24px; color:var(--text-muted);">Không có bộ đề nào phù hợp với tìm kiếm.</div>`
+            : subjQuizzes.map(q => {
+                const best = Storage.get('best_score_' + q.id, null);
+                return `
+                  <div class="quiz-card">
+                    <div>
+                      <div style="display:flex; justify-content:space-between; gap:10px; margin-bottom:8px;">
+                        <span class="badge badge-primary">${Utils.escapeHTML(q.subject)}</span>
+                        <span class="badge badge-accent">${Utils.escapeHTML(q.difficulty)}</span>
+                      </div>
+                      <h3 class="quiz-title">${Utils.escapeHTML(q.title)}</h3>
+                      <p class="quiz-desc">${Utils.escapeHTML(q.description)}</p>
+                    </div>
+                    <div>
+                      <div class="quiz-meta">
+                        <span>📝 ${q.questions.length} câu</span>
+                        <span>⏱️ ${q.timeLimitMinutes}p</span>
+                        <span>🏆 ${best !== null ? best + '/10' : 'Chưa làm'}</span>
+                      </div>
+                      <div class="quiz-card-footer">
+                        <button class="btn btn-secondary btn-sm" onclick="FlashcardManager.openForQuiz('${q.id}')">Học Flashcard</button>
+                        <button class="btn btn-primary btn-sm" onclick="QuizRunner.selectQuiz('${q.id}')">Bắt đầu →</button>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }).join('');
+
+          htmlSections += `
+            <section class="subject-section" id="subject-sec-${subj.id.replace(/\s+/g, '-')}">
+              <div class="subject-section-header">
+                <div style="flex:1; min-width:260px;">
+                  <div class="subject-title-wrap">
+                    <div class="subject-icon-box">${subj.icon}</div>
+                    <div>
+                      <h2 class="subject-heading">${Utils.escapeHTML(subj.name)}</h2>
+                      <div class="subject-tagline">${Utils.escapeHTML(subj.tagline)}</div>
+                    </div>
+                  </div>
+                  <p class="subject-desc">${Utils.escapeHTML(subj.desc)}</p>
+                </div>
+                <div class="subject-actions">
+                  <span class="subject-count-pill">${subjQuizzes.length} bộ đề • ${totalQuestions} câu hỏi</span>
+                  ${this.currentSubject === 'all'
+                    ? `<button class="btn btn-secondary btn-sm" onclick="QuizManager.filterSubject('${subj.id}')">Xem riêng môn này</button>`
+                    : `<button class="btn btn-secondary btn-sm" onclick="QuizManager.filterSubject('all')">← Xem tất cả môn</button>`
+                  }
+                </div>
+              </div>
+              <div class="quiz-grid">
+                ${cardsHtml}
+              </div>
+            </section>
+          `;
         });
-        if (filtered.length === 0) {
-          c.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-muted);">Không tìm thấy bộ đề phù hợp.</div>`;
-          return;
-        }
-        c.innerHTML = filtered.map(q => {
-          const best = Storage.get('best_score_' + q.id, null);
-          return `
-            <div class="quiz-card">
-              <div>
-                <div style="display:flex; justify-content:space-between; gap:10px; margin-bottom:8px;">
-                  <span class="badge badge-primary">${Utils.escapeHTML(q.subject)}</span>
-                  <span class="badge badge-accent">${Utils.escapeHTML(q.difficulty)}</span>
-                </div>
-                <h3 class="quiz-title">${Utils.escapeHTML(q.title)}</h3>
-                <p class="quiz-desc">${Utils.escapeHTML(q.description)}</p>
-              </div>
-              <div>
-                <div class="quiz-meta">
-                  <span>📝 ${q.questions.length} câu</span>
-                  <span>⏱️ ${q.timeLimitMinutes}p</span>
-                  <span>🏆 ${best !== null ? best + '/10' : 'Chưa làm'}</span>
-                </div>
-                <div class="quiz-card-footer">
-                  <button class="btn btn-secondary btn-sm" onclick="FlashcardManager.openForQuiz('${q.id}')">Học Flashcard</button>
-                  <button class="btn btn-primary btn-sm" onclick="QuizRunner.selectQuiz('${q.id}')">Bắt đầu →</button>
-                </div>
-              </div>
+
+        if (totalVisible === 0) {
+          c.innerHTML = `
+            <div style="text-align:center; padding:48px 20px; color:var(--text-muted); background:var(--bg-surface); border-radius:var(--radius-xl); border:1px solid var(--border-subtle);">
+              <div style="font-size:2rem; margin-bottom:12px;">🔍</div>
+              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:6px;">Không tìm thấy bộ đề phù hợp</h3>
+              <p style="font-size:0.9rem;">Không có kết quả nào khớp với "${Utils.escapeHTML(this.searchQuery)}".</p>
+              <button class="btn btn-secondary btn-sm" style="margin-top:16px;" onclick="QuizManager.clearSearch()">Xóa tìm kiếm</button>
             </div>
           `;
-        }).join('');
+        } else {
+          c.innerHTML = htmlSections;
+        }
       },
       filterSubject(sub) {
         this.currentSubject = sub;
         document.querySelectorAll('#subject-filter-chips .chip').forEach(c => {
-          c.classList.toggle('active', c.textContent.trim() === (sub === 'all' ? 'Tất cả' : sub));
+          c.classList.toggle('active', c.getAttribute('data-sub') === sub);
         });
         this.renderQuizCards();
       },
       search(val) { this.searchQuery = val; this.renderQuizCards(); },
+      clearSearch() {
+        this.searchQuery = '';
+        const inp = document.querySelector('#screen-dashboard input.input-control');
+        if (inp) inp.value = '';
+        this.renderQuizCards();
+      },
       startWrongQuestionsQuiz() {
         const list = Storage.get('wrong_questions', []);
         if (list.length === 0) return Toast.show("Chúc mừng! Bạn không có câu hỏi nào bị sai.", "success");
@@ -2870,7 +4511,6 @@
       }
     };
 
-    /* 10. QUIZ RUNNER ENGINE */
     const QuizRunner = {
       activeQuiz: null, mode: 'practice', questions: [], currentIndex: 0,
       exitQuiz() {
@@ -3446,29 +5086,51 @@
 
     /* 12. FLASHCARD MANAGER */
     const FlashcardManager = {
-      cards: [], currentIndex: 0, isFlipped: false,
+      cards: [], currentIndex: 0, isFlipped: false, currentSubject: 'all', filteredCards: [],
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v4_ngu_van_9_cham_thong_minh') {
+        if (ver !== 'v5_multi_subject_ai_design') {
           this.cards = DEFAULT_FLASHCARDS;
           Storage.set('flashcards', this.cards);
         } else {
           const s = Storage.get('flashcards', null);
           this.cards = (s && Array.isArray(s) && s.length > 0) ? s : DEFAULT_FLASHCARDS;
         }
+        this.filteredCards = this.cards;
+      },
+      filterSubject(sub) {
+        this.currentSubject = sub;
+        document.querySelectorAll('#fc-subject-filter-chips .chip').forEach(c => {
+          c.classList.toggle('active', c.getAttribute('data-sub') === sub);
+        });
+        this.filteredCards = (sub === 'all')
+          ? this.cards
+          : this.cards.filter(c => c.subject === sub);
+        this.currentIndex = 0;
+        this.render();
       },
       render() {
-        if (this.cards.length === 0) return;
-        const c = this.cards[this.currentIndex];
+        if (!this.filteredCards || this.filteredCards.length === 0) {
+          document.getElementById('fc-category').textContent = 'Chưa có thẻ';
+          document.getElementById('fc-front-text').textContent = 'Không có thẻ ghi nhớ nào trong mục này.';
+          document.getElementById('fc-back-text').textContent = 'Vui lòng chọn môn học khác.';
+          document.getElementById('fc-index').textContent = '0/0';
+          document.getElementById('box-count-1').textContent = 0;
+          document.getElementById('box-count-2').textContent = 0;
+          document.getElementById('box-count-3').textContent = 0;
+          return;
+        }
+        if (this.currentIndex >= this.filteredCards.length) this.currentIndex = 0;
+        const c = this.filteredCards[this.currentIndex];
         this.isFlipped = false;
         document.getElementById('flashcard-card')?.classList.remove('flipped');
-        document.getElementById('fc-category').textContent = c.cat || 'Kiến thức';
+        document.getElementById('fc-category').textContent = `${c.subject || ''} • ${c.cat || 'Kiến thức'}`;
         document.getElementById('fc-front-text').textContent = c.front;
         document.getElementById('fc-back-text').textContent = c.back;
-        document.getElementById('fc-index').textContent = `${this.currentIndex + 1}/${this.cards.length}`;
-        document.getElementById('box-count-1').textContent = this.cards.filter(card => card.box === 1).length;
-        document.getElementById('box-count-2').textContent = this.cards.filter(card => card.box === 2).length;
-        document.getElementById('box-count-3').textContent = this.cards.filter(card => card.box === 3).length;
+        document.getElementById('fc-index').textContent = `${this.currentIndex + 1}/${this.filteredCards.length}`;
+        document.getElementById('box-count-1').textContent = this.filteredCards.filter(card => (card.box || 1) === 1).length;
+        document.getElementById('box-count-2').textContent = this.filteredCards.filter(card => card.box === 2).length;
+        document.getElementById('box-count-3').textContent = this.filteredCards.filter(card => card.box === 3).length;
       },
       flip() {
         this.isFlipped = !this.isFlipped;
@@ -3476,15 +5138,26 @@
         Utils.haptic(20);
       },
       rate(rem) {
-        const c = this.cards[this.currentIndex];
+        if (!this.filteredCards || this.filteredCards.length === 0) return;
+        const c = this.filteredCards[this.currentIndex];
         if (!c) return;
         c.box = rem ? Math.min(3, (c.box || 1) + 1) : 1;
+        const masterCard = this.cards.find(card => card.id === c.id);
+        if (masterCard) masterCard.box = c.box;
         Storage.set('flashcards', this.cards);
         Toast.show(rem ? "Đã nhớ vững 🌱" : "Đã đưa về Hộp 1 để ôn thêm.", rem ? "success" : "info", 1500);
-        this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+        this.currentIndex = (this.currentIndex + 1) % this.filteredCards.length;
         this.render();
       },
-      openForQuiz(quizId) { Router.navigate('flashcards'); }
+      openForQuiz(quizId) {
+        const q = QuizManager.quizzes.find(item => item.id === quizId);
+        Router.navigate('flashcards');
+        if (q && q.subject) {
+          this.filterSubject(q.subject);
+        } else {
+          this.filterSubject('all');
+        }
+      }
     };
 
     /* 13. RELAX CORNER */
