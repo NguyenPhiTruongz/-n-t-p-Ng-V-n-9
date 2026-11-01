@@ -1040,10 +1040,10 @@
         "type": "multiple",
         "text": "Trong 4 câu thơ: 'Tiếng nhạc ngựa lần chen tiếng trống / Giáp mặt rồi phút bỗng chia tay / Hà lương chia rẽ đường này / Bên đường trông bóng cờ bay ngùi ngùi', những cặp từ nào hiệp vần chính xác? (Chọn các phương án đúng)",
         "options": [
-          "Vần chân (thanh Bằng): 'tay' hiệp vần với 'này'",
-          "Vần lưng (thanh Trắc): 'trống' hiệp vần với 'bỗng'",
-          "Vần lưng (thanh Bằng): 'này' hiệp vần với 'bay'",
-          "Vần chân (thanh Trắc): 'ngựa' hiệp vần với 'rẽ'"
+          "Vần chân 'tay' (cuối câu 2) hiệp với vần chân 'này' (cuối câu 3) mang thanh Bằng",
+          "Vần chân 'trống' (cuối câu 1) hiệp với vần lưng 'bỗng' (tiếng 5 câu 2) mang thanh Trắc",
+          "Vần chân 'này' (cuối câu 3) hiệp với vần lưng 'bay' (tiếng 6 câu 4) mang thanh Bằng",
+          "Tiếng 'ngựa' hiệp vần với 'rẽ'"
         ],
         "correct": [
           0,
@@ -1098,9 +1098,9 @@
         "type": "multiple",
         "text": "Trong 4 câu thơ: 'Ngày sáu khắc tin mong nhạn vắng / Đêm năm canh tiếng lắng chuông rền / Lạnh lùng thay giấc cô miên / Mùi hương tịch mịch, bóng đèn thâm u', những nhận định nào sau đây là ĐÚNG về cách gieo vần? (Chọn các phương án đúng)",
         "options": [
-          "Tiếng 'vắng' (cuối câu 1) hiệp vần với tiếng 'lắng' (ở giữa câu 2 - vần lưng) mang thanh Trắc",
-          "Tiếng 'rền' (cuối câu 2) hiệp vần chân với tiếng 'miên' (cuối câu 3) mang thanh Bằng",
-          "Tiếng 'miên' (cuối câu 3) hiệp vần với tiếng 'đèn' (ở giữa câu 4 - vần lưng) mang thanh Bằng",
+          "Vần chân 'vắng' (cuối câu 1) hiệp với vần lưng 'lắng' (tiếng 5 câu 2) mang thanh Trắc, gieo vần liền",
+          "Vần chân 'rền' (cuối câu 2) hiệp với vần chân 'miên' (cuối câu 3) mang thanh Bằng",
+          "Vần chân 'miên' (cuối câu 3) hiệp với vần lưng 'đèn' (tiếng 6 câu 4) mang thanh Bằng",
           "Đoạn thơ trên hoàn toàn không gieo vần theo quy luật song thất lục bát"
         ],
         "correct": [
@@ -2764,11 +2764,14 @@
       quizzes: [], currentSubject: 'all', searchQuery: '',
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v2_ngu_van_9_full') {
+        if (ver !== 'v3_ngu_van_9_chuan_ngu_nghia') {
           this.quizzes = DEFAULT_QUIZZES;
           Storage.set('quizzes', this.quizzes);
           Storage.set('flashcards', DEFAULT_FLASHCARDS);
-          Storage.set('app_data_version', 'v2_ngu_van_9_full');
+          Storage.set('wrong_questions', []);
+          Storage.set('flagged_questions', []);
+          Storage.remove('pending_quiz_session');
+          Storage.set('app_data_version', 'v3_ngu_van_9_chuan_ngu_nghia');
         } else {
           const saved = Storage.get('quizzes', null);
           this.quizzes = (saved && Array.isArray(saved) && saved.length > 0) ? saved : DEFAULT_QUIZZES;
@@ -3365,7 +3368,7 @@
       cards: [], currentIndex: 0, isFlipped: false,
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v2_ngu_van_9_full') {
+        if (ver !== 'v3_ngu_van_9_chuan_ngu_nghia') {
           this.cards = DEFAULT_FLASHCARDS;
           Storage.set('flashcards', this.cards);
         } else {
