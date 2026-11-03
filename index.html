@@ -1068,8 +1068,9 @@
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-nlxh-moi-truong')">4. Nghị Luận Xã Hội</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-de-thi-thu')">5. Đề Thi Thử</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('khtn-9-on-thi-giua-ki-1')">6. KHTN 9</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-giua-ki-1-full')">7. LS&ĐL 9</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('tin-9-giua-ki-1-full')">8. Tin Học 9</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-trac-nghiem-toan-dien')">7. LS&ĐL Trắc Nghiệm</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-chuyen-de-dung-sai-so-lieu-tu-luan')">8. LS&ĐL Đúng/Sai & Tự Luận</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('tin-9-giua-ki-1-full')">9. Tin Học 9</button>
         </div>
 
         <div id="leaderboard-podium" class="podium-grid"></div>
@@ -1083,10 +1084,10 @@
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:24px;">Lật thẻ bằng chạm hoặc phím Space. Đánh giá trí nhớ theo Leitner 3 hộp.</p>
 
           <div class="filter-chips" id="fc-subject-filter-chips" style="justify-content:center; margin-bottom:16px;">
-            <button class="chip active" data-sub="all" onclick="FlashcardManager.filterSubject('all')">Tất cả (39)</button>
+            <button class="chip active" data-sub="all" onclick="FlashcardManager.filterSubject('all')">Tất cả (49)</button>
             <button class="chip" data-sub="Ngữ Văn 9" onclick="FlashcardManager.filterSubject('Ngữ Văn 9')">Ngữ Văn 9 (28)</button>
             <button class="chip" data-sub="Khoa Học Tự Nhiên 9" onclick="FlashcardManager.filterSubject('Khoa Học Tự Nhiên 9')">KHTN 9 (5)</button>
-            <button class="chip" data-sub="Lịch Sử & Địa Lí 9" onclick="FlashcardManager.filterSubject('Lịch Sử & Địa Lí 9')">LS&ĐL 9 (4)</button>
+            <button class="chip" data-sub="Lịch Sử & Địa Lí 9" onclick="FlashcardManager.filterSubject('Lịch Sử & Địa Lí 9')">LS&ĐL 9 (14)</button>
             <button class="chip" data-sub="Tin Học 9" onclick="FlashcardManager.filterSubject('Tin Học 9')">Tin Học 9 (2)</button>
           </div>
 
@@ -3111,301 +3112,858 @@
     ]
   },
   {
-    "id": "lsdl-9-giua-ki-1-full",
+    "id": "lsdl-9-trac-nghiem-toan-dien",
+    "title": "1. Đề Cương Trắc Nghiệm Toàn Diện (35 Câu Chuẩn Ma Trận)",
     "subject": "Lịch Sử & Địa Lí 9",
-    "title": "LS&ĐL 9 - Đề Cương Ôn Tập Giữa Kì 1 (Lịch Sử Thế Giới & Địa Lí Dân Cư - Kinh Tế VN)",
-    "difficulty": "Trung bình",
-    "timeLimitMinutes": 20,
-    "description": "Chuẩn ma trận đề cương giữa kì 1: Phong trào cách mạng thế giới và Việt Nam (1919-1945), Dân cư, Các vùng kinh tế và Ngành nông - lâm - thủy sản.",
+    "difficulty": "Cơ bản - Nâng cao",
+    "timeLimitMinutes": 35,
+    "description": "Trọn bộ 35 câu hỏi trắc nghiệm chuẩn đề cương: Lịch sử thế giới (Nga Xô viết, Liên Xô 1922-1945, New Deal, Đại suy thoái, Khối phát xít, CTTG 2), Lịch sử Việt Nam (1919-1936, Ba Son 1925, Thành lập Đảng 1930) và Địa lí Việt Nam (Dân cư, Lao động, Cây trồng, Lâm sản & Thủy sản).",
     "questions": [
       {
         "id": 1,
         "type": "single",
-        "text": "Có bao nhiêu đế quốc đã câu kết với các thế lực phản cách mạng trong nước để tấn công vào nước Nga xô viết năm 1917?",
+        "text": "Có bao nhiêu nước đế quốc đã cấu kết với các thế lực phản cách mạng trong nước để tấn công vào nước Nga xô viết năm 1917?",
         "options": [
-          "13 đế quốc",
-          "14 đế quốc",
-          "21 đế quốc",
-          "42 đế quốc"
+          "13 đế quốc.",
+          "14 đế quốc.",
+          "21 đế quốc.",
+          "42 đế quốc."
         ],
         "correct": 1,
         "hints": [
-          "14 nước đế quốc liên minh tấn công nước Nga Xô viết non trẻ.",
-          "Số lượng là 14."
+          "Sau Cách mạng tháng Mười 1917, quân đội nhiều nước đế quốc liên minh tấn công bóp chết nước Nga Xô viết non trẻ.",
+          "Số lượng chính xác là 14 nước đế quốc."
         ],
-        "explanation": "14 nước đế quốc (Anh, Pháp, Mĩ, Nhật...) đã câu kết với thế lực phản động trong nước bao vây và tấn công nước Nga Xô viết."
+        "explanation": "Sau thắng lợi của Cách mạng tháng Mười Nga năm 1917, quân đội của 14 nước đế quốc (Anh, Pháp, Mỹ, Nhật...) đã liên minh với lực lượng phản cách mạng trong nước mở cuộc tấn công vũ trang vào nước Nga Xô viết."
       },
       {
         "id": 2,
         "type": "single",
-        "text": "Liên Xô đạt nhiều thành tựu trong xây dựng chủ nghĩa xã hội vào khoảng thời gian nào?",
+        "text": "Liên Xô đạt được nhiều thành tựu rực rỡ trong công cuộc xây dựng chủ nghĩa xã hội vào khoảng thời gian nào?",
         "options": [
-          "Từ năm 1917 - 1919",
-          "Từ năm 1919 - 1920",
-          "Từ năm 1920 - 1921",
-          "Từ năm 1922 đến năm 1945"
+          "Từ năm 1917 - 1919.",
+          "Từ năm 1919 - 1920.",
+          "Từ năm 1920 - 1921.",
+          "Từ năm 1922 - 1945."
         ],
         "correct": 3,
         "hints": [
-          "Liên bang Cộng hòa XHCN Xô viết thành lập tháng 12/1922.",
-          "Giai đoạn thực hiện các kế hoạch 5 năm đến khi kết thúc CTTG 2."
+          "Bắt đầu từ khi Liên bang Cộng hòa XHCN Xô viết (Liên Xô) chính thức thành lập cuối năm 1922.",
+          "Giai đoạn hoàn thành 2 kế hoạch 5 năm xây dựng CNXH kéo dài từ 1922 đến 1945."
         ],
-        "explanation": "Giai đoạn 1922 - 1945 là thời kỳ Liên Xô thực hiện công cuộc xây dựng CNXH với các kế hoạch 5 năm đạt nhiều kỳ tích."
+        "explanation": "Từ khi thành lập Liên bang Xô viết vào cuối năm 1922 đến năm 1945, nhân dân Liên Xô đã thực hiện thắng lợi các kế hoạch 5 năm, biến Liên Xô từ nước nông nghiệp lạc hậu thành cường quốc công nghiệp thứ 2 thế giới."
       },
       {
         "id": 3,
         "type": "single",
-        "text": "Đâu KHÔNG PHẢI là thành tựu của Liên Xô về KINH TẾ trong giai đoạn 1922 đến năm 1945?",
+        "text": "Đâu KHÔNG PHẢI là thành tựu của Liên Xô về kinh tế trong giai đoạn 1922 đến năm 1945?",
         "options": [
-          "Trở thành cường quốc công nghiệp sau 2 kế hoạch 5 năm xây dựng chủ nghĩa xã hội",
-          "Giai cấp bóc lột bị xoá bỏ, còn lại giai cấp công nhân và nông dân tập thể",
-          "Sản xuất công nghiệp đứng đầu châu Âu, đứng thứ hai thế giới",
-          "Sản lượng công nghiệp tăng trưởng vượt bậc"
+          "Giai cấp bóc lột bị xoá bỏ, xã hội chỉ còn giai cấp công nhân và nông dân tập thể.",
+          "Trở thành cường quốc công nghiệp sau 2 kế hoạch 5 năm xây dựng chủ nghĩa xã hội.",
+          "Sản xuất công nghiệp chiếm hơn 70% tổng sản phẩm kinh tế quốc dân.",
+          "Sản lượng công nghiệp đứng đầu châu Âu và đứng thứ hai trên thế giới."
         ],
-        "correct": 1,
+        "correct": 0,
         "hints": [
-          "Đọc kỹ câu hỏi: không phải thành tựu về KINH TẾ.",
-          "Xoá bỏ giai cấp bóc lột là thành tựu về XÃ HỘI."
+          "Hãy chú ý cụm từ 'về kinh tế'.",
+          "Việc xóa bỏ các giai cấp bóc lột thuộc về lĩnh vực xã hội - chính trị, không phải kinh tế."
         ],
-        "explanation": "Giai cấp bóc lột bị xoá bỏ là thành tựu về mặt Xã hội, không thuộc lĩnh vực Kinh tế."
+        "explanation": "'Giai cấp bóc lột bị xoá bỏ, xã hội chỉ còn lại giai cấp công nhân và nông dân tập thể' là thành tựu về mặt XÃ HỘI - CHÍNH TRỊ, không phải thành tựu kinh tế."
       },
       {
         "id": 4,
         "type": "single",
-        "text": "Tác động lớn nhất của 'Chính sách mới' (New Deal) của Tổng thống Ru-dơ-ven đối với chế độ chính trị nước Mỹ là gì?",
+        "text": "Tác động quan trọng nhất của Chính sách mới (New Deal) đối với chế độ chính trị nước Mỹ là gì?",
         "options": [
-          "Duy trì chế độ dân chủ tư sản",
-          "Giải quyết triệt để nạn thất nghiệp",
-          "Tạo thêm nhiều việc làm cho thanh niên",
-          "Xoá dịu hoàn toàn mâu thuẫn giai cấp"
+          "Duy trì chế độ dân chủ tư sản.",
+          "Giải quyết triệt để nạn thất nghiệp trong xã hội.",
+          "Tạo thêm nhiều việc làm cho tầng lớp công nhân.",
+          "Phục hồi toàn diện hệ thống ngân hàng tư nhân."
         ],
         "correct": 0,
         "hints": [
-          "Đưa nước Mĩ thoát khỏi nguy cơ phát xít hóa.",
-          "Giúp nước Mĩ duy trì chế độ dân chủ."
+          "Câu hỏi nhấn mạnh tác động đối với 'chế độ chính trị' nước Mỹ.",
+          "Chính sách mới giúp nước Mỹ không bị trôi dạt vào chế độ độc tài phát xít, bảo vệ nền dân chủ tư sản."
         ],
-        "explanation": "Chính sách mới của Ru-dơ-ven đã giúp nước Mĩ vượt qua khủng hoảng kinh tế và quan trọng nhất là duy trì chế độ dân chủ tư sản, ngăn chặn nguy cơ chủ nghĩa phát xít."
+        "explanation": "Chính sách mới (New Deal) do Tổng thống Franklin Roosevelt ban hành không chỉ giải quyết khó khăn kinh tế mà quan trọng nhất về chính trị là duy trì chế độ dân chủ tư sản Mỹ, ngăn chặn xu hướng phát xít hóa."
       },
       {
         "id": 5,
         "type": "single",
-        "text": "Cuộc đại suy thoái kinh tế ở Mĩ bắt đầu vào thời gian nào và trong lĩnh vực gì?",
+        "text": "Cuộc đại suy thoái kinh tế ở Mỹ (1929 - 1933) bắt đầu bùng nổ trong lĩnh vực nào và vào thời gian nào?",
         "options": [
-          "Tháng 7 - 1929 trong lĩnh vực công nghiệp",
-          "Tháng 8 - 1929 trong lĩnh vực nông nghiệp",
-          "Tháng 9 - 1929 trong lĩnh vực giao thông",
-          "Tháng 10 - 1929 trong lĩnh vực tài chính ngân hàng"
+          "Tháng 7 - 1929 trong lĩnh vực ngân hàng thương mại.",
+          "Tháng 10 - 1929 trong lĩnh vực tài chính ngân hàng.",
+          "Tháng 8 - 1929 trong lĩnh vực đầu tư tài chính.",
+          "Tháng 9 - 1929 trong lĩnh vực sản xuất công nghiệp."
         ],
-        "correct": 3,
+        "correct": 1,
         "hints": [
-          "Ngày 'Thứ Năm đen tối' tại thị trường chứng khoán Phố Wall.",
-          "Bắt đầu vào tháng 10 năm 1929 trong ngành tài chính ngân hàng."
+          "Sự kiện xảy ra vào cuối tháng 10 năm 1929 ('Ngày thứ Năm đen tối').",
+          "Nơi bùng nổ đầu tiên là sàn giao dịch chứng khoán Phố Wall thuộc lĩnh vực tài chính - ngân hàng."
         ],
-        "explanation": "Cuộc đại suy thoái kinh tế ở Mĩ bùng nổ vào ngày 24/10/1929 tại thị trường chứng khoán Phố Wall (lĩnh vực tài chính ngân hàng)."
+        "explanation": "Cuộc đại suy thoái kinh tế bắt đầu vào ngày 24/10/1929 tại thị trường chứng khoán Phố Wall ở New York thuộc lĩnh vực tài chính - ngân hàng, sau đó lan nhanh ra mọi ngành kinh tế."
       },
       {
         "id": 6,
         "type": "single",
-        "text": "Sự kiện nào đã chấm dứt sự phục hồi của nền kinh tế Nhật Bản sau Chiến tranh thế giới thứ nhất?",
+        "text": "Sự kiện nào đã chấm dứt quá trình phục hồi của nền kinh tế Nhật Bản sau Chiến tranh thế giới thứ nhất?",
         "options": [
-          "Cuộc bạo động lúa gạo năm 1918",
-          "Khủng hoảng tài chính năm 1927",
-          "Đảng Cộng sản Nhật Bản thành lập năm 1922",
-          "Trận động đất lịch sử ở Tô-ky-ô năm 1923"
+          "Cuộc bạo động lúa gạo năm 1918.",
+          "Khủng hoảng tài chính năm 1927.",
+          "Đảng Cộng sản Nhật Bản thành lập năm 1922.",
+          "Trận động đất lịch sử ở vùng Kantō - Tô-ky-ô năm 1923."
         ],
         "correct": 1,
         "hints": [
-          "Năm 1927, cuộc khủng hoảng tài chính làm hàng loạt ngân hàng đóng cửa.",
-          "Khủng hoảng tài chính 1927."
+          "Một cuộc khủng hoảng tài chính xảy ra năm 1927 tại Tokyo.",
+          "Cuộc khủng hoảng tài chính năm 1927 làm sụp đổ nhiều ngân hàng lớn."
         ],
-        "explanation": "Năm 1927, cuộc khủng hoảng tài chính ở Tô-ky-ô làm 30 ngân hàng phải đóng cửa, chấm dứt thời kỳ phục hồi ngắn ngủi của kinh tế Nhật."
+        "explanation": "Năm 1927, cuộc khủng hoảng tài chính nổ ra tại thủ đô Tô-ky-ô đã làm tê liệt các ngân hàng và xí nghiệp lớn, chính thức chấm dứt sự phục hồi ngắn ngủi của nền kinh tế Nhật Bản."
       },
       {
         "id": 7,
         "type": "single",
         "text": "Phong trào Ngũ tứ ở Trung Quốc (4/5/1919) được mở đầu bằng cuộc biểu tình của tầng lớp nào?",
         "options": [
-          "Biểu tình của 3000 học sinh, sinh viên ở Bắc Kinh",
-          "Biểu tình của 3000 nông dân Bắc Kinh",
-          "Biểu tình của công nhân thành phố Thượng Hải",
-          "Biểu tình của binh lính và tiểu thương"
+          "Biểu tình của 3000 nông dân ngoại thành Bắc Kinh.",
+          "Biểu tình của hơn 3000 học sinh, sinh viên ở Bắc Kinh.",
+          "Biểu tình của 3000 công nhân đường sắt Bắc Kinh.",
+          "Biểu tình của 3000 trí thức và sĩ phu yêu nước Bắc Kinh."
         ],
-        "correct": 0,
+        "correct": 1,
         "hints": [
-          "Phong trào nổ ra tại quảng trường Thiên An Môn.",
-          "Lực lượng tiên phong là 3000 học sinh, sinh viên Bắc Kinh."
+          "Lực lượng thanh niên trí thức tập trung trước Thiên An Môn.",
+          "Cuộc biểu tình của hơn 3000 học sinh, sinh viên Bắc Kinh ngày 4/5/1919."
         ],
-        "explanation": "Ngày 4/5/1919, 3000 học sinh, sinh viên Bắc Kinh biểu tình phản đối Hội nghị Véc-xai, mở đầu cho Phong trào Ngũ tứ."
+        "explanation": "Ngày 4/5/1919, hơn 3000 học sinh, sinh viên tại Bắc Kinh tổ chức biểu tình rầm rộ trước Thiên An Môn phản đối các cường quốc tại Hội nghị Véc-xai trao quyền lợi ở Sơn Đông cho Nhật Bản, mở đầu phong trào Ngũ Tứ."
       },
       {
         "id": 8,
         "type": "single",
-        "text": "Khối phát xít trong Chiến tranh thế giới thứ hai bao gồm trục 3 quốc gia nào?",
+        "text": "Kết quả của các cuộc khởi nghĩa ở Gia-va (In-đô-nê-xi-a) và Xô viết Nghệ - Tĩnh (Việt Nam) trong phong trào cách mạng là gì?",
         "options": [
-          "Anh, Đức, Nhật Bản",
-          "Mĩ, Pháp, Anh",
-          "Liên Xô, Anh, Pháp",
-          "Đức, I-ta-li-a, Nhật Bản"
+          "Giành thắng lợi trọn vẹn và giải phóng hoàn toàn dân tộc.",
+          "Lan rộng khắp Đông Nam Á và làm động lực cho các cuộc khởi nghĩa toàn dân.",
+          "Bị chính quyền thực dân đàn áp đẫm máu.",
+          "Lật đổ chính quyền phản quốc và thiết lập nền cộng hòa độc lập."
         ],
-        "correct": 3,
+        "correct": 2,
         "hints": [
-          "Trục phát xít Béc-lin - Rô-ma - Tô-ky-ô.",
-          "Đức, Ý (Italia) và Nhật."
+          "Cả hai cuộc đấu tranh đều chưa thể giành thắng lợi cuối cùng do kẻ thù còn rất mạnh.",
+          "Đều bị chính quyền thực dân Hà Lan và Pháp đàn áp dã man, đẫm máu."
         ],
-        "explanation": "Khối phát xít bao gồm trục liên minh 3 nước: Đức, I-ta-li-a và Nhật Bản."
+        "explanation": "Cuộc khởi nghĩa Gia-va (1926-1927) của nhân dân In-đô-nê-xi-a và cao trào Xô viết Nghệ - Tĩnh (1930-1931) ở Việt Nam tuy đều bị chính quyền thực dân thực hiện đàn áp đẫm máu nhưng đã để lại nhiều bài học kinh nghiệm vô giá."
       },
       {
         "id": 9,
         "type": "single",
-        "text": "Ngày 6 và ngày 9/8/1945, quân đội Mĩ đã ném bom nguyên tử xuống hai thành phố nào của Nhật Bản?",
+        "text": "Khối Trục phát xít trong Chiến tranh thế giới thứ hai bao gồm liên minh của những quốc gia nào?",
         "options": [
-          "Na-gôi-a, Tô-ki-ô",
-          "Hi-rô-si-ma, Na-ga-xa-ki",
-          "Tô-ki-ô, Ô-xa-ca",
-          "Hi-rô-si-ma, Na-gôi-a"
+          "Anh, Đức, Nhật Bản.",
+          "Mỹ, Pháp, Anh.",
+          "I-ta-li-a, Pháp, Mỹ.",
+          "Đức, I-ta-li-a, Nhật Bản."
         ],
-        "correct": 1,
+        "correct": 3,
         "hints": [
-          "Ngày 6/8 thả xuống Hi-rô-si-ma, ngày 9/8 thả xuống Na-ga-xa-ki.",
-          "Hai thành phố chịu thảm họa nguyên tử."
+          "Trục Béclin - Rôma - Tôkiô.",
+          "Gồm ba nước: Đức, Italia và Nhật Bản."
         ],
-        "explanation": "Mĩ ném quả bom nguyên tử đầu tiên xuống Hi-rô-si-ma (6/8/1945) và quả thứ hai xuống Na-ga-xa-ki (9/8/1945)."
+        "explanation": "Khối phát xít (Phe Trục) gồm 3 quốc gia phát xít hiếu chiến nhất: Đức, I-ta-li-a và Nhật Bản, liên minh với nhau để phát động chiến tranh phân chia lại thị trường thế giới."
       },
       {
         "id": 10,
         "type": "single",
-        "text": "Ai là người trực tiếp lãnh đạo cuộc bãi công lịch sử của công nhân Ba Son (Sài Gòn) vào tháng 8/1925?",
+        "text": "Ngay sau khi phát xít Đức vô cớ tấn công Ba Lan (1/9/1939), những quốc gia nào đã tuyên chiến với Đức?",
         "options": [
-          "Tôn Đức Thắng",
-          "Phan Bội Châu",
-          "Nguyễn An Ninh",
-          "Phan Châu Trinh"
+          "Anh và Pháp.",
+          "Anh, Pháp, Ba Lan và Mĩ.",
+          "Liên Xô, Anh, Pháp và Mĩ.",
+          "Anh, Pháp và Mĩ."
         ],
         "correct": 0,
         "hints": [
-          "Chủ tịch nước Tôn Đức Thắng thành lập Công hội bí mật ở Sài Gòn.",
-          "Đồng chí Tôn Đức Thắng."
+          "Hai cường quốc Tây Âu có hiệp ước bảo vệ an ninh cho Ba Lan.",
+          "Ngày 3/9/1939, Anh và Pháp tuyên chiến với Đức."
         ],
-        "explanation": "Đồng chí Tôn Đức Thắng là người sáng lập Công hội và trực tiếp lãnh đạo cuộc bãi công của hơn 1000 thợ máy xưởng Ba Son (8/1925)."
+        "explanation": "Ngày 1/9/1939 Đức nổ súng tấn công Ba Lan. Ngày 3/9/1939, hai nước Anh và Pháp chính thức tuyên chiến với phát xít Đức, mở đầu Chiến tranh thế giới thứ hai."
       },
       {
         "id": 11,
         "type": "single",
-        "text": "Sự kiện nào đánh dấu phong trào công nhân Việt Nam bắt đầu chuyển từ đấu tranh tự phát sang đấu tranh tự giác?",
+        "text": "Vào các ngày 6/8 và 9/8/1945, quân đội Mỹ đã ném hai quả bom nguyên tử xuống hai thành phố nào của Nhật Bản?",
         "options": [
-          "Sự xuất hiện của 3 tổ chức cộng sản năm 1929",
-          "Cuộc bãi công của công nhân Ba Son tháng 8/1925",
-          "Đảng Cộng sản Việt Nam thành lập đầu năm 1930",
-          "Hội Việt Nam Cách mạng Thanh niên thành lập tháng 6/1925"
+          "Na-gôi-a và Tô-ki-ô.",
+          "Hi-rô-si-ma và Na-ga-xa-ki.",
+          "Tô-ki-ô và Ô-xa-ca.",
+          "Hi-rô-si-ma và Na-gôi-a."
         ],
         "correct": 1,
         "hints": [
-          "Cuộc bãi công Ba Son đấu tranh không chỉ vì quyền lợi kinh tế mà còn có tính quốc tế vô sản.",
-          "Bãi công Ba Son (8/1925)."
+          "Ngày 6/8 thả xuống Hi-rô-si-ma; ngày 9/8 thả xuống Na-ga-xa-ki.",
+          "Hai thành phố lịch sử chịu thảm họa bom nguyên tử của Nhật Bản."
         ],
-        "explanation": "Bãi công Ba Son (8/1925) trì hoãn chiến hạm Mi-sơ-lê đưa lính sang đàn áp cách mạng Trung Quốc, đánh dấu bước chuyển sang tự giác."
+        "explanation": "Ngày 6/8/1945 Mỹ ném bom nguyên tử xuống Hi-rô-si-ma và ngày 9/8/1945 ném xuống Na-ga-xa-ki khiến hàng trăm nghìn dân thường thương vong, buộc phát xít Nhật phải tuyên bố đầu hàng không điều kiện."
       },
       {
         "id": 12,
         "type": "single",
-        "text": "Hội nghị thành lập Đảng Cộng sản Việt Nam bắt đầu họp vào ngày nào dưới sự chủ trì của lãnh tụ Nguyễn Ái Quốc?",
+        "text": "Tầng lớp, giai cấp nào đã thành lập Đảng Lập hiến ở Việt Nam vào năm 1923?",
         "options": [
-          "Ngày 8 - 2 - 1930",
-          "Ngày 14 - 2 - 1930",
-          "Ngày 6 - 2 - 1930",
-          "Ngày 6 - 1 - 1930"
+          "Tư sản và đại địa chủ.",
+          "Nông dân và thợ thủ công nghèo.",
+          "Giai cấp công nhân Việt Nam.",
+          "Tiểu tư sản thành thị và học sinh sinh viên."
         ],
-        "correct": 3,
+        "correct": 0,
         "hints": [
-          "Khai mạc tại Cửu Long (Hương Cảng, Trung Quốc) từ ngày 6/1/1930.",
-          "Ngày 6 tháng 1 năm 1930."
+          "Các nhân vật như Bùi Quang Chiêu, Nguyễn Phan Long đại diện cho tầng lớp có nhiều ruộng đất và tư bản thương nghiệp.",
+          "Đó là giai cấp tư sản và đại địa chủ ở Nam Kỳ."
         ],
-        "explanation": "Hội nghị hợp nhất các tổ chức cộng sản bắt đầu họp từ ngày 6/1/1930 tại Cửu Long (Hương Cảng) do Nguyễn Ái Quốc chủ trì."
+        "explanation": "Năm 1923, một số nhà tư sản và đại địa chủ ở Nam Kỳ (Bùi Quang Chiêu, Nguyễn Phan Long...) thành lập Đảng Lập hiến đưa ra một số khẩu hiệu đòi tự do dân chủ để thỏa hiệp với thực dân Pháp."
       },
       {
         "id": 13,
         "type": "single",
-        "text": "Trong khu vực Đông Nam Á, dân số nước ta hiện nay xếp thứ mấy?",
+        "text": "Ai là người trực tiếp tổ chức và lãnh đạo cuộc bãi công lịch sử của công nhân Ba Son (Sài Gòn) vào tháng 8/1925?",
         "options": [
-          "Xếp thứ ba (sau In-đô-nê-xi-a và Phi-líp-pin)",
-          "Xếp thứ tư (sau In-đô-nê-xi-a, Phi-líp-pin và Thái Lan)",
-          "Xếp thứ hai (sau In-đô-nê-xi-a)",
-          "Xếp thứ nhất"
+          "Tôn Đức Thắng.",
+          "Phan Bội Châu.",
+          "Nguyễn An Ninh.",
+          "Phan Châu Trinh."
         ],
         "correct": 0,
         "hints": [
-          "Dân số VN vượt 100 triệu người.",
-          "Đứng thứ 3 Đông Nam Á sau Indonesia và Philippines."
+          "Người thành lập Công hội đỏ bí mật tại Sài Gòn - Chợ Lớn.",
+          "Sau này là Chủ tịch nước Việt Nam Dân chủ Cộng hòa."
         ],
-        "explanation": "Tại Đông Nam Á, Việt Nam có quy mô dân số đứng thứ 3 (sau In-đô-nê-xi-a và Phi-líp-pin)."
+        "explanation": "Đồng chí Tôn Đức Thắng đã trực tiếp lãnh đạo cuộc bãi công của hơn 1000 công nhân xưởng đóng tàu Ba Son vào tháng 8/1925."
       },
       {
         "id": 14,
         "type": "single",
-        "text": "Mặc dù tỉ lệ gia tăng tự nhiên đã giảm nhưng mỗi năm nước ta vẫn tăng thêm khoảng 1 triệu người. Nguyên nhân chủ yếu là do:",
+        "text": "Sự kiện lịch sử nào đánh dấu phong trào công nhân Việt Nam bắt đầu bước chuyển biến từ đấu tranh tự phát sang đấu tranh tự giác?",
         "options": [
-          "Quy mô dân số lớn và cơ cấu dân số trẻ",
-          "Tỉ lệ người già trong dân số tăng nhanh",
-          "Chất lượng y tế phát triển vượt bậc",
-          "Lượng người nhập cư từ nước ngoài vào đông"
+          "Năm 1929, ở nước ta liên tiếp xuất hiện ba tổ chức cộng sản.",
+          "Tháng 8-1925, công nhân thợ máy xưởng Ba Son tiến hành bãi công.",
+          "Đầu năm 1930, Đảng Cộng sản Việt Nam được chính thức thành lập.",
+          "Tháng 6-1925, Hội Việt Nam Cách mạng Thanh niên ra đời tại Quảng Châu."
         ],
-        "correct": 0,
+        "correct": 1,
         "hints": [
-          "Quy mô gốc dân số đã lớn (hơn 100 triệu người).",
-          "Số phụ nữ trong độ tuổi sinh đẻ còn cao do cơ cấu dân số trẻ."
+          "Cuộc bãi công của công nhân Ba Son vào tháng 8 năm 1925 do Tôn Đức Thắng lãnh đạo.",
+          "Đánh dấu bước ngoặt chuyển từ đấu tranh tự phát sang tự giác."
         ],
-        "explanation": "Do quy mô dân số nước ta lớn và cơ cấu dân số trẻ nên dù tỉ lệ gia tăng tự nhiên giảm, số người tăng tuyệt đối hàng năm vẫn rất cao."
+        "explanation": "Cuộc bãi công của công nhân thợ máy xưởng Ba Son (8/1925) do Tôn Đức Thắng lãnh đạo đánh dấu bước ngoặt công nhân Việt Nam chuyển từ đấu tranh tự phát sang đấu tranh tự giác."
       },
       {
         "id": 15,
         "type": "single",
-        "text": "Hai vùng chuyên canh cây công nghiệp lớn nhất ở nước ta hiện nay là:",
+        "text": "Tháng 6 - 1919, người thanh niên yêu nước Nguyễn Tất Thành đã gửi bản 'Yêu sách của nhân dân An Nam' tới đâu?",
         "options": [
-          "Đông Nam Bộ và Trung du miền núi Bắc Bộ",
-          "Trung du miền núi Bắc Bộ và Tây Nguyên",
-          "Đông Nam Bộ và Tây Nguyên",
-          "Tây Nguyên và Duyên hải Nam Trung Bộ"
+          "Hội liên hiệp thuộc địa.",
+          "Hội nghị Véc-xai (Pháp).",
+          "Hội đồng Quốc tế Nông dân.",
+          "Hội nghị hợp nhất các tổ chức cộng sản."
         ],
-        "correct": 2,
+        "correct": 1,
         "hints": [
-          "Đông Nam Bộ là thủ phủ cao su, điều, tiêu.",
-          "Tây Nguyên là thủ phủ cà phê."
+          "Hội nghị của các nước đế quốc thắng trận họp tại thủ đô nước Pháp sau CTTG 1.",
+          "Hội nghị Véc-xai (Versailles)."
         ],
-        "explanation": "Đông Nam Bộ và Tây Nguyên là hai vùng chuyên canh cây công nghiệp lâu năm lớn nhất cả nước."
+        "explanation": "Tháng 6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc (Nguyễn Tất Thành) gửi bản 'Yêu sách của nhân dân An Nam' gồm 8 điểm tới Hội nghị Véc-xai đòi các quyền tự do dân chủ tối thiểu."
       },
       {
         "id": 16,
         "type": "single",
-        "text": "Trong cơ cấu giá trị sản xuất ngành trồng trọt ở nước ta, loại cây trồng nào vẫn chiếm tỉ trọng cao nhất?",
+        "text": "Hội nghị thành lập Đảng Cộng sản Việt Nam bắt đầu tiến hành từ thời gian nào?",
         "options": [
-          "Cây lương thực (lúa gạo, ngô)",
-          "Cây rau đậu",
-          "Cây công nghiệp",
-          "Cây ăn quả"
+          "Ngày 8 - 2 - 1930.",
+          "Ngày 14 - 2 - 1930.",
+          "Ngày 6 - 2 - 1930.",
+          "Ngày 6 - 1 - 1930."
         ],
-        "correct": 0,
+        "correct": 3,
         "hints": [
-          "Nước ta là nước xuất khẩu gạo hàng đầu thế giới.",
-          "Cây lương thực giữ vai trò nòng cốt."
+          "Khai mạc vào ngày 6 tháng 1 năm 1930.",
+          "Hội nghị do Nguyễn Ái Quốc chủ trì tại Cửu Long (Hương Cảng)."
         ],
-        "explanation": "Cây lương thực (chủ yếu là lúa) luôn chiếm tỉ trọng cao nhất trong cơ cấu giá trị sản xuất ngành trồng trọt của nước ta."
+        "explanation": "Hội nghị hợp nhất các tổ chức cộng sản do đồng chí Nguyễn Ái Quốc chủ trì bắt đầu họp từ ngày 6/1/1930 đến đầu tháng 2/1930 tại Cửu Long (Hương Cảng, Trung Quốc)."
       },
       {
         "id": 17,
         "type": "single",
-        "text": "Vai trò quan trọng hàng đầu của việc bảo vệ và phát triển rừng đầu nguồn ở nước ta là gì?",
+        "text": "Phong trào cách mạng 1930 - 1931 ở Việt Nam bùng nổ và diễn ra trong bối cảnh lịch sử nào?",
         "options": [
-          "Tạo cảnh quan du lịch sinh thái",
-          "Điều hoà nguồn nước của các dòng sông, chống lũ lụt và xói mòn",
-          "Cung cấp nguồn gỗ quý phục vụ xuất khẩu",
-          "Mở rộng diện tích đất làm nương rẫy"
+          "Khủng hoảng kinh tế thừa trên thế giới đã hoàn toàn kết thúc.",
+          "Thực dân Pháp tăng cường khủng bố, đàn áp chính trị dã man.",
+          "Giai cấp tư sản dân tộc nắm quyền lãnh đạo phong trào cách mạng.",
+          "Phong trào đấu tranh chống chủ nghĩa phát xít trên thế giới dâng cao."
         ],
         "correct": 1,
         "hints": [
-          "Rừng đầu nguồn nằm ở thượng lưu các con sông lớn.",
-          "Có vai trò giữ nước, chống sạt lở xói mòn và điều hòa dòng chảy."
+          "Ảnh hưởng của cuộc khủng hoảng kinh tế thế giới 1929-1933 và chính sách khủng bố trắng của thực dân Pháp.",
+          "Thực dân Pháp tăng cường đàn áp, khủng bố chính trị sau khởi nghĩa Yên Bái."
         ],
-        "explanation": "Rừng đầu nguồn giữ vai trò đặc biệt quan trọng trong việc giữ nước, điều hoà nguồn nước ngầm và dòng chảy các sông, phòng chống lũ quét và xói mòn đất."
+        "explanation": "Phong trào cách mạng 1930-1931 nổ ra dưới tác động tàn khốc của khủng hoảng kinh tế 1929-1933 và chính sách khủng bố, đàn áp đẫm máu của thực dân Pháp sau khởi nghĩa Yên Bái thất bại."
+      },
+      {
+        "id": 18,
+        "type": "single",
+        "text": "Chủ trương tập hợp lực lượng cách mạng của Hội nghị Ban Chấp hành Trung ương Đảng vào tháng 7-1936 là thành lập tổ chức nào?",
+        "options": [
+          "Mặt trận Thống nhất Dân chủ Đông Dương.",
+          "Mặt trận Nhân dân phản đế Đông Dương.",
+          "Mặt trận Dân tộc Đông Dương.",
+          "Mặt trận Việt Nam Độc lập Đồng minh."
+        ],
+        "correct": 1,
+        "hints": [
+          "Hội nghị tháng 7/1936 chủ trương thành lập Mặt trận mang tên 'Nhân dân phản đế'.",
+          "Đến năm 1938 đổi tên thành Mặt trận Dân chủ Đông Dương."
+        ],
+        "explanation": "Hội nghị Ban Chấp hành Trung ương Đảng (7/1936) họp tại Thượng Hải do đồng chí Lê Hồng Phong chủ trì quyết định thành lập 'Mặt trận Nhân dân phản đế Đông Dương' nhằm tập hợp mọi lực lượng dân chủ chống phản động thuộc địa."
+      },
+      {
+        "id": 19,
+        "type": "single",
+        "text": "Ngày 12/9/1930, cuộc biểu tình đấu tranh anh dũng của khoảng 8000 nông dân đã diễn ra ở địa danh nào?",
+        "options": [
+          "Hưng Nguyên (Nghệ An).",
+          "Anh Sơn (Nghệ An).",
+          "Can Lộc (Hà Tĩnh).",
+          "Hương Khê (Hà Tĩnh)."
+        ],
+        "correct": 0,
+        "hints": [
+          "Một huyện thuộc tỉnh Nghệ An gần kề thành phố Vinh.",
+          "Cuộc biểu tình của nông dân Hưng Nguyên ngày 12/9/1930."
+        ],
+        "explanation": "Ngày 12/9/1930, 8000 nông dân huyện Hưng Nguyên (Nghệ An) biểu tình kéo về Vinh. Thực dân Pháp cho máy bay ném bom xả súng làm hàng trăm người chết, mở đầu cao trào Xô viết Nghệ - Tĩnh."
+      },
+      {
+        "id": 20,
+        "type": "single",
+        "text": "Vùng Trung du và miền núi Bắc Bộ là địa bàn cư trú lâu đời của các dân tộc anh em nào sau đây?",
+        "options": [
+          "H'Mông, Thái, Chăm, Hoa.",
+          "Tày, Khơ-me, Mường, Chăm.",
+          "Tày, H'Mông, Thái, Mường.",
+          "Kinh, Tày, Mường, Chăm."
+        ],
+        "correct": 2,
+        "hints": [
+          "Chú ý loại trừ các phương án có dân tộc Chăm hoặc Khơ-me (vốn cư trú ở miền Nam).",
+          "Gồm các dân tộc: Tày, H'Mông, Thái, Mường..."
+        ],
+        "explanation": "Trung du và miền núi Bắc Bộ là nơi cư trú chủ yếu của các dân tộc: Tày, Nùng, Thái, H'Mông, Dao, Mường... (trong khi đồng bào Chăm cư trú ở Nam Trung Bộ/Nam Bộ, Khơ-me ở ĐBSCL)."
+      },
+      {
+        "id": 21,
+        "type": "single",
+        "text": "Trong khu vực Đông Nam Á, quy mô dân số nước ta (trên 100 triệu người) xếp thứ ba sau những quốc gia nào?",
+        "options": [
+          "In-đô-nê-xi-a và Phi-líp-pin.",
+          "Cam-pu-chia và Phi-líp-pin.",
+          "In-đô-nê-xi-a và Mi-an-ma.",
+          "Lào và Ma-lai-xi-a."
+        ],
+        "correct": 0,
+        "hints": [
+          "Nước đông dân nhất Đông Nam Á là In-đô-nê-xi-a, thứ hai là Phi-líp-pin.",
+          "Việt Nam đứng thứ ba sau Indonesia và Philippines."
+        ],
+        "explanation": "Tại Đông Nam Á, dân số Việt Nam xếp thứ 3 sau In-đô-nê-xi-a (hơn 270 triệu người) và Phi-líp-pin (hơn 110 triệu người), đồng thời đứng thứ 15 trên thế giới."
+      },
+      {
+        "id": 22,
+        "type": "single",
+        "text": "Mặc dù tỉ lệ gia tăng tự nhiên của dân số giảm, nhưng số lượng dân nước ta vẫn còn tăng nhanh là do nguyên nhân nào sau đây?",
+        "options": [
+          "Quy mô dân số nước ta rất lớn.",
+          "Tuổi thọ trung bình ngày càng tăng cao.",
+          "Cơ cấu dân số đang già hóa.",
+          "Tỉ lệ gia tăng cơ học rất cao."
+        ],
+        "correct": 0,
+        "hints": [
+          "Nước ta có quy mô dân số trên 100 triệu người.",
+          "Khi quy mô dân số lớn, tỉ lệ % dù nhỏ cũng tạo ra số lượng người tăng thêm rất lớn."
+        ],
+        "explanation": "Do quy mô dân số nước ta rất lớn (hơn 100 triệu người), nên dù tỉ lệ gia tăng tự nhiên đã giảm đáng kể thì số lượng người tăng thêm mỗi năm vẫn ở mức rất cao."
+      },
+      {
+        "id": 23,
+        "type": "single",
+        "text": "Tỉ lệ gia tăng tự nhiên đã giảm nhưng mỗi năm nước ta vẫn tăng thêm khoảng 1 triệu người là do những yếu tố nào?",
+        "options": [
+          "Quy mô dân số lớn và cơ cấu dân số trẻ.",
+          "Mức chết xuống thấp và ổn định.",
+          "Sự phát triển vượt bậc về kinh tế - xã hội.",
+          "Chất lượng cuộc sống ngày càng được nâng lên."
+        ],
+        "correct": 0,
+        "hints": [
+          "Kết hợp giữa quy mô dân số lớn (>100 triệu) và cơ cấu độ tuổi sinh sản.",
+          "Quy mô dân số lớn và cơ cấu dân số trẻ là nguyên nhân chính."
+        ],
+        "explanation": "Quy mô dân số lớn (>100 triệu) kết hợp cùng cơ cấu dân số trẻ với tỉ lệ người trong độ tuổi sinh sản cao là nguyên nhân mỗi năm nước ta tăng thêm xấp xỉ 1 triệu người."
+      },
+      {
+        "id": 24,
+        "type": "single",
+        "text": "Hai vùng kinh tế phát triển năng động nhất và thu hút đông đảo dân cư nhập cư nhất ở nước ta là:",
+        "options": [
+          "Tây Nguyên và Đồng bằng sông Hồng.",
+          "Bắc Trung Bộ và Đồng bằng sông Cửu Long.",
+          "Đông Nam Bộ và Đồng bằng sông Hồng.",
+          "Đồng bằng sông Hồng và Đồng bằng sông Cửu Long."
+        ],
+        "correct": 2,
+        "hints": [
+          "Hai vùng gắn liền với hai đại đô thị TP. Hồ Chí Minh và Hà Nội.",
+          "Đông Nam Bộ và Đồng bằng sông Hồng."
+        ],
+        "explanation": "Đông Nam Bộ và Đồng bằng sông Hồng là hai vùng kinh tế trọng điểm phát triển năng động, hạ tầng hoàn thiện, tập trung nhiều khu công nghiệp nên thu hút luồng di dân nhập cư lớn nhất cả nước."
+      },
+      {
+        "id": 25,
+        "type": "single",
+        "text": "Hai loại hình quần cư cơ bản ở nước ta hiện nay là:",
+        "options": [
+          "Quần cư nông thôn và quần cư thành thị.",
+          "Quần cư ven biển và quần cư thành thị.",
+          "Quần cư nông thôn và quần cư miền núi.",
+          "Quần cư đồng bằng và quần cư thành thị."
+        ],
+        "correct": 0,
+        "hints": [
+          "Gắn với làng xã nông nghiệp và đô thị công nghiệp - dịch vụ.",
+          "Gồm quần cư nông thôn và quần cư thành thị."
+        ],
+        "explanation": "Nước ta có hai loại hình quần cư cơ bản: Quần cư nông thôn (gắn với sản xuất nông - lâm - ngư nghiệp, làng xã) và Quần cư thành thị (gắn với công nghiệp, dịch vụ, mật độ cao)."
+      },
+      {
+        "id": 26,
+        "type": "single",
+        "text": "Nhận định nào sau đây KHÔNG ĐÚNG về đặc điểm phân bố dân cư ở nước ta hiện nay?",
+        "options": [
+          "Mật độ dân số nước ta thuộc mức cao trên thế giới.",
+          "Mật độ dân số tại các khu vực là đồng đều như nhau.",
+          "Sự phân bố dân cư có sự thay đổi theo thời gian.",
+          "Phân bố dân cư có sự chênh lệch lớn giữa các vùng."
+        ],
+        "correct": 1,
+        "hints": [
+          "Dân cư nước ta phân bố đồng đều hay rất không đều giữa các vùng?",
+          "Nhận định cho rằng mật độ dân số ở các khu vực như nhau là hoàn toàn sai."
+        ],
+        "explanation": "Nhận định 'Mật độ dân số tại các khu vực là như nhau' là SAI. Thực tế dân cư nước ta phân bố rất không đều: tập trung tới 75% ở đồng bằng và duyên hải, trong khi miền núi và cao nguyên chỉ chiếm 25%."
+      },
+      {
+        "id": 27,
+        "type": "single",
+        "text": "Hai vùng chuyên canh cây công nghiệp lâu năm lớn nhất ở nước ta hiện nay là:",
+        "options": [
+          "Đông Nam Bộ và Trung du miền núi Bắc Bộ.",
+          "Trung du miền núi Bắc Bộ và Tây Nguyên.",
+          "Đông Nam Bộ và Tây Nguyên.",
+          "Tây Nguyên và Duyên hải Nam Trung Bộ."
+        ],
+        "correct": 2,
+        "hints": [
+          "Hai vùng đất đỏ bazan và đất xám phù sa cổ màu mỡ bậc nhất phía Nam.",
+          "Đông Nam Bộ (cao su, tiêu, điều) và Tây Nguyên (cà phê, cao su, chè)."
+        ],
+        "explanation": "Đông Nam Bộ và Tây Nguyên là 2 vùng chuyên canh cây công nghiệp lớn nhất cả nước nhờ có diện tích đất bazan màu mỡ, khí hậu nhiệt đới cận xích đạo thuận lợi cho cao su, cà phê, hồ tiêu, điều."
+      },
+      {
+        "id": 28,
+        "type": "single",
+        "text": "Nguồn thức ăn cho ngành chăn nuôi gia súc lớn (trâu, bò) ở vùng trung du và miền núi nước ta chủ yếu dựa vào:",
+        "options": [
+          "Hoa màu lương thực.",
+          "Phụ phẩm ngành thủy sản.",
+          "Thức ăn công nghiệp tổng hợp.",
+          "Các đồng cỏ tự nhiên."
+        ],
+        "correct": 3,
+        "hints": [
+          "Vùng đồi núi và cao nguyên có lợi thế tự nhiên về thảm thực vật chăn thả.",
+          "Dựa chủ yếu vào các đồng cỏ tự nhiên tươi tốt."
+        ],
+        "explanation": "Trung du và miền núi nước ta có nhiều đồng cỏ tự nhiên tươi tốt trên các cao nguyên và sườn đồi, là cơ sở tự nhiên quan trọng nhất để phát triển đàn trâu bò quy mô lớn."
+      },
+      {
+        "id": 29,
+        "type": "single",
+        "text": "Trong cơ cấu giá trị sản xuất của ngành trồng trọt ở nước ta, nhóm cây trồng nào chiếm tỉ trọng cao nhất?",
+        "options": [
+          "Cây lương thực.",
+          "Cây rau đậu.",
+          "Cây công nghiệp.",
+          "Cây ăn quả."
+        ],
+        "correct": 0,
+        "hints": [
+          "Nhóm cây trồng giữ vai trò bảo đảm an ninh lương thực quốc gia, chủ yếu là lúa nước.",
+          "Cây lương thực chiếm tỉ trọng giá trị cao nhất."
+        ],
+        "explanation": "Cây lương thực (đặc biệt là cây lúa) luôn chiếm tỉ trọng cao nhất trong cơ cấu giá trị ngành trồng trọt nước ta, đáp ứng nhu cầu lương thực trong nước và đưa Việt Nam thành quốc gia xuất khẩu gạo hàng đầu."
+      },
+      {
+        "id": 30,
+        "type": "single",
+        "text": "Nguồn lao động nước ta hiện nay còn có hạn chế chủ yếu về những mặt nào sau đây?",
+        "options": [
+          "Thể lực, trình độ chuyên môn kỹ thuật và tác phong lao động công nghiệp.",
+          "Nguồn lao động bổ sung hàng năm quá ít ỏi.",
+          "Thiếu kinh nghiệm trong sản xuất nông nghiệp cổ truyền.",
+          "Khả năng tiếp thu khoa học - kỹ thuật mới còn chậm."
+        ],
+        "correct": 0,
+        "hints": [
+          "Lao động Việt Nam khéo léo nhưng còn thiếu chứng chỉ chuyên môn và ý thức công nghiệp.",
+          "Hạn chế về thể lực, trình độ chuyên môn và tác phong công nghiệp."
+        ],
+        "explanation": "Mặc dù cần cù và khéo léo, nguồn lao động nước ta vẫn còn hạn chế lớn về thể lực, trình độ chuyên môn kỹ thuật (tỉ lệ có chứng chỉ bằng cấp còn thấp) và tác phong lao động công nghiệp chưa cao."
+      },
+      {
+        "id": 31,
+        "type": "single",
+        "text": "Đặc điểm nào sau đây KHÔNG ĐÚNG với thực trạng nguồn lao động nước ta hiện nay?",
+        "options": [
+          "Nguồn lao động dồi dào, bổ sung khá lớn hàng năm.",
+          "Tỉ lệ lao động qua đào tạo chuyên môn còn khá thấp.",
+          "Có tác phong công nghiệp cao và tính kỷ luật đồng đều.",
+          "Chất lượng lao động ngày càng từng bước được nâng lên."
+        ],
+        "correct": 2,
+        "hints": [
+          "Phần lớn lao động nước ta vẫn chưa được rèn luyện trong môi trường công nghiệp hiện đại.",
+          "Nhận định cho rằng lao động nước ta có tác phong công nghiệp cao là không đúng."
+        ],
+        "explanation": "Đặc điểm 'Có tác phong công nghiệp cao' là KHÔNG ĐÚNG. Đa số lao động nước ta còn mang thói quen sản xuất nông nghiệp manh mún, ý thức kỷ luật lao động và tác phong công nghiệp còn hạn chế."
+      },
+      {
+        "id": 32,
+        "type": "single",
+        "text": "Hoạt động xuất khẩu lao động có ý nghĩa quan trọng như thế nào đối với việc giải quyết vấn đề việc làm ở nước ta?",
+        "options": [
+          "Giúp phân bố lại dân cư và nguồn lao động giữa các vùng trong nước.",
+          "Góp phần đa dạng hóa các hoạt động sản xuất tiểu thủ công nghiệp.",
+          "Hạn chế tình trạng thất nghiệp và thiếu việc làm, nâng cao thu nhập cho lao động.",
+          "Đa dạng các loại hình trường đào tạo nghề nghiệp trong nước."
+        ],
+        "correct": 2,
+        "hints": [
+          "Giải quyết trực tiếp bài toán người lao động chưa tìm được việc trong nước.",
+          "Hạn chế tình trạng thất nghiệp, thiếu việc làm và mang lại thu nhập cao."
+        ],
+        "explanation": "Xuất khẩu lao động trực tiếp giải quyết công ăn việc làm cho lực lượng lao động dôi dư, giảm áp lực thất nghiệp trong nước, tăng thu nhập và rèn luyện tác phong lao động quốc tế hiện đại."
+      },
+      {
+        "id": 33,
+        "type": "single",
+        "text": "Ngành thủy sản ở nước ta bao gồm những hoạt động sản xuất kinh tế nào sau đây?",
+        "options": [
+          "Nuôi trồng, bảo vệ nguồn lợi và khai hoang bãi bồi ven biển.",
+          "Khoan nuôi hải sản, đánh bắt tự nhiên và bảo vệ môi trường biển.",
+          "Khai thác, chế biến và nuôi trồng thủy sản.",
+          "Bảo vệ sinh thái nước mặn, khai thác và nuôi trồng thủy sản."
+        ],
+        "correct": 2,
+        "hints": [
+          "Gồm đánh bắt tự nhiên, nuôi trên mặt nước và làm gia tăng giá trị sản phẩm.",
+          "Khai thác, chế biến và nuôi trồng thủy sản."
+        ],
+        "explanation": "Cơ cấu ngành thủy sản nước ta bao gồm 3 hoạt động cơ bản: khai thác thủy sản (hải sản biển, sông hồ), nuôi trồng thủy sản (nước ngọt, nước lợ, nước mặn) và chế biến thủy sản phục vụ tiêu dùng và xuất khẩu."
+      },
+      {
+        "id": 34,
+        "type": "single",
+        "text": "Yếu tố tự nhiên nào sau đây có ảnh hưởng trực tiếp và lớn nhất đến sự phát triển của ngành sản xuất thủy sản nước ta?",
+        "options": [
+          "Địa hình bờ biển, vùng biển rộng và nguồn lợi hải sản phong phú.",
+          "Khí hậu nhiệt đới gió mùa và các dạng địa hình bán bình nguyên.",
+          "Nguồn nước ngọt dồi dào và khí hậu có mùa đông lạnh.",
+          "Hệ sinh vật đất ngập mặn và nguồn nước ngầm phong phú."
+        ],
+        "correct": 0,
+        "hints": [
+          "Vùng biển đặc quyền kinh tế hơn 1 triệu km2 và các ngư trường giàu hải sản.",
+          "Địa hình ven bờ, vùng biển rộng và nguồn lợi hải sản phong phú."
+        ],
+        "explanation": "Vùng biển rộng lớn (hơn 1 triệu km2), đường bờ biển dài 3260 km, nhiều vũng vịnh, đầm phá và 4 ngư trường trọng điểm giàu trữ lượng hải sản là điều kiện tự nhiên quyết định sự phát triển vượt bậc của ngành thủy sản."
+      },
+      {
+        "id": 35,
+        "type": "single",
+        "text": "Vai trò quan trọng hàng đầu của hệ thống rừng đầu nguồn đối với môi trường sinh thái và đời sống là gì?",
+        "options": [
+          "Tạo sự phong phú cho cảnh quan du lịch sinh thái tự nhiên.",
+          "Điều hoà nguồn nước của các lưu vực sông, chống xói mòn và giảm thiểu lũ lụt.",
+          "Điều hoà khí hậu khu vực đồng bằng, chắn cát bay ven biển.",
+          "Cung cấp khối lượng lớn gỗ quý và lâm sản phục vụ xuất khẩu."
+        ],
+        "correct": 1,
+        "hints": [
+          "Rừng ở thượng nguồn điều tiết nước chảy vào mùa mưa lũ và mùa cạn.",
+          "Điều hoà nguồn nước của các sông, chống xói mòn đất và hạn chế lũ lụt."
+        ],
+        "explanation": "Rừng đầu nguồn (rừng phòng hộ ở thượng nguồn các con sông) có chức năng then chốt là giữ đất, giữ nước, điều hòa dòng chảy sông ngòi, hạn chế lũ quét vào mùa mưa và bổ sung nước ngầm vào mùa cạn."
+      }
+    ]
+  },
+  {
+    "id": "lsdl-9-chuyen-de-dung-sai-so-lieu-tu-luan",
+    "title": "2. Chuyên Đề Đúng/Sai, Bài Tập Số Liệu & Tự Luận Trọng Tâm (15 Câu)",
+    "subject": "Lịch Sử & Địa Lí 9",
+    "difficulty": "Nâng cao",
+    "timeLimitMinutes": 30,
+    "description": "Bộ câu hỏi then chốt phân loại điểm 9-10 đề thi giữa kì 1: Trắc nghiệm Đúng/Sai (Quốc tế CS 1919-1943, Nguyên nhân phát xít hóa Đức - Italia, Phong trào Ba Son 1925), Bài tập tính toán & phân tích số liệu Địa lí (% Dân thành thị, % Cây công nghiệp, Sản lượng thủy sản) và Tự luận (Thất nghiệp thanh niên, Tài nguyên rừng, Lớp huấn luyện Quảng Châu 75 học viên, Nguyễn Thái Học).",
+    "questions": [
+      {
+        "id": 1,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI khi nói về sự thành lập Quốc tế Cộng sản: 'Quốc tế Cộng sản được thành lập ở Béc-lin vào tháng 3/1919'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 1,
+        "hints": [
+          "Quốc tế Cộng sản được thành lập ở thủ đô của nước Nga Xô viết.",
+          "Nơi thành lập là Mát-xcơ-va (Nga), không phải Béc-lin (Đức)."
+        ],
+        "explanation": "SAI. Tháng 3/1919, với sự hoạt động tích cực của V. I. Lê-nin và Đảng Bôn-sê-vích Nga, Quốc tế Cộng sản được thành lập tại Mát-xcơ-va (Nga), không phải Béc-lin."
+      },
+      {
+        "id": 2,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI: 'Trong suốt thời gian tồn tại từ năm 1919 đến năm 1943, Quốc tế Cộng sản đã tiến hành tổng cộng 7 kỳ đại hội'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 0,
+        "hints": [
+          "Quốc tế Cộng sản đã trải qua 7 kỳ đại hội lịch sử.",
+          "Nhận định trên là hoàn toàn chính xác."
+        ],
+        "explanation": "ĐÚNG. Trong 24 năm tồn tại (1919-1943), Quốc tế Cộng sản đã tiến hành 7 kỳ đại hội, đề ra đường lối chỉ đạo phong trào cách mạng thế giới qua từng giai đoạn."
+      },
+      {
+        "id": 3,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI: 'Quốc tế Cộng sản là tổ chức quốc tế của giai cấp công nhân và các dân tộc bị áp bức trên toàn thế giới'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 0,
+        "hints": [
+          "Quốc tế thứ ba kết hợp chặt chẽ phong trào công nhân chính quốc với phong trào giải phóng thuộc địa.",
+          "Nhận định này là ĐÚNG."
+        ],
+        "explanation": "ĐÚNG. Quốc tế Cộng sản thực sự là tổ chức quốc tế của giai cấp công nhân và các dân tộc bị áp bức trên toàn thế giới, hướng dẫn phong trào đấu tranh chống chủ nghĩa đế quốc."
+      },
+      {
+        "id": 4,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI: 'Năm 1945, Quốc tế Cộng sản tuyên bố tự giải tán để tránh sự can thiệp từ phe phát xít'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 1,
+        "hints": [
+          "Thời điểm tự giải tán là năm 1943 do tình hình phong trào cách mạng từng nước đã trưởng thành.",
+          "Không phải năm 1945."
+        ],
+        "explanation": "SAI. Năm 1943 (chứ không phải năm 1945), do sự thay đổi của tình hình thế giới và nhiệm vụ cụ thể của từng đảng cộng sản ở mỗi nước, Quốc tế Cộng sản đã tuyên bố tự giải tán."
+      },
+      {
+        "id": 5,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI về nguyên nhân phát xít hóa: 'Các nước như Đức, Italia do có nhiều thuộc địa và thị trường nguyên liệu ổn định nên kinh tế phát triển bền vững'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 1,
+        "hints": [
+          "Đức và Italia là các nước 'đế quốc đến muộn', có rất ít hoặc không có thuộc địa.",
+          "Nhận định trên là SAI."
+        ],
+        "explanation": "SAI. Đức và Italia không có hoặc có rất ít thuộc địa nên vô cùng thiếu vốn, thiếu nguyên liệu và thị trường, rơi vào khủng hoảng nặng nề và đã đi theo con đường phát xít hóa độc tài."
+      },
+      {
+        "id": 6,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI: 'Dưới tác động mạnh mẽ của cuộc đại suy thoái kinh tế (1929-1933), Đức và Italia ngày càng thiếu vốn, thiếu nguyên liệu và thị trường nên đã đi theo con đường phát xít hóa để phân chia lại thế giới'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 0,
+        "hints": [
+          "Khủng hoảng 1929-1933 làm trầm trọng thêm tình trạng thiếu thị trường của Đức và Italia.",
+          "Nhận định này là ĐÚNG."
+        ],
+        "explanation": "ĐÚNG. Cuộc đại suy thoái kinh tế 1929-1933 tàn phá nặng nề nền kinh tế Đức và Italia, đẩy giới thống trị ở đây lựa chọn giải pháp thiết lập chế độ độc tài phát xít, ráo riết gây chiến tranh chia lại thuộc địa."
+      },
+      {
+        "id": 7,
+        "type": "boolean",
+        "text": "Nhận định sau ĐÚNG hay SAI: 'Thắng lợi của cuộc bãi công công nhân xưởng đóng tàu Ba Son (8/1925) chứng tỏ giai cấp công nhân Việt Nam đã bắt đầu đi vào đấu tranh có tổ chức và có mục đích chính trị rõ ràng'?",
+        "options": [
+          "Đúng",
+          "Sai"
+        ],
+        "correct": 0,
+        "hints": [
+          "Công nhân Ba Son bãi công nhằm trì hoãn tàu chiến Pháp đàn áp phong trào cách mạng ở Trung Quốc.",
+          "Nhận định này là ĐÚNG."
+        ],
+        "explanation": "ĐÚNG. Cuộc bãi công Ba Son (8/1925) dưới sự chỉ đạo của Công hội đỏ (Tôn Đức Thắng) đã chứng tỏ công nhân Việt Nam bắt đầu đấu tranh có tổ chức chặt chẽ và có mục đích chính trị rõ ràng, gắn liền với tình đoàn kết vô sản quốc tế."
+      },
+      {
+        "id": 8,
+        "type": "single",
+        "text": "Năm 2024, dân số nước ta đạt khoảng 101,3 triệu người, trong đó dân số thành thị là 38,7 triệu người. Tỉ lệ (%) dân cư thành thị ở nước ta năm 2024 là bao nhiêu và xu hướng thay đổi như thế nào?",
+        "options": [
+          "38,2% và có xu hướng tăng.",
+          "35,4% và có xu hướng giảm.",
+          "42,1% và có xu hướng ổn định.",
+          "28,5% và có xu hướng tăng."
+        ],
+        "correct": 0,
+        "hints": [
+          "Công thức: (Dân thành thị : Tổng dân số) × 100 = (38,7 : 101,3) × 100.",
+          "Tỉ lệ đạt 38,2% và theo đà đô thị hóa thì dân cư thành thị ngày càng tăng."
+        ],
+        "explanation": "Tỉ lệ dân số thành thị = (38,7 / 101,3) × 100 ≈ 38,2%. Cùng với quá trình công nghiệp hóa và hiện đại hóa đất nước, tỉ lệ dân cư thành thị nước ta có xu hướng tăng liên tục."
+      },
+      {
+        "id": 9,
+        "type": "single",
+        "text": "Năm 2022, tổng diện tích các loại cây trồng ở nước ta là 14 370 nghìn ha, trong đó diện tích trồng cây công nghiệp là 2 601 nghìn ha. Diện tích trồng cây công nghiệp chiếm bao nhiêu phần trăm (%) trong tổng diện tích cây trồng? (làm tròn đến một chữ số thập phân)",
+        "options": [
+          "18,1%",
+          "15,6%",
+          "22,4%",
+          "26,0%"
+        ],
+        "correct": 0,
+        "hints": [
+          "Công thức: (Diện tích cây công nghiệp : Tổng diện tích cây trồng) × 100.",
+          "(2601 / 14370) × 100 = 18,1%."
+        ],
+        "explanation": "Tỉ lệ diện tích cây công nghiệp = (2 601 : 14 370) × 100 ≈ 18,1%. Cây công nghiệp đóng vai trò quan trọng cung cấp nguyên liệu chế biến và xuất khẩu, tập trung lớn nhất ở Đông Nam Bộ và Tây Nguyên."
+      },
+      {
+        "id": 10,
+        "type": "single",
+        "text": "Dựa vào bảng số liệu sản lượng thủy sản (nghìn tấn): Năm 2010 (Nuôi trồng: 2 732,3; Tổng: 5 204,5); Năm 2022 (Nuôi trồng: 5 233,8; Tổng: 9 108,0). Sản lượng nuôi trồng năm 2022 là bao nhiêu và tỉ trọng nuôi trồng trong tổng sản lượng năm 2022 tăng bao nhiêu % so với năm 2010?",
+        "options": [
+          "Nuôi trồng đạt 5 233,8 nghìn tấn; tỉ trọng tăng 5,0% (từ 52,5% lên 57,5%).",
+          "Nuôi trồng đạt 5 204,5 nghìn tấn; tỉ trọng tăng 3,8% (từ 50,0% lên 53,8%).",
+          "Nuôi trồng đạt 9 108,0 nghìn tấn; tỉ trọng tăng 7,2% (từ 48,0% lên 55,2%).",
+          "Nuôi trồng đạt 2 732,3 nghìn tấn; tỉ trọng tăng 2,5% (từ 55,0% lên 57,5%)."
+        ],
+        "correct": 0,
+        "hints": [
+          "Sản lượng nuôi trồng năm 2022 đọc trực tiếp trên bảng: 5 233,8 nghìn tấn.",
+          "Tỉ trọng năm 2010 = 52,5%, năm 2022 = 57,5% -> Tăng đúng 5,0%."
+        ],
+        "explanation": "1. Sản lượng thủy sản nuôi trồng năm 2022 đạt: 5 233,8 nghìn tấn.\n2. Tỉ trọng nuôi trồng năm 2010 = (2 732,3 : 5 204,5) × 100 = 52,5%.\n3. Tỉ trọng nuôi trồng năm 2022 = (5 233,8 : 9 108,0) × 100 = 57,5%.\n=> Tỉ trọng nuôi trồng tăng thêm: 57,5% - 52,5% = 5,0%."
+      },
+      {
+        "id": 11,
+        "type": "single",
+        "text": "Theo số liệu năm 2024, tỉ lệ thất nghiệp của thanh niên nước ta (độ tuổi 15-24) là gần 8%, gấp 3,5 lần mức chung. Nhóm giải pháp nào sau đây là CƠ BẢN VÀ CẤP THIẾT NHẤT để giải quyết việc làm cho thanh niên?",
+        "options": [
+          "Nâng cao chất lượng giáo dục nghề nghiệp, tăng cường thời lượng thực hành, đào tạo kỹ năng số và kỹ năng mềm, khuyến khích khởi nghiệp.",
+          "Ngừng hoàn toàn hoạt động xuất khẩu lao động và bao cấp lương tối thiểu cho toàn bộ thanh niên thất nghiệp.",
+          "Chỉ tập trung đào tạo lý thuyết bậc đại học và hạn chế các cơ sở giáo dục nghề nghiệp, trường nghề.",
+          "Yêu cầu các doanh nghiệp chỉ được tuyển dụng lao động có trên 10 năm kinh nghiệm công tác."
+        ],
+        "correct": 0,
+        "hints": [
+          "Chú trọng đào tạo thực hành gắn với nhu cầu chuyển đổi số và tạo cơ hội khởi nghiệp.",
+          "Đổi mới giáo dục nghề nghiệp, đào tạo kỹ năng số và hỗ trợ thanh niên lập nghiệp."
+        ],
+        "explanation": "Để giải quyết căn cơ bài toán thất nghiệp thanh niên, cần: 1. Đổi mới giáo dục nghề nghiệp, tăng giờ thực hành; 2. Đào tạo kỹ năng số, ngoại ngữ, kỹ năng mềm; 3. Tạo môi trường pháp lý thuận lợi hỗ trợ vốn khởi nghiệp; 4. Kết nối chặt chẽ giữa nhà trường và thị trường lao động doanh nghiệp."
+      },
+      {
+        "id": 12,
+        "type": "single",
+        "text": "Tính đến năm 2024, tổng diện tích rừng nước ta đạt khoảng 14,9 triệu ha với tỉ lệ che phủ đạt 42% (vùng TD&MN Bắc Bộ chiếm gần 36%). Đâu là hệ thống giải pháp hàng đầu để bảo vệ và phát triển bền vững tài nguyên rừng?",
+        "options": [
+          "Tích cực trồng rừng phủ xanh đất trống đồi trọc, tăng cường quản lý bảo vệ rừng nghiêm ngặt, tuyên truyền ý thức và phát triển kinh tế nông - lâm kết hợp.",
+          "Chuyển đổi toàn bộ diện tích rừng đặc dụng sang trồng cây công nghiệp ngắn ngày để thu lợi nhuận cao.",
+          "Cho phép khai thác tự do gỗ quý tại các khu bảo tồn thiên nhiên để tăng nguồn thu ngân sách địa phương.",
+          "Cấm hoàn toàn việc người dân sinh sống gần rừng và di dời toàn bộ đồng bào miền núi xuống đồng bằng."
+        ],
+        "correct": 0,
+        "hints": [
+          "Kết hợp giữa trồng mới, bảo vệ nghiêm ngặt và tạo sinh kế bền vững cho người dân vùng rừng.",
+          "Phủ xanh đồi trọc, xử lý nghiêm phá rừng và phát triển mô hình kinh tế nông - lâm kết hợp."
+        ],
+        "explanation": "Giải pháp phát triển rừng bền vững: 1. Đẩy mạnh trồng rừng phủ xanh đồi trọc; 2. Tăng cường thanh tra kiểm lâm, xử lý nghiêm hành vi chặt phá rừng; 3. Tuyên truyền giáo dục người dân; 4. Triển khai mô hình nông - lâm kết hợp và chi trả dịch vụ môi trường rừng giúp người dân sống tốt nhờ rừng."
+      },
+      {
+        "id": 13,
+        "type": "single",
+        "text": "Lớp huấn luyện cán bộ đầu tiên do đồng chí Nguyễn Ái Quốc trực tiếp mở tại Quảng Châu (1925 - 1927) đào tạo bao nhiêu học viên và gồm những chiến sĩ tiêu biểu nào sau đây?",
+        "options": [
+          "Gồm 75 học viên; với các chiến sĩ ưu tú như: Lê Hồng Phong, Phùng Chí Kiên, Nguyễn Lương Bằng, Trần Phú, Phạm Văn Đồng...",
+          "Gồm 100 học viên; với các nhân vật: Phan Bội Châu, Huỳnh Thúc Kháng, Nguyễn An Ninh, Phan Châu Trinh.",
+          "Gồm 50 học viên; với các nhân vật: Nguyễn Thái Học, Phó Đức Chính, Nguyễn Khắc Nhu, Cô Giang.",
+          "Gồm 120 học viên; với các nhân vật: Bùi Quang Chiêu, Nguyễn Phan Long, Diệp Văn Cương."
+        ],
+        "correct": 0,
+        "hints": [
+          "Lớp huấn luyện chính trị tại Quảng Châu (Trung Quốc) gồm 75 học viên.",
+          "Gồm các đồng chí Trần Phú, Lê Hồng Phong, Phạm Văn Đồng, Phùng Chí Kiên..."
+        ],
+        "explanation": "Lớp cán bộ cách mạng đầu tiên được Nguyễn Ái Quốc đào tạo tại Quảng Châu gồm 75 học viên. Những hạt nhân nòng cốt xuất sắc từ lớp học này (Lê Hồng Phong, Phùng Chí Kiên, Nguyễn Lương Bằng, Trần Phú, Phạm Văn Đồng...) đã trở thành các nhà lãnh đạo tiền bối kiệt xuất của Đảng."
+      },
+      {
+        "id": 14,
+        "type": "single",
+        "text": "Là thế hệ học sinh hôm nay được hưởng nền hòa bình, độc lập do cha ông hy sinh xương máu gây dựng, em cần làm gì để phát huy truyền thống yêu nước kiên cường của dân tộc? (Chọn phương án đúng và toàn diện nhất)",
+        "options": [
+          "Chủ động bảo vệ nền tảng tư tưởng của Đảng, đấu tranh phản bác quan điểm sai trái trên không gian mạng; tích cực học tập, rèn đức luyện tài và nuôi dưỡng khát vọng cống hiến vì cộng đồng.",
+          "Chỉ quan tâm tới mục tiêu làm giàu vật chất cá nhân, không cần tham gia các hoạt động xã hội hay tìm hiểu lịch sử dân tộc.",
+          "Dễ dàng chia sẻ, bình luận các thông tin chưa được kiểm chứng trên mạng xã hội vì cho rằng tự do ngôn luận.",
+          "Xem việc bảo vệ độc lập, chủ quyền Tổ quốc hoàn toàn là nhiệm vụ của lực lượng quân đội và công an."
+        ],
+        "correct": 0,
+        "hints": [
+          "Phương án thể hiện trách nhiệm công dân toàn diện từ học tập, đạo đức đến bảo vệ chủ quyền.",
+          "Học tập rèn luyện tốt, bảo vệ tư tưởng trên không gian mạng và sống có lý tưởng cống hiến."
+        ],
+        "explanation": "Trách nhiệm của thế hệ trẻ: 1. Kiên định bảo vệ nền tảng tư tưởng, bảo vệ an ninh chủ quyền quốc gia cả ngoài đời lẫn không gian mạng; 2. Nỗ lực học tập tri thức khoa học công nghệ, tu dưỡng đạo đức; 3. Giữ gìn và phát huy bản sắc văn hóa dân tộc, sẵn sàng cống hiến sức trẻ dựng xây đất nước."
+      },
+      {
+        "id": 15,
+        "type": "single",
+        "text": "Khí phách anh hùng bất khuất của nhà yêu nước Nguyễn Thái Học trước máy chém của thực dân Pháp sau cuộc khởi nghĩa Yên Bái thất bại (1930) được khắc họa qua câu nói bất hủ nào?",
+        "options": [
+          "'Chết đi! Để thế giới biết đến cái tinh thần dân tộc này còn sống! Chết đi! Để cái gương hi sinh, phấn đấu cho người sau nối bước!... Không thành công thì cũng thành nhân'.",
+          "'Không có gì quý hơn độc lập tự do'.",
+          "'Bao giờ người Tây nhổ hết cỏ nước Nam thì mới hết người Nam đánh Tây'.",
+          "'Thà làm ma nước Nam còn hơn làm vương đất Bắc'."
+        ],
+        "correct": 0,
+        "hints": [
+          "Lời khẳng định bất hủ: 'Không thành công thì cũng thành nhân'.",
+          "Câu nói khẳng định khí tiết xả thân vì độc lập dân tộc trước đoạn đầu đài."
+        ],
+        "explanation": "Nguyễn Thái Học - lãnh tụ cuộc khởi nghĩa Yên Bái (1930) - đã hiên ngang bước lên máy chém với câu nói bất hủ: 'Chết đi! Để thế giới biết đến cái tinh thần dân tộc này còn sống!... Không thành công thì cũng thành nhân'. Câu nói đã trở thành biểu tượng rực rỡ của tinh thần yêu nước xả thân vì độc lập dân tộc."
       }
     ]
   },
@@ -4128,36 +4686,116 @@
     "id": 34,
     "box": 1,
     "cat": "Lịch Sử 9",
-    "front": "Sự kiện Ba Son (8/1925)",
-    "back": "Do Tôn Đức Thắng lãnh đạo, bãi công giữ tàu chiến Pháp; đánh dấu phong trào công nhân chuyển từ tự phát sang tự giác.",
+    "front": "14 nước đế quốc tấn công nước Nga Xô Viết (1917)",
+    "back": "Sau Cách mạng tháng Mười 1917, quân đội 14 nước đế quốc liên minh với lực lượng phản cách mạng trong nước mở cuộc tấn công vũ trang nhằm tiêu diệt nước Nga Xô viết non trẻ.",
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
     "id": 35,
     "box": 1,
     "cat": "Lịch Sử 9",
-    "front": "Hội nghị thành lập Đảng (1930)",
-    "back": "Khai mạc 6/1/1930 tại Cửu Long (Hương Cảng, Trung Quốc) do Nguyễn Ái Quốc chủ trì, hợp nhất thành Đảng Cộng sản Việt Nam.",
+    "front": "Thành tựu xây dựng CNXH ở Liên Xô (1922 - 1945)",
+    "back": "Từ nước nông nghiệp lạc hậu, Liên Xô hoàn thành 2 kế hoạch 5 năm, vươn lên thành cường quốc công nghiệp đứng đầu châu Âu và thứ 2 thế giới; xóa bỏ chế độ người bóc lột người.",
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
     "id": 36,
     "box": 1,
-    "cat": "Địa Lí 9",
-    "front": "Đặc điểm dân số Việt Nam",
-    "back": "Dân số đông (trên 100 triệu, thứ 3 Đông Nam Á, 15 thế giới), cơ cấu dân số trẻ, mật độ cao nhưng phân bố không đều giữa đồng bằng và miền núi.",
+    "cat": "Lịch Sử 9",
+    "front": "Chính sách mới (New Deal) của Mĩ (1933)",
+    "back": "Tổng thống F. Roosevelt ban hành nhằm giải quyết khủng hoảng kinh tế 1929-1933. Về chính trị: DUY TRÌ CHẾ ĐỘ DÂN CHỦ TƯ SẢN, ngăn chặn nguy cơ phát xít hóa chính quyền.",
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
     "id": 37,
     "box": 1,
-    "cat": "Địa Lí 9",
-    "front": "Hai vùng chuyên canh cây công nghiệp lớn nhất",
-    "back": "Đông Nam Bộ (cao su, điều, hồ tiêu) và Tây Nguyên (cà phê, cao su, chè).",
+    "cat": "Lịch Sử 9",
+    "front": "Khối Trục phát xít trong CTTG 2",
+    "back": "Liên minh 3 nước quân phiệt hiếu chiến: Đức - I-ta-li-a - Nhật Bản (Trục Béclin - Rôma - Tôkiô) ráo riết gây chiến tranh phân chia lại thị trường và thuộc địa thế giới.",
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
     "id": 38,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Sự kiện bãi công Ba Son (Tháng 8 - 1925)",
+    "back": "Do Tôn Đức Thắng lãnh đạo, bãi công giữ tàu chiến Pháp sửa chữa nhằm ủng hộ cách mạng Trung Quốc; đánh dấu công nhân Việt Nam chuyển từ tự phát sang tự giác.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 39,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Bản Yêu sách của nhân dân An Nam (6/1919)",
+    "back": "Nguyễn Ái Quốc gửi tới Hội nghị Véc-xai (Pháp) đòi các quyền tự do dân chủ tối thiểu, thức tỉnh đồng bào và gây tiếng vang lớn trong phong trào giải phóng dân tộc.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 40,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Hội nghị thành lập ĐCSVN (6/1/1930)",
+    "back": "Khai mạc ngày 6/1/1930 tại Cửu Long (Hương Cảng, Trung Quốc) do Nguyễn Ái Quốc chủ trì, hợp nhất các tổ chức cộng sản thành Đảng Cộng sản Việt Nam duy nhất.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 41,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Quốc tế Cộng sản (1919 - 1943)",
+    "back": "Thành lập tháng 3/1919 tại Mát-xcơ-va dưới sự lãnh đạo của V.I.Lê-nin, trải qua 7 kỳ đại hội; là tổ chức quốc tế của giai cấp công nhân và các dân tộc bị áp bức; tự giải tán năm 1943.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 42,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Lớp huấn luyện cán bộ Quảng Châu (1925 - 1927)",
+    "back": "Nguyễn Ái Quốc trực tiếp huấn luyện 75 học viên ưu tú (Lê Hồng Phong, Phùng Chí Kiên, Nguyễn Lương Bằng, Trần Phú, Phạm Văn Đồng...), làm nòng cốt thành lập Đảng.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 43,
+    "box": 1,
+    "cat": "Lịch Sử 9",
+    "front": "Nguyễn Thái Học & Khí phách khởi nghĩa Yên Bái (1930)",
+    "back": "'Chết đi! Để thế giới biết đến cái tinh thần dân tộc này còn sống!... Không thành công thì cũng thành nhân' - Lời tuyên thệ bất tử của lãnh tụ Việt Nam Quốc Dân Đảng trước máy chém Pháp.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 44,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Đặc điểm Dân số Việt Nam (2024)",
+    "back": "Quy mô >100 triệu người (thứ 3 Đông Nam Á sau Indonesia và Philippines, thứ 15 thế giới); cơ cấu dân số trẻ; dân số thành thị chiếm 38,2% và có xu hướng tăng.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 45,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Cơ cấu Cây trồng & Hai vùng chuyên canh lớn",
+    "back": "Cây lương thực chiếm tỉ trọng cao nhất; cây công nghiệp chiếm 18,1% diện tích (2022). Hai vùng chuyên canh cây công nghiệp lớn nhất cả nước là Đông Nam Bộ và Tây Nguyên.",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 46,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Tài nguyên Rừng Việt Nam (2024)",
+    "back": "Tổng diện tích rừng đạt khoảng 14,9 triệu ha, độ che phủ rừng đạt 42% (vùng Trung du và miền núi Bắc Bộ chiếm gần 36% tổng diện tích rừng cả nước).",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 47,
+    "box": 1,
+    "cat": "Địa Lí 9",
+    "front": "Ngành Thủy sản Việt Nam (2022)",
+    "back": "Gồm 3 hoạt động: khai thác, chế biến và nuôi trồng. Năm 2022, sản lượng nuôi trồng đạt 5 233,8 nghìn tấn, chiếm 57,5% tổng sản lượng (tăng 5,0% so với năm 2010).",
+    "subject": "Lịch Sử & Địa Lí 9"
+  },
+  {
+    "id": 48,
     "box": 1,
     "cat": "Tin Học 9",
     "front": "4 tiêu chí đánh giá chất lượng thông tin",
@@ -4165,7 +4803,7 @@
     "subject": "Tin Học 9"
   },
   {
-    "id": 39,
+    "id": 49,
     "box": 1,
     "cat": "Tin Học 9",
     "front": "Ứng xử chuẩn mực trong môi trường số",
@@ -4479,9 +5117,9 @@
         id: 'Lịch Sử & Địa Lí 9',
         name: 'Lịch Sử & Địa Lí 9',
         icon: '🌏',
-        badge: 'Lịch Sử • Địa Lí VN',
-        tagline: 'Phong trào 1919-1945 • CTTG 2 • Dân cư kinh tế & Nông lâm nghiệp',
-        desc: '17 câu hỏi bao quát: Phong trào cách mạng thế giới và Việt Nam 1919-1945, sự kiện Ba Son 1925, thành lập ĐCSVN 1930, đại suy thoái Mĩ, đặc điểm dân số và các vùng kinh tế trọng điểm VN.'
+        badge: 'Trọn Bộ Đề Cương 50 Câu',
+        tagline: '50 câu chuẩn ma trận: 35 câu trắc nghiệm + 15 câu Đúng/Sai, Bài tập số liệu & Tự luận',
+        desc: 'Trọn bộ 50 câu đề cương giữa kì 1: Trắc nghiệm 4 lựa chọn (35 câu), Trắc nghiệm Đúng/Sai (Quốc tế CS, Phát xít Đức-Ý, Ba Son 1925), Bài tập tính toán số liệu Địa lí (% cây công nghiệp, sản lượng thủy sản, dân thành thị), và Tự luận trọng tâm (Thất nghiệp thanh niên, Tài nguyên rừng, Lớp huấn luyện Quảng Châu 75 học viên, Nguyễn Thái Học).'
       },
       {
         id: 'Tin Học 9',
@@ -4497,14 +5135,14 @@
       quizzes: [], currentSubject: 'all', searchQuery: '',
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v6_ngu_van_9_trong_tam_2_tac_pham_va_bien_doi_khi_hau') {
+        if (ver !== 'v7_lsdl_full_50_cau_chuan_ma_tran') {
           this.quizzes = DEFAULT_QUIZZES;
           Storage.set('quizzes', this.quizzes);
           Storage.set('flashcards', DEFAULT_FLASHCARDS);
           Storage.set('wrong_questions', []);
           Storage.set('flagged_questions', []);
           Storage.remove('pending_quiz_session');
-          Storage.set('app_data_version', 'v6_ngu_van_9_trong_tam_2_tac_pham_va_bien_doi_khi_hau');
+          Storage.set('app_data_version', 'v7_lsdl_full_50_cau_chuan_ma_tran');
         } else {
           const saved = Storage.get('quizzes', null);
           this.quizzes = (saved && Array.isArray(saved) && saved.length > 0) ? saved : DEFAULT_QUIZZES;
@@ -5235,7 +5873,7 @@
       cards: [], currentIndex: 0, isFlipped: false, currentSubject: 'all', filteredCards: [],
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v6_ngu_van_9_trong_tam_2_tac_pham_va_bien_doi_khi_hau') {
+        if (ver !== 'v7_lsdl_full_50_cau_chuan_ma_tran') {
           this.cards = DEFAULT_FLASHCARDS;
           Storage.set('flashcards', this.cards);
         } else {
