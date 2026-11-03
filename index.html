@@ -286,6 +286,7 @@
     .progress-bar-fill { height:100%; background:var(--primary); border-radius:var(--radius-pill); transition:width 0.4s ease; }
     .filter-bar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-bottom:24px; }
     .filter-chips { display:flex; flex-wrap:wrap; gap:8px; }
+    .lb-chips-bar .chip { flex-shrink:0; }
     .chip { padding:7px 16px; border-radius:var(--radius-pill); background:var(--bg-surface); border:1px solid var(--border-subtle); font-size:0.875rem; font-weight:500; color:var(--text-muted); transition:var(--transition); }
     .chip:hover, .chip.active { background:var(--primary-light); color:var(--primary); border-color:var(--primary); }
     .quiz-grid {
@@ -415,11 +416,11 @@
     .review-card { background:var(--bg-surface); border-radius:var(--radius-xl); border:1px solid var(--border-subtle); padding:24px; margin-bottom:20px; text-align:left; }
     .review-explanation { margin-top:16px; padding:16px 20px; border-radius:var(--radius-lg); background:var(--primary-light); border-left:4px solid var(--primary); font-size:0.9375rem; line-height:1.6; }
     .flashcard-stage { max-width:580px; margin:20px auto; perspective:1000px; }
-    .flashcard { width:100%; min-height:320px; position:relative; transform-style:preserve-3d; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1); cursor:pointer; }
+    .flashcard { width:100%; min-height:320px; position:relative; transform-style:preserve-3d; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1); cursor:pointer; user-select:none; -webkit-user-select:none; touch-action:manipulation; }
     .flashcard.flipped { transform:rotateY(180deg); }
     .card-face { position:absolute; inset:0; backface-visibility:hidden; border-radius:var(--radius-xl); padding:36px 28px; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center; background:var(--bg-surface); border:1px solid var(--border-subtle); box-shadow:var(--shadow-md); }
     .card-back { transform:rotateY(180deg); background:var(--bg-surface-elevated); border-color:var(--primary); }
-    .leitner-boxes-bar { display:flex; gap:10px; justify-content:center; margin-bottom:24px; }
+    .leitner-boxes-bar { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:24px; }
     .leitner-box-item { padding:6px 14px; border-radius:var(--radius-pill); background:var(--bg-surface-elevated); border:1px solid var(--border-subtle); font-size:0.8125rem; font-weight:600; }
     .relax-grid { display:grid; grid-template-columns:1fr; gap:24px; }
     @media (min-width:768px) { .relax-grid { grid-template-columns:1fr 1fr; } }
@@ -1012,7 +1013,7 @@
               </div>
             </div>
             <div style="display:flex; flex-wrap:wrap; gap:10px;">
-              <input type="text" id="input-student-name" class="input-control" style="flex:1; min-width:200px;" placeholder="Nhập họ và tên / Biệt danh của bạn...">
+              <input type="text" id="input-student-name" class="input-control" style="flex:1; min-width:200px;" placeholder="Nhập họ và tên / Biệt danh của bạn..." onkeydown="if(event.key==='Enter') QuizRunner.submitToLeaderboard()">
               <button class="btn btn-primary" id="btn-submit-leaderboard" onclick="QuizRunner.submitToLeaderboard()">Lưu điểm ngay 🚀</button>
               <button class="btn btn-secondary" onclick="Router.navigate('leaderboard')">Xem Bảng Vàng</button>
             </div>
@@ -1060,7 +1061,7 @@
           </button>
         </div>
 
-        <div class="filter-chips" style="margin-bottom:24px; overflow-x:auto; padding-bottom:6px;">
+        <div class="filter-chips lb-chips-bar" style="margin-bottom:24px; overflow-x:auto; flex-wrap:nowrap; padding-bottom:8px; -webkit-overflow-scrolling:touch;">
           <button class="chip lb-filter-chip active" onclick="LeaderboardManager.filter('all')">Tất cả đề</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-stlb-doc-hieu')">1. Song Thất Lục Bát</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-ba-tac-pham')">2. Hai Tác Phẩm Ra Thi</button>
