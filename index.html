@@ -1068,10 +1068,11 @@
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-tu-han-viet')">3. Từ Hán Việt</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-nlxh-moi-truong')">4. Nghị Luận Xã Hội</button>
           <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('van-9-de-thi-thu')">5. Đề Thi Thử</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('khtn-9-on-thi-giua-ki-1')">6. KHTN 9</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-trac-nghiem-toan-dien')">7. LS&ĐL Trắc Nghiệm</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-chuyen-de-dung-sai-so-lieu-tu-luan')">8. LS&ĐL Đúng/Sai & Tự Luận</button>
-          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('tin-9-giua-ki-1-full')">9. Tin Học 9</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('khtn-9-trac-nghiem-toan-dien')">6. KHTN Trắc Nghiệm</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('khtn-9-de-cuong-bo-sung-va-tu-luan')">7. KHTN Tự Luận & Bổ Sung</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-trac-nghiem-toan-dien')">8. LS&ĐL Trắc Nghiệm</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('lsdl-9-chuyen-de-dung-sai-so-lieu-tu-luan')">9. LS&ĐL Đúng/Sai & Tự Luận</button>
+          <button class="chip lb-filter-chip" onclick="LeaderboardManager.filter('tin-9-giua-ki-1-full')">10. Tin Học 9</button>
         </div>
 
         <div id="leaderboard-podium" class="podium-grid"></div>
@@ -1085,9 +1086,9 @@
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:24px;">Lật thẻ bằng chạm hoặc phím Space. Đánh giá trí nhớ theo Leitner 3 hộp.</p>
 
           <div class="filter-chips" id="fc-subject-filter-chips" style="justify-content:center; margin-bottom:16px;">
-            <button class="chip active" data-sub="all" onclick="FlashcardManager.filterSubject('all')">Tất cả (49)</button>
+            <button class="chip active" data-sub="all" onclick="FlashcardManager.filterSubject('all')">Tất cả (60)</button>
             <button class="chip" data-sub="Ngữ Văn 9" onclick="FlashcardManager.filterSubject('Ngữ Văn 9')">Ngữ Văn 9 (28)</button>
-            <button class="chip" data-sub="Khoa Học Tự Nhiên 9" onclick="FlashcardManager.filterSubject('Khoa Học Tự Nhiên 9')">KHTN 9 (5)</button>
+            <button class="chip" data-sub="Khoa Học Tự Nhiên 9" onclick="FlashcardManager.filterSubject('Khoa Học Tự Nhiên 9')">KHTN 9 (16)</button>
             <button class="chip" data-sub="Lịch Sử & Địa Lí 9" onclick="FlashcardManager.filterSubject('Lịch Sử & Địa Lí 9')">LS&ĐL 9 (14)</button>
             <button class="chip" data-sub="Tin Học 9" onclick="FlashcardManager.filterSubject('Tin Học 9')">Tin Học 9 (2)</button>
           </div>
@@ -2593,153 +2594,153 @@
     ]
   },
   {
-    "id": "khtn-9-on-thi-giua-ki-1",
+    "id": "khtn-9-trac-nghiem-toan-dien",
+    "title": "1. Đề Cương Trắc Nghiệm Toàn Diện (35 Câu Chuẩn Ma Trận)",
     "subject": "Khoa Học Tự Nhiên 9",
-    "title": "KHTN 9 - Đề Cương Ôn Thi Giữa Kì 1 (Quang học, Điện học & Dụng cụ thí nghiệm)",
-    "difficulty": "Trung bình",
-    "timeLimitMinutes": 20,
-    "description": "Bao quát kiến thức trọng tâm giữa kì 1: Khúc xạ ánh sáng, lăng kính, thấu kính, định luật Ôm, điện trở dây dẫn, công và công suất cơ học.",
+    "difficulty": "Cơ bản - Nâng cao",
+    "timeLimitMinutes": 35,
+    "description": "Trọn bộ 35 câu trắc nghiệm chuẩn ma trận đề thi giữa kì 1: Thiết bị & quy tắc an toàn phòng thí nghiệm, Quang học (Khúc xạ ánh sáng, Phản xạ toàn phần, Tán sắc, Màu sắc của vật, Thấu kính hội tụ, Kính lúp), Điện học (Định luật Ohm, Điện trở dây dẫn, Đoạn mạch nối tiếp & song song) và Cơ học (Công và Công suất).",
     "questions": [
       {
         "id": 1,
         "type": "single",
         "text": "Bộ ống dẫn khí bằng thuỷ tinh được dùng để làm gì trong phòng thí nghiệm?",
         "options": [
-          "Lắp ráp các ống thuỷ tinh",
-          "Lắp ráp các bộ thí nghiệm",
-          "Lắp ráp các bình chứa hoá chất",
-          "Lắp ráp các dụng cụ thuỷ tinh"
+          "Lắp ráp các ống thuỷ tinh.",
+          "Lắp ráp các bộ thí nghiệm.",
+          "Lắp ráp các bình chứa hoá chất.",
+          "Lắp ráp các dụng cụ thuỷ tinh."
         ],
         "correct": 1,
         "hints": [
-          "Ống dẫn khí đóng vai trò liên kết giữa các bình, ống nghiệm.",
-          "Dùng để lắp ghép thành một hệ thống thí nghiệm hoàn chỉnh."
+          "Ống dẫn khí dùng để liên kết các bình, ống nghiệm thành hệ thống hoàn chỉnh.",
+          "Đáp án đúng là: Lắp ráp các bộ thí nghiệm."
         ],
-        "explanation": "Bộ ống dẫn khí bằng thuỷ tinh dùng để lắp ráp các bộ thí nghiệm thu và dẫn khí."
+        "explanation": "Trong phòng thí nghiệm KHTN, bộ ống dẫn khí bằng thuỷ tinh có tác dụng dẫn luồng khí và kết nối các dụng cụ để lắp ráp các bộ thí nghiệm hoàn chỉnh."
       },
       {
         "id": 2,
         "type": "single",
-        "text": "Ống dẫn bằng cao su được dùng để làm gì?",
+        "text": "Ống dẫn bằng cao su được dùng để làm gì trong các thao tác thí nghiệm?",
         "options": [
-          "Kết nối giữa các ống nghiệm",
-          "Kết nối giữa các bình cầu",
-          "Kết nối giữa các ống dẫn thuỷ tinh",
-          "Kết nối giữa các dụng cụ thuỷ tinh"
+          "Kết nối giữa các ống nghiệm.",
+          "Kết nối giữa các bình cầu.",
+          "Kết nối giữa các ống dẫn thuỷ tinh.",
+          "Kết nối giữa các dụng cụ thuỷ tinh."
         ],
         "correct": 2,
         "hints": [
-          "Cao su có tính đàn hồi và kín khí.",
-          "Dùng để nối các đoạn ống dẫn bằng thuỷ tinh với nhau."
+          "Ống cao su có tính đàn hồi cao, dùng làm khớp nối giữa hai ống thuỷ tinh.",
+          "Đáp án là: Kết nối giữa các ống dẫn thuỷ tinh."
         ],
-        "explanation": "Ống cao su mềm dẻo dùng để kết nối giữa các ống dẫn thuỷ tinh trong các hệ thống dẫn khí, chất lỏng."
+        "explanation": "Ống dẫn bằng cao su mềm dẻo, có độ co giãn tốt được sử dụng để kết nối kín khít giữa các đoạn ống dẫn thuỷ tinh với nhau."
       },
       {
         "id": 3,
         "type": "single",
-        "text": "Nút cao su trong phòng thí nghiệm được dùng để:",
+        "text": "Nút cao su trong phòng thí nghiệm được dùng để làm gì?",
         "options": [
-          "Nút các ống nghiệm và lắp các ống dẫn",
-          "Nút các lọ hoá chất và lắp bình cầu",
-          "Nút các lọ hoá chất và lắp ống thuỷ tinh",
-          "Nút các lọ hoá chất và lắp các bộ thí nghiệm"
+          "Nút các ống nghiệm và lắp các ống dẫn.",
+          "Nút các lọ hoá chất và lắp bình cầu.",
+          "Nút các lọ hoá chất và lắp ống thuỷ tinh.",
+          "Nút các lọ hoá chất và lắp các bộ thí nghiệm."
         ],
         "correct": 3,
         "hints": [
-          "Nút cao su đậy kín bình chứa hoặc có đục lỗ để xuyên ống dẫn.",
-          "Được dùng để nút lọ hoá chất và lắp các bộ thí nghiệm."
+          "Có hai công dụng chính: đậy kín lọ hoá chất và khoan lỗ để lắp ráp bộ thí nghiệm.",
+          "Đáp án đúng là: Nút các lọ hoá chất và lắp các bộ thí nghiệm."
         ],
-        "explanation": "Nút cao su có tác dụng đậy kín các lọ hoá chất và có thể khoan lỗ để lắp các bộ thí nghiệm."
+        "explanation": "Nút cao su (có loại không đục lỗ và có lỗ) được dùng để nút kín các lọ hoá chất bảo quản và lắp ráp cùng ống dẫn khí trong các bộ thí nghiệm."
       },
       {
         "id": 4,
         "type": "single",
-        "text": "Trong các hoá chất sau, hoá chất nào là hoá chất nguy hiểm cần đặc biệt cẩn trọng khi sử dụng?",
+        "text": "Trong các hoá chất sau đây, hoá chất nào là hoá chất nguy hiểm cần đặc biệt cẩn trọng khi sử dụng?",
         "options": [
-          "Đồng phôi bào (Cu)",
-          "Dung dịch amonia (NH3)",
-          "Dung dịch sulfuric acid (H2SO4) 98%",
-          "Ethylic alcohol (C2H5OH)"
+          "Đồng phôi bào (Cu).",
+          "Dung dịch ammonia (NH3).",
+          "Dung dịch sulfuric acid (H2SO4) 98%.",
+          "Ethylic alcohol (C2H5OH)."
         ],
         "correct": 2,
         "hints": [
-          "Đây là acid đặc có tính háo nước cực mạnh và gây bỏng sâu.",
-          "H2SO4 98% (sulfuric acid đặc)."
+          "Một loại acid đặc vô cùng háo nước, có thể gây bỏng sâu và phá hủy mô tế bào ngay lập tức.",
+          "Dung dịch H2SO4 đặc 98%."
         ],
-        "explanation": "Sulfuric acid đặc (H2SO4 98%) là hoá chất nguy hiểm, ăn mòn cực mạnh và háo nước, khi tiếp xúc với da sẽ gây bỏng nặng."
+        "explanation": "Dung dịch sulfuric acid đặc (H2SO4 98%) là hoá chất cực kỳ nguy hiểm, có tính ăn mòn cực mạnh, háo nước và tỏa nhiệt rất lớn khi tiếp xúc với nước, có thể gây bỏng hóa chất nặng."
       },
       {
         "id": 5,
         "type": "single",
-        "text": "Các màu chính trong quang phổ của ánh sáng trắng theo thứ tự là:",
+        "text": "Các màu chính trong dải quang phổ của ánh sáng trắng theo thứ tự là:",
         "options": [
-          "Trắng, đỏ, vàng, lục, lam, chàm, tím",
-          "Đỏ, cam, vàng, lục, lam, chàm, tím",
-          "Hồng, vàng, cam, lục, lam, chàm, tím",
-          "Cam, vàng, đỏ, chàm, lục, lam, trắng"
+          "Trắng, đỏ, vàng, lục, lam, chàm, tím.",
+          "Đỏ, cam, vàng, lục, lam, chàm, tím.",
+          "Hồng, vàng, cam, lục, lam, chàm, tím.",
+          "Cam, vàng, đỏ, chàm, lục, lam, trắng."
         ],
         "correct": 1,
         "hints": [
-          "Nhớ 7 màu cầu vồng quen thuộc.",
-          "Bắt đầu từ Đỏ và kết thúc ở Tím."
+          "7 màu cầu vồng quen thuộc: Đỏ -> Tím.",
+          "Thứ tự chuẩn: Đỏ, cam, vàng, lục, lam, chàm, tím."
         ],
-        "explanation": "Quang phổ ánh sáng trắng gồm dải 7 màu chính liên tục biến thiên từ Đỏ, cam, vàng, lục, lam, chàm đến tím."
+        "explanation": "Khi ánh sáng trắng bị tán sắc qua lăng kính, ta thu được dải màu liên tục gồm 7 màu chính từ đỏ đến tím: Đỏ, cam, vàng, lục, lam, chàm, tím."
       },
       {
         "id": 6,
         "type": "single",
-        "text": "Một vật hấp thụ hoàn toàn tất cả các ánh sáng màu chiếu tới nó thì ta sẽ thấy vật có màu gì?",
+        "text": "Một vật hấp thụ hoàn toàn tất cả các ánh sáng màu chiếu tới nó thì ta sẽ thấy vật đó có màu gì?",
         "options": [
-          "Trắng",
-          "Xanh",
-          "Lục",
-          "Đen"
+          "Màu Trắng.",
+          "Màu Xanh.",
+          "Màu Lục.",
+          "Màu Đen."
         ],
         "correct": 3,
         "hints": [
-          "Mắt ta nhìn thấy màu sắc do ánh sáng phản xạ từ vật tới mắt.",
-          "Khi không có ánh sáng nào phản xạ đến mắt, vật có màu đen."
+          "Khi không có bất kỳ ánh sáng nào phản xạ từ vật đến mắt ta.",
+          "Vật có màu Đen."
         ],
-        "explanation": "Vật màu đen là vật hấp thụ tất cả các ánh sáng màu chiếu vào nó, không có ánh sáng phản xạ tới mắt."
+        "explanation": "Ta nhìn thấy một vật có màu sắc nào là do vật đó phản xạ ánh sáng màu đó tới mắt ta. Khi vật hấp thụ toàn bộ ánh sáng chiếu tới mà không phản xạ ánh sáng nào thì ta thấy vật có màu đen."
       },
       {
         "id": 7,
         "type": "single",
         "text": "Thấu kính hội tụ là thấu kính có đặc điểm hình học nào sau đây?",
         "options": [
-          "Phần rìa mỏng hơn phần giữa",
-          "Phần rìa dày hơn phần giữa",
-          "Có giới hạn bởi 2 mặt cong",
-          "Có giới hạn bởi 2 mặt phẳng"
+          "Phần rìa mỏng hơn phần giữa.",
+          "Phần rìa dày hơn phần giữa.",
+          "Có giới hạn bởi 2 mặt phẳng song song.",
+          "Có phần rìa và phần giữa dày bằng nhau."
         ],
         "correct": 0,
         "hints": [
-          "Thấu kính phân kì có rìa dày hơn giữa.",
-          "Thấu kính hội tụ (thấu kính rìa mỏng) có phần rìa mỏng hơn phần giữa."
+          "Thấu kính hội tụ (thấu kính rìa mỏng).",
+          "Phần rìa mỏng hơn phần giữa."
         ],
-        "explanation": "Thấu kính hội tụ có phần rìa mỏng hơn phần giữa (còn gọi là thấu kính rìa mỏng)."
+        "explanation": "Thấu kính hội tụ được làm bằng vật liệu trong suốt, có phần rìa mỏng hơn phần giữa. Chùm tia sáng song song khi qua thấu kính hội tụ sẽ bị khúc xạ hội tụ tại một điểm."
       },
       {
         "id": 8,
         "type": "single",
-        "text": "Quang tâm O là một điểm nằm trên trục chính ở trong thấu kính sao cho các tia sáng truyền qua đó đều:",
+        "text": "Quang tâm O là một điểm nằm trên trục chính ở trong thấu kính sao cho các tia sáng tới đi qua quang tâm O đều:",
         "options": [
-          "Truyền thẳng",
-          "Truyền lên",
-          "Truyền xuống",
-          "Không truyền đi tiếp mà phản xạ lại mặt trước của thấu kính"
+          "Truyền thẳng không đổi hướng.",
+          "Bị khúc xạ truyền lệch lên trên.",
+          "Bị khúc xạ truyền lệch xuống dưới.",
+          "Bị phản xạ ngược trở lại môi trường cũ."
         ],
         "correct": 0,
         "hints": [
-          "Tia sáng đi qua quang tâm O luôn tiếp tục truyền theo hướng ban đầu.",
-          "Tia tới qua quang tâm thì tia ló truyền thẳng."
+          "Đặc điểm quang học độc nhất của quang tâm O.",
+          "Mọi tia sáng đi qua quang tâm đều truyền thẳng."
         ],
-        "explanation": "Tia tới đi qua quang tâm O của thấu kính luôn truyền thẳng, không bị đổi hướng."
+        "explanation": "Quang tâm O là điểm chính giữa thấu kính nằm trên trục chính. Tính chất cơ bản: Tia sáng tới đi qua quang tâm O thì truyền thẳng mà không bị đổi hướng."
       },
       {
         "id": 9,
         "type": "single",
-        "text": "Công thức tính chiều dài l của dây điện trở từ công thức R = ρ.(l/S) là:",
+        "text": "Từ công thức điện trở R = ρ.(l/S), công thức tính chiều dài l của dây dẫn điện trở là:",
         "options": [
           "l = (R . S) / ρ",
           "l = (R . ρ) / S",
@@ -2748,49 +2749,49 @@
         ],
         "correct": 0,
         "hints": [
-          "Biến đổi: R = ρ . l / S => R . S = ρ . l.",
-          "Do đó l = R . S / ρ."
+          "Từ R = ρ . l / S, nhân chéo S lên: R . S = ρ . l, sau đó chia ρ.",
+          "l = (R . S) / ρ."
         ],
-        "explanation": "Từ R = ρ.(l/S) suy ra chiều dài l = (R . S) / ρ."
+        "explanation": "Từ công thức R = ρ.(l/S) suy ra l = (R.S)/ρ. Trong đó R là điện trở (Ω), S là tiết diện dây (m²), ρ là điện trở suất (Ω.m), l là chiều dài (m)."
       },
       {
         "id": 10,
         "type": "single",
-        "text": "Cường độ dòng điện chạy qua một đoạn dây dẫn phụ thuộc như thế nào vào hiệu điện thế giữa hai đầu dây dẫn đó?",
+        "text": "Cường độ dòng điện I chạy qua một đoạn dây dẫn phụ thuộc như thế nào vào hiệu điện thế U giữa hai đầu dây dẫn đó?",
         "options": [
-          "Không thay đổi khi hiệu điện thế thay đổi",
-          "Tỉ lệ nghịch với hiệu điện thế",
-          "Tỉ lệ thuận với hiệu điện thế",
-          "Có lúc tăng, có lúc giảm tùy theo hiệu điện thế tăng ít hay nhiều"
+          "Không thay đổi khi hiệu điện thế thay đổi.",
+          "Tỉ lệ nghịch với hiệu điện thế.",
+          "Tỉ lệ thuận với hiệu điện thế.",
+          "Có lúc tăng, có lúc giảm không tuân theo quy luật."
         ],
         "correct": 2,
         "hints": [
-          "Hệ thức định luật Ohm: I = U / R.",
+          "Khi hiệu điện thế U tăng bao nhiêu lần thì cường độ dòng điện I cũng tăng bấy nhiêu lần.",
           "I tỉ lệ thuận với U."
         ],
-        "explanation": "Theo định luật Ohm, cường độ dòng điện chạy qua dây dẫn tỉ lệ thuận với hiệu điện thế đặt vào hai đầu dây."
+        "explanation": "Theo Định luật Ohm, cường độ dòng điện chạy qua một dây dẫn tỉ lệ thuận với hiệu điện thế đặt vào hai đầu dây dẫn đó: I ~ U (khi R không đổi)."
       },
       {
         "id": 11,
         "type": "single",
-        "text": "Điện trở tương đương của đoạn mạch gồm các điện trở mắc song song luôn có đặc điểm:",
+        "text": "Điện trở tương đương của đoạn mạch gồm các điện trở mắc song song có đặc điểm nào sau đây?",
         "options": [
-          "Luôn lớn hơn điện trở thành phần",
-          "Luôn nhỏ hơn điện trở thành phần",
-          "Lớn hơn điện trở thành phần nhỏ nhất nhưng nhỏ hơn điện trở thành phần lớn nhất",
-          "Lớn hơn hay nhỏ hơn các điện trở thành phần tùy trường hợp"
+          "Luôn lớn hơn bất kỳ điện trở thành phần nào.",
+          "Luôn nhỏ hơn từng điện trở thành phần.",
+          "Bằng tổng của các điện trở thành phần cộng lại.",
+          "Luôn bằng điện trở thành phần lớn nhất."
         ],
         "correct": 1,
         "hints": [
-          "Công thức nghịch đảo: 1/Rtd = 1/R1 + 1/R2...",
-          "R tương đương song song luôn nhỏ hơn mỗi điện trở thành phần."
+          "Trong mạch mắc song song, 1/Rtđ = 1/R1 + 1/R2...",
+          "Điện trở tương đương Rtđ luôn nhỏ hơn từng điện trở thành phần."
         ],
-        "explanation": "Trong đoạn mạch mắc song song, điện trở tương đương luôn nhỏ hơn từng điện trở thành phần."
+        "explanation": "Trong đoạn mạch mắc song song, tổng nghịch đảo các điện trở bằng nghịch đảo điện trở tương đương, nên điện trở tương đương luôn nhỏ hơn từng điện trở thành phần nhỏ nhất trong mạch."
       },
       {
         "id": 12,
         "type": "single",
-        "text": "Với 5 điện trở bằng nhau R1 = R2 = R3 = R4 = R5 = 10 Ω mắc song song nhau. Điện trở tương đương của mạch là:",
+        "text": "Cho 5 điện trở bằng nhau cùng có giá trị R1 = R2 = R3 = R4 = R5 = 10 Ω mắc song song với nhau. Điện trở tương đương của mạch là:",
         "options": [
           "10 Ω",
           "7 Ω",
@@ -2799,304 +2800,389 @@
         ],
         "correct": 2,
         "hints": [
-          "Mắc song song n điện trở giống nhau R: Rtd = R / n.",
-          "Ở đây R = 10 Ω, n = 5."
+          "Khi n điện trở bằng nhau R mắc song song: Rtđ = R / n.",
+          "Rtđ = 10 / 5 = 2 Ω."
         ],
-        "explanation": "Rtd = R / n = 10 / 5 = 2 Ω."
+        "explanation": "Đoạn mạch gồm n điện trở giống nhau R mắc song song có: Rtđ = R / n = 10 / 5 = 2 Ω."
       },
       {
         "id": 13,
         "type": "single",
-        "text": "Công thức tính chiết suất n của một môi trường trong suốt so với chân không là:",
+        "text": "Công thức tính chiết suất tuyệt đối n của một môi trường trong suốt theo tốc độ ánh sáng là:",
         "options": [
-          "n = c . v",
-          "n = c / v",
           "n = v / c",
-          "n = v + c"
+          "n = c / v",
+          "n = c . v",
+          "n = c + v"
         ],
         "correct": 1,
         "hints": [
-          "c là tốc độ ánh sáng trong chân không (3.10^8 m/s), v là tốc độ ánh sáng trong môi trường.",
-          "Chiết suất tuyệt đối n = c / v luôn >= 1."
+          "c là tốc độ ánh sáng trong chân không (3.10^8 m/s), v là tốc độ ánh sáng trong môi trường đó (v < c).",
+          "n = c / v (với n ≥ 1)."
         ],
-        "explanation": "Chiết suất tuyệt đối của môi trường: n = c / v, trong đó c là tốc độ ánh sáng trong chân không, v là tốc độ ánh sáng trong môi trường đó."
+        "explanation": "Chiết suất tuyệt đối của một môi trường là tỉ số giữa tốc độ ánh sáng trong chân không (c) và tốc độ ánh sáng trong môi trường đó (v): n = c / v."
       },
       {
         "id": 14,
         "type": "single",
-        "text": "Khi quan sát chiếc đũa cắm nghiêng vào cốc nước, ta thấy chiếc đũa bị gãy khúc tại mặt phân cách giữa hai môi trường. Hiện tượng này xảy ra do:",
+        "text": "Khi quan sát một chiếc đũa nhúng nghiêng vào một cốc nước trong suốt, ta thấy chiếc đũa có hiện tượng gì và do nguyên nhân nào?",
         "options": [
-          "Hiện tượng tán sắc ánh sáng",
-          "Hiện tượng khúc xạ ánh sáng",
-          "Hiện tượng phản xạ toàn phần",
-          "Hiện tượng hấp thụ ánh sáng của nước"
+          "Chiếc đũa sáng hơn do hiện tượng phản xạ ánh sáng.",
+          "Chiếc đũa dường như dài hơn do hiện tượng tán sắc ánh sáng.",
+          "Chiếc đũa bị gãy khúc tại mặt phân cách giữa hai môi trường do hiện tượng khúc xạ ánh sáng.",
+          "Phần đũa ngập trong nước nhỏ hơn do ánh sáng bị nước hấp thụ hoàn toàn."
         ],
-        "correct": 1,
+        "correct": 2,
         "hints": [
-          "Tia sáng truyền từ nước ra không khí bị lệch phương tại mặt phân cách.",
-          "Đó là hiện tượng khúc xạ ánh sáng."
+          "Tia sáng từ đũa trong nước truyền ra không khí bị đổi hướng tại mặt nước.",
+          "Hiện tượng khúc xạ ánh sáng làm chiếc đũa dường như bị gãy khúc."
         ],
-        "explanation": "Chiếc đũa như bị gãy khúc là do hiện tượng khúc xạ ánh sáng: tia sáng từ phần đũa ngập trong nước bị gãy khúc khi truyền qua mặt phân cách giữa nước và không khí trước khi tới mắt."
+        "explanation": "Tia sáng truyền từ chiếc đũa ngập trong nước sang không khí bị khúc xạ (đổi hướng đột ngột) tại mặt phân cách hai môi trường, khiến mắt ta thấy chiếc đũa như bị gãy khúc tại mặt nước."
       },
       {
         "id": 15,
         "type": "single",
-        "text": "Trong hiện tượng khúc xạ ánh sáng, công thức định luật khúc xạ ánh sáng liên hệ giữa góc tới i và góc khúc xạ r là:",
+        "text": "Cho các phát biểu sau về hiện tượng khúc xạ ánh sáng, phát biểu nào sau đây là ĐÚNG?",
         "options": [
-          "sin i / sin r = n2 / n1",
-          "sin r / sin i = n2 / n1",
-          "sin i / sin r = n1 / n2",
-          "sin i = sin r"
+          "Hiện tượng khúc xạ ánh sáng chỉ xảy ra tại mặt phân cách giữa hai môi trường trong suốt.",
+          "Góc tới là góc tạo bởi tia tới và mặt phân cách.",
+          "Góc khúc xạ bao giờ cũng nhỏ hơn góc tới.",
+          "Góc khúc xạ tăng tỉ lệ thuận với góc tới."
         ],
         "correct": 0,
         "hints": [
-          "n1 . sin i = n2 . sin r.",
-          "Suy ra sin i / sin r = n2 / n1 = n21."
+          "Hiện tượng khúc xạ là sự gãy khúc của tia sáng tại mặt phân cách giữa hai môi trường trong suốt.",
+          "Phát biểu A là hoàn toàn chính xác."
         ],
-        "explanation": "Định luật khúc xạ ánh sáng: n1 . sin i = n2 . sin r, tương đương sin i / sin r = n2 / n1."
+        "explanation": "Khúc xạ ánh sáng là hiện tượng tia sáng truyền qua mặt phân cách giữa hai môi trường trong suốt bị gãy khúc. (Góc tới là góc giữa tia tới và PHÁP TUYẾN, không phải mặt phân cách; góc khúc xạ có thể lớn hơn hoặc nhỏ hơn góc tới tùy chiết suất hai môi trường)."
       },
       {
         "id": 16,
         "type": "single",
-        "text": "Vào ban đêm, nếu dùng đèn pin chiếu chùm ánh sáng đỏ từ đèn laser vào bông hoa cúc màu vàng thì ta nhìn thấy bông hoa cúc có màu gì?",
+        "text": "Công thức biểu diễn đúng định luật khúc xạ ánh sáng giữa hai môi trường là:",
         "options": [
-          "Màu vàng",
-          "Có màu đỏ và màu vàng",
-          "Màu đỏ",
-          "Màu đen"
+          "(sin i) / (sin r) = n2 / n1",
+          "(sin r) / (sin i) = n2 / n1",
+          "(sin i) / (sin r) = n1 / n2",
+          "(sin i) / (sin r) = n1 . n2"
         ],
-        "correct": 3,
+        "correct": 0,
         "hints": [
-          "Cánh hoa cúc màu vàng chỉ phản xạ ánh sáng vàng và hấp thụ các màu khác.",
-          "Ánh sáng đỏ chiếu tới bị cánh hoa hấp thụ hoàn toàn."
+          "n1 . sin i = n2 . sin r suy ra (sin i) / (sin r) = n2 / n1.",
+          "(sin i) / (sin r) = n2 / n1."
         ],
-        "explanation": "Hoa cúc vàng hấp thụ ánh sáng đỏ, không phản xạ ánh sáng nào tới mắt nên trong đêm tối dưới ánh sáng đỏ, ta thấy hoa có màu đen."
+        "explanation": "Định luật khúc xạ ánh sáng: n1 . sin i = n2 . sin r <=> (sin i) / (sin r) = n2 / n1 = n21 (chiết suất tỉ đối của môi trường chứa tia khúc xạ so với môi trường chứa tia tới)."
       },
       {
         "id": 17,
         "type": "single",
-        "text": "Chiếu chùm ánh sáng trắng có các màu đỏ, cam, vàng chiếu qua tấm kính lọc màu vàng. Chùm sáng sau khi qua tấm lọc màu vàng sẽ có màu gì?",
+        "text": "Vào ban đêm, nếu dùng chùm ánh sáng màu đỏ từ đèn laser chiếu vào một bông hoa cúc vàng thì ta nhìn thấy bông hoa có màu gì?",
         "options": [
-          "Màu vàng",
-          "Màu đỏ",
-          "Có màu đỏ và màu vàng",
-          "Màu đen"
+          "Màu vàng.",
+          "Có màu đỏ và màu vàng.",
+          "Màu đỏ tươi.",
+          "Màu Đen."
         ],
-        "correct": 0,
+        "correct": 3,
         "hints": [
-          "Kính lọc màu nào thì cho ánh sáng màu đó đi qua tốt nhất.",
-          "Tấm lọc màu vàng hấp thụ đỏ, cam và cho màu vàng đi qua."
+          "Vật màu vàng tán xạ tốt ánh sáng vàng và hấp thụ các màu ánh sáng khác.",
+          "Hoa cúc vàng hấp thụ ánh sáng đỏ, không có ánh sáng phản xạ đến mắt nên thấy màu đen."
         ],
-        "explanation": "Tấm lọc màu vàng cho ánh sáng màu vàng truyền qua tốt và hấp thụ các màu khác, do đó chùm sáng thu được có màu vàng."
+        "explanation": "Cánh hoa cúc màu vàng chỉ phản xạ tốt ánh sáng màu vàng. Khi chiếu ánh sáng đỏ tới, cánh hoa hấp thụ ánh sáng đỏ mà không phản xạ ánh sáng đỏ tới mắt, nên ta nhìn thấy hoa có màu đen."
       },
       {
         "id": 18,
         "type": "single",
-        "text": "Đặt một vật sáng AB vuông góc với trục chính của một thấu kính hội tụ có tiêu cự f = 15 cm, AB nằm cách thấu kính một khoảng d = 10 cm. Ảnh của AB tạo bởi thấu kính có đặc điểm gì?",
+        "text": "Cho chùm ánh sáng gồm các màu đỏ, cam, vàng chiếu qua một tấm kính lọc màu vàng. Chùm sáng thu được sau khi qua tấm lọc màu vàng sẽ có màu gì?",
         "options": [
-          "Ảnh thật, ngược chiều, lớn hơn vật",
-          "Ảnh thật, ngược chiều, bé hơn vật",
-          "Ảnh ảo, cùng chiều, bé hơn vật",
-          "Ảnh ảo, cùng chiều, lớn hơn vật"
+          "Màu vàng.",
+          "Màu đỏ.",
+          "Màu đen.",
+          "Có màu đỏ và màu vàng."
         ],
-        "correct": 3,
+        "correct": 0,
         "hints": [
-          "Khoảng cách từ vật đến thấu kính d = 10 cm < tiêu cự f = 15 cm.",
-          "Vật đặt trong khoảng tiêu cự của thấu kính hội tụ luôn cho ảnh ảo, cùng chiều, lớn hơn vật."
+          "Tấm lọc màu vàng chỉ cho ánh sáng màu vàng đi qua và giữ lại (hấp thụ) các màu khác.",
+          "Chùm sáng đi ra có màu vàng."
         ],
-        "explanation": "Khi đặt vật trong khoảng tiêu cự của thấu kính hội tụ (d < f), thấu kính cho ảnh ảo, cùng chiều và lớn hơn vật."
+        "explanation": "Tấm lọc màu nào thì cho ánh sáng màu đó đi qua tốt nhất và hấp thụ các ánh sáng màu khác. Do đó qua tấm lọc màu vàng chỉ có ánh sáng màu vàng đi qua."
       },
       {
         "id": 19,
         "type": "single",
-        "text": "Kính lúp đơn giản dùng để quan sát các vật nhỏ được cấu tạo bởi một:",
+        "text": "Dưới ánh nắng mặt trời (ánh sáng trắng), ta nhìn thấy hoa Cúc có màu vàng vì nguyên nhân nào?",
         "options": [
-          "Thấu kính hội tụ có tiêu cự ngắn",
-          "Lăng kính thuỷ tinh có góc chiết quang là góc vuông",
-          "Thấu kính phân kì có tiêu cự ngắn",
-          "Lăng kính thuỷ tinh có góc chiết quang nhỏ"
+          "Vì cánh hoa Cúc hấp thụ hầu hết các ánh sáng màu của mặt trời chiếu vào nó.",
+          "Vì cánh hoa Cúc phản xạ hết toàn bộ các màu ánh sáng mặt trời.",
+          "Vì cánh hoa Cúc hấp thụ các màu ánh sáng khác, chỉ phản xạ ánh sáng màu vàng tới mắt.",
+          "Vì cánh hoa Cúc hấp thụ ánh sáng màu vàng và phản xạ tất cả các màu khác."
         ],
-        "correct": 0,
+        "correct": 2,
         "hints": [
-          "Kính lúp phải phóng to ảnh của vật.",
-          "Kính lúp là một thấu kính hội tụ có tiêu cự ngắn."
+          "Vật có màu gì là do nó phản xạ màu đó và hấp thụ các màu khác.",
+          "Cánh hoa cúc hấp thụ các màu khác và phản xạ ánh sáng màu vàng."
         ],
-        "explanation": "Kính lúp là thấu kính hội tụ có tiêu cự ngắn (thường dưới vài cm), dùng để quan sát các vật nhỏ."
+        "explanation": "Ánh sáng mặt trời là ánh sáng trắng gồm nhiều màu. Cánh hoa Cúc có khả năng hấp thụ các ánh sáng màu khác (đỏ, cam, lục, lam, tím) và phản xạ ánh sáng màu vàng vào mắt người quan sát, nên ta thấy hoa cúc có màu vàng."
       },
       {
         "id": 20,
         "type": "single",
-        "text": "Đơn vị đo của điện trở trong hệ đo lường quốc tế (SI) là:",
+        "text": "Đặt một vật sáng AB vuông góc với trục chính của một thấu kính hội tụ có tiêu cự f = 15 cm, điểm A nằm trên trục chính cách thấu kính d = 10 cm. Ảnh của AB tạo bởi thấu kính có đặc điểm gì?",
         "options": [
-          "Oát (W)",
-          "Ohm (Ω)",
-          "Joule (J)",
-          "Mét (m)"
+          "Ảnh thật, ngược chiều, lớn hơn vật.",
+          "Ảnh thật, ngược chiều, bé hơn vật.",
+          "Ảnh ảo, cùng chiều, bé hơn vật.",
+          "Ảnh ảo, cùng chiều, lớn hơn vật."
         ],
-        "correct": 1,
+        "correct": 3,
         "hints": [
-          "Đặt theo tên nhà vật lý Georg Ohm.",
-          "Kí hiệu là Ω."
+          "So sánh d và f: d = 10 cm < f = 15 cm (vật nằm trong khoảng tiêu cự).",
+          "Vật nằm trong khoảng tiêu cự của thấu kính hội tụ luôn cho ảnh ảo, cùng chiều và lớn hơn vật."
         ],
-        "explanation": "Điện trở có đơn vị là Ohm, kí hiệu là Ω."
+        "explanation": "Vì d = 10 cm < f = 15 cm nên vật AB nằm trong khoảng tiêu cự của thấu kính hội tụ. Theo tính chất quang học, thấu kính hội tụ tạo ảnh ảo, cùng chiều và lớn hơn vật (nguyên lý của kính lúp)."
       },
       {
         "id": 21,
         "type": "single",
-        "text": "Dụng cụ nào sau đây thường được dùng để lấy một lượng nhỏ hoá chất lỏng trong phòng thí nghiệm?",
+        "text": "Kính lúp đơn giản dùng để quan sát các vật nhỏ được cấu tạo bởi một:",
         "options": [
-          "Bình tam giác",
-          "Ống hút nhỏ giọt",
-          "Phễu chiết",
-          "Cốc thuỷ tinh"
+          "Thấu kính hội tụ có tiêu cự ngắn.",
+          "Lăng kính thuỷ tinh có góc chiết quang là góc vuông.",
+          "Thấu kính phân kì có tiêu cự ngắn.",
+          "Lăng kính thuỷ tinh có góc chiết quang nhỏ."
         ],
-        "correct": 1,
+        "correct": 0,
         "hints": [
-          "Dụng cụ có bóp cao su để hút từng giọt chất lỏng.",
-          "Ống hút nhỏ giọt (pipet)."
+          "Kính lúp là dụng cụ quang học bổ trợ cho mắt gồm một thấu kính hội tụ.",
+          "Thấu kính hội tụ có tiêu cự ngắn (thường f < 25 cm)."
         ],
-        "explanation": "Ống hút nhỏ giọt chuyên dùng để lấy từng lượng nhỏ chất lỏng chính xác theo giọt."
+        "explanation": "Kính lúp đơn giản là một thấu kính hội tụ có tiêu cự ngắn (vài centimet đến mười centimet), dùng để quan sát các vật thể nhỏ bé bằng cách đặt vật trong khoảng tiêu cự để thu được ảnh ảo phóng đại."
       },
       {
         "id": 22,
         "type": "single",
-        "text": "Khi viết báo cáo một vấn đề khoa học, nội dung nào sau đây phản ánh kết quả thu được và ý nghĩa của nghiên cứu?",
+        "text": "Một vật sáng AB đặt vuông góc trước một thấu kính hội tụ, AB nằm ngoài tiêu cự của thấu kính (d > f). Đường truyền tia sáng nào sau đây biểu diễn ĐÚNG sơ đồ tạo ảnh qua thấu kính?",
         "options": [
-          "Mở đầu",
-          "Mục tiêu nghiên cứu",
-          "Kết luận và kiến nghị",
-          "Danh mục tài liệu tham khảo"
+          "Tia tới song song trục chính bị phản xạ ngược lại; tia qua quang tâm bị khúc xạ lệch hướng.",
+          "Tia tới song song trục chính cho tia ló đi qua tiêu điểm F'; tia tới đi qua quang tâm O cho tia ló truyền thẳng.",
+          "Tia tới song song trục chính cho tia ló đi qua quang tâm O; tia qua tiêu điểm bị gãy khúc lệch ra ngoài.",
+          "Tất cả các tia sáng tới thấu kính đều truyền thẳng song song với nhau."
         ],
-        "correct": 2,
+        "correct": 1,
         "hints": [
-          "Phần tổng kết lại toàn bộ kết quả nghiên cứu.",
-          "Nằm ở phần Kết luận và kiến nghị."
+          "Hai tia sáng đặc biệt: 1. Tia tới // trục chính -> tia ló qua F'; 2. Tia tới qua quang tâm O -> tia ló truyền thẳng.",
+          "Đáp án là phương án B."
         ],
-        "explanation": "Phần Kết luận và kiến nghị nêu bật các kết quả chính đã thu được từ nghiên cứu và giá trị thực tiễn của đề tài."
+        "explanation": "Quy tắc dựng ảnh qua thấu kính hội tụ sử dụng 2 tia đặc biệt: Tia tới song song với trục chính cho tia ló đi qua tiêu điểm ảnh F'; Tia tới đi qua quang tâm O cho tia ló truyền thẳng không đổi hướng. Giao điểm của hai tia ló là ảnh B' của điểm B."
       },
       {
         "id": 23,
         "type": "single",
-        "text": "Trường hợp nào sau đây lực tác dụng thực hiện công cơ học?",
+        "text": "Cách sử dụng kính lúp nào sau đây là ĐÚNG khi quan sát một chi tiết nhỏ?",
         "options": [
-          "Lực đỡ tạ của vận động viên khi đang giữ yên tạ trên cao",
-          "Lực kéo của con ngựa làm xe chuyển động trên đường",
-          "Người đẩy bức tường bê tông nhưng tường không di chuyển",
-          "Trọng lực tác dụng lên cuốn sách nằm yên trên mặt bàn"
+          "Đặt vật ngoài khoảng tiêu cự của kính sao cho nhìn thấy ảnh của vật rõ nét.",
+          "Đặt vật trong khoảng tiêu cự của kính sao cho mắt nhìn thấy ảnh ảo của vật rõ nét và lớn hơn vật.",
+          "Đặt kính trong khoảng mắt không phải điều tiết, mắt nhìn cách xa kính 2 mét.",
+          "Đặt kính cách vật 50 cm và không cần điều chỉnh cự ly."
         ],
         "correct": 1,
         "hints": [
-          "Công cơ học chỉ xuất hiện khi có lực tác dụng VÀ vật dịch chuyển theo phương của lực (A = F.s).",
-          "Xe chuyển động nhờ lực kéo của ngựa."
+          "Để kính lúp phóng đại được ảnh ảo lớn hơn vật, vật phải nằm trong khoảng tiêu cự (d < f).",
+          "Đáp án là B."
         ],
-        "explanation": "Công cơ học được thực hiện khi có lực tác dụng vào vật và vật chuyển dời theo phương của lực. Con ngựa kéo xe chuyển động đã sinh công cơ học."
+        "explanation": "Khi sử dụng kính lúp, phải đặt vật trong khoảng tiêu cự của kính (d < f) để tạo ra ảnh ảo, cùng chiều và lớn hơn vật, nằm trong giới hạn nhìn rõ của mắt."
       },
       {
         "id": 24,
         "type": "single",
-        "text": "Cơ năng của một vật bao gồm:",
+        "text": "Đơn vị đo của điện trở trong hệ đo lường quốc tế (SI) là gì?",
         "options": [
-          "Chỉ gồm động năng của vật",
-          "Chỉ gồm thế năng của vật",
-          "Tổng động năng và thế năng của vật",
-          "Hiệu giữa động năng và thế năng của vật"
+          "Oát (W).",
+          "Ohm (Ω).",
+          "Joule (J).",
+          "Mét (m)."
         ],
-        "correct": 2,
+        "correct": 1,
         "hints": [
-          "Cơ năng = Động năng + Thế năng.",
-          "W = Wd + Wt."
+          "Ký hiệu là chữ cái Hy Lạp Omega (Ω), mang tên nhà bác học Georg Ohm.",
+          "Ohm (Ω)."
         ],
-        "explanation": "Cơ năng của một vật là tổng của động năng và thế năng của vật đó."
+        "explanation": "Đơn vị đo điện trở trong hệ SI là Ohm (kí hiệu là Ω). (W là đơn vị công suất, J là đơn vị công/năng lượng, m là đơn vị chiều dài)."
       },
       {
         "id": 25,
         "type": "single",
-        "text": "Phát biểu nào sau đây là ĐÚNG khi nói về công và công suất?",
+        "text": "Dụng cụ nào sau đây thường được dùng để lấy một lượng nhỏ chất lỏng (vài giọt) trong phòng thí nghiệm?",
         "options": [
-          "Máy nào sinh ra công lớn hơn thì chắc chắn có công suất lớn hơn",
-          "Công suất cho biết tốc độ thực hiện công nhanh hay chậm của người hoặc máy",
-          "Vật ở vị trí càng cao so với mặt đất thì động năng của vật càng lớn",
-          "Thế năng trọng trường chỉ phụ thuộc vào khối lượng, không phụ thuộc vào độ cao"
+          "Bình tam giác (Erlenmeyer).",
+          "Ống hút nhỏ giọt (Pipette pasteur).",
+          "Phễu chiết chất lỏng.",
+          "Cốc thuỷ tinh có mỏ."
         ],
         "correct": 1,
         "hints": [
-          "Công suất P = A / t.",
-          "Công suất đặc trưng cho tốc độ thực hiện công."
+          "Dụng cụ có quả bóp cao su ở đầu dùng để hút từng giọt chất lỏng.",
+          "Ống hút nhỏ giọt."
         ],
-        "explanation": "Công suất được xác định bằng công thực hiện được trong một đơn vị thời gian, cho biết mức độ thực hiện công nhanh hay chậm."
+        "explanation": "Ống hút nhỏ giọt được thiết kế gồm một ống thuỷ tinh nhỏ và quả bóp cao su đàn hồi, chuyên dùng để lấy từng giọt hoặc một lượng nhỏ chất lỏng dung dịch trong thí nghiệm."
       },
       {
         "id": 26,
         "type": "single",
-        "text": "Hiện tượng tán sắc ánh sáng được quan sát rõ nhất khi cho một chùm ánh sáng trắng truyền qua:",
+        "text": "Khi viết một báo cáo nghiên cứu khoa học, phần nội dung nào sau đây phản ánh kết quả thu được và ý nghĩa thực tiễn của nghiên cứu?",
         "options": [
-          "Tấm kính phẳng trong suốt",
-          "Lăng kính thuỷ tinh",
-          "Gương phẳng",
-          "Tấm bìa màu đen"
+          "Phần Mở đầu.",
+          "Phần Mục tiêu nghiên cứu.",
+          "Phần Kết luận và kiến nghị.",
+          "Danh mục tài liệu tham khảo."
         ],
-        "correct": 1,
+        "correct": 2,
         "hints": [
-          "Thí nghiệm tán sắc ánh sáng kinh điển của Newton dùng dụng cụ này.",
-          "Lăng kính thuỷ tinh có hình lăng trụ tam giác."
+          "Phần tổng kết lại toàn bộ kết quả nghiên cứu và đưa ra đề xuất.",
+          "Kết luận và kiến nghị."
         ],
-        "explanation": "Khi chùm sáng trắng truyền qua lăng kính thuỷ tinh, do các ánh sáng màu bị lệch với các góc khác nhau nên tạo ra dải màu cầu vồng tán sắc rõ rệt."
+        "explanation": "Trong cấu trúc báo cáo khoa học, phần 'Kết luận và kiến nghị' là nơi tóm tắt các phát hiện/kết quả đạt được và chỉ ra ý nghĩa khoa học cũng như ứng dụng thực tiễn của đề tài."
       },
       {
         "id": 27,
         "type": "single",
-        "text": "Khi nhìn thấy một bông hoa có màu đỏ dưới ánh sáng mặt trời, điều đó có nghĩa là bông hoa đã:",
+        "text": "Trường hợp nào sau đây lực tác dụng ĐÃ THỰC HIỆN công cơ học?",
         "options": [
-          "Hấp thụ ánh sáng màu đỏ và phản xạ các ánh sáng màu khác",
-          "Tán sắc ánh sáng màu đỏ thành nhiều màu sắc khác nhau",
-          "Phản xạ tốt ánh sáng màu đỏ và hấp thụ các ánh sáng màu khác",
-          "Tự phát ra ánh sáng màu đỏ"
+          "Lực đỡ quả tạ của vận động viên khi đang giữ yên tạ trên cao.",
+          "Lực kéo của con ngựa làm chiếc xe chuyển động trên đường.",
+          "Người tác dụng lực đẩy lên bức tường bê tông nhưng tường không hề dịch chuyển.",
+          "Trọng lực tác dụng lên cuốn sách đang nằm yên trên mặt bàn nằm ngang."
         ],
-        "correct": 2,
+        "correct": 1,
         "hints": [
-          "Mắt nhìn thấy màu nào thì vật phản xạ tốt màu đó.",
-          "Vật phản xạ ánh sáng đỏ tới mắt."
+          "Điều kiện có công cơ học: Phải có lực tác dụng VÀ làm vật dịch chuyển một quãng đường (A = F.s với s > 0).",
+          "Lực kéo của con ngựa làm xe chuyển động."
         ],
-        "explanation": "Vật có màu đỏ khi chiếu ánh sáng trắng vào vì nó phản xạ tốt ánh sáng màu đỏ tới mắt và hấp thụ hầu hết các ánh sáng màu khác."
+        "explanation": "Công cơ học chỉ xuất hiện khi có lực tác dụng vào vật và vật chuyển dời theo hướng của lực (A = F.s). Giữ yên tạ hoặc đẩy tường không di chuyển thì s = 0 nên A = 0."
       },
       {
         "id": 28,
         "type": "single",
-        "text": "Hiện tượng phản xạ toàn phần chỉ có thể xảy ra khi ánh sáng truyền:",
+        "text": "Cơ năng của một vật bao gồm các dạng năng lượng nào?",
         "options": [
-          "Từ môi trường chiết quang kém sang môi trường chiết quang hơn",
-          "Từ môi trường chiết quang hơn sang môi trường chiết quang kém với góc tới i ≥ igh",
-          "Vuông góc với mặt phân cách giữa hai môi trường",
-          "Với góc tới luôn bằng 0°"
+          "Chỉ gồm động năng của vật.",
+          "Chỉ gồm thế năng của vật.",
+          "Tổng động năng và thế năng của vật.",
+          "Hiệu giữa động năng và thế năng của vật."
         ],
-        "correct": 1,
+        "correct": 2,
         "hints": [
-          "Cần 2 điều kiện: truyền từ môi trường chiết quang hơn sang kém hơn (n1 > n2) và góc tới i >= igh.",
-          "Thoả mãn cả 2 điều kiện trên."
+          "Cơ năng W = Wđ + Wt.",
+          "Tổng động năng và thế năng của vật."
         ],
-        "explanation": "Điều kiện xảy ra phản xạ toàn phần: ánh sáng truyền từ môi trường chiết quang hơn sang môi trường chiết quang kém hơn và góc tới thoả mãn i ≥ igh."
+        "explanation": "Cơ năng là dạng năng lượng cơ học của vật, bằng tổng động năng (do chuyển động) và thế năng (do tương tác hoặc độ cao vị trí) của vật: W = Wđ + Wt."
       },
       {
         "id": 29,
         "type": "single",
-        "text": "Đoạn mạch gồm hai điện trở R1 và R2 mắc nối tiếp thì điện trở tương đương Rtd của đoạn mạch được tính bằng:",
+        "text": "Phát biểu nào sau đây là ĐÚNG khi nói về mối quan hệ giữa công và công suất?",
         "options": [
-          "Rtd = R1 + R2",
-          "Rtd = R1 . R2",
-          "Rtd = (R1 . R2) / (R1 + R2)",
-          "1 / Rtd = R1 + R2"
+          "Máy nào sinh ra công lớn hơn thì chắc chắn có công suất lớn hơn.",
+          "Công suất cho biết tốc độ thực hiện công nhanh hay chậm của người hoặc máy trong một đơn vị thời gian.",
+          "Vật ở vị trí càng cao so với mặt đất thì động năng của vật càng lớn.",
+          "Thế năng trọng trường chỉ phụ thuộc vào khối lượng, không phụ thuộc vào độ cao của vật."
         ],
-        "correct": 0,
+        "correct": 1,
         "hints": [
-          "Đoạn mạch nối tiếp: điện trở cộng dồn.",
-          "Rtd = R1 + R2."
+          "Công suất P = A / t là đại lượng đo bằng công sinh ra trong 1 đơn vị thời gian.",
+          "Công suất xác định tốc độ thực hiện công nhanh hay chậm."
         ],
-        "explanation": "Trong đoạn mạch mắc nối tiếp, điện trở tương đương bằng tổng các điện trở thành phần: Rtd = R1 + R2."
+        "explanation": "Công suất P = A / t đặc trưng cho tốc độ sinh công của người hoặc máy móc trong một đơn vị thời gian (cho biết thực hiện công nhanh hay chậm)."
       },
       {
         "id": 30,
         "type": "single",
-        "text": "Có ba điện trở bằng nhau cùng có giá trị R1 = R2 = R3 = 30 Ω mắc song song với nhau. Điện trở tương đương của đoạn mạch này là:",
+        "text": "Hiện tượng tán sắc ánh sáng được quan sát rõ ràng nhất khi chiếu một chùm ánh sáng trắng hẹp truyền qua:",
+        "options": [
+          "Tấm kính phẳng trong suốt có hai mặt song song.",
+          "Lăng kính thuỷ tinh trong suốt.",
+          "Gương phẳng phản xạ ánh sáng.",
+          "Tấm bìa màu đen hấp thụ ánh sáng."
+        ],
+        "correct": 1,
+        "hints": [
+          "Thí nghiệm tán sắc ánh sáng kinh điển của nhà bác học Isaac Newton.",
+          "Lăng kính thuỷ tinh."
+        ],
+        "explanation": "Khi chùm sáng trắng hẹp đi qua lăng kính thuỷ tinh, do các ánh sáng đơn sắc có bước sóng khác nhau bị khúc xạ với các góc lệch khác nhau nên chùm sáng bị tách thành dải màu cầu vồng (tán sắc)."
+      },
+      {
+        "id": 31,
+        "type": "single",
+        "text": "Khi nhìn thấy một bông hoa có màu đỏ tươi dưới ánh sáng mặt trời, điều đó có nghĩa là cánh hoa đã:",
+        "options": [
+          "Hấp thụ ánh sáng màu đỏ và phản xạ các ánh sáng màu khác.",
+          "Tán sắc ánh sáng màu đỏ thành nhiều màu sắc khác nhau.",
+          "Phản xạ tốt ánh sáng màu đỏ và hấp thụ hầu hết các ánh sáng màu khác.",
+          "Tự phát ra chùm ánh sáng màu đỏ trong đêm tối."
+        ],
+        "correct": 2,
+        "hints": [
+          "Vật màu đỏ phản xạ ánh sáng màu đỏ tới mắt ta.",
+          "Phản xạ ánh sáng màu đỏ và hấp thụ các màu khác."
+        ],
+        "explanation": "Vật có màu đỏ khi được chiếu sáng bởi ánh sáng trắng (mặt trời) sẽ phản xạ tốt ánh sáng màu đỏ đến mắt ta và hấp thụ hầu hết các ánh sáng màu khác."
+      },
+      {
+        "id": 32,
+        "type": "single",
+        "text": "Hiện tượng phản xạ toàn phần xảy ra khi thỏa mãn đồng thời hai điều kiện nào sau đây?",
+        "options": [
+          "Ánh sáng truyền từ môi trường chiết quang kém sang môi trường chiết quang hơn với góc tới tùy ý.",
+          "Ánh sáng truyền từ môi trường chiết quang hơn sang môi trường chiết quang kém và góc tới i ≥ igh.",
+          "Ánh sáng truyền vuông góc với mặt phân cách giữa hai môi trường và i = 0°.",
+          "Ánh sáng truyền trong cùng một môi trường đồng tính và góc tới i = 90°."
+        ],
+        "correct": 1,
+        "hints": [
+          "1. n1 > n2 (từ chiết quang hơn sang kém hơn); 2. Góc tới i ≥ igh (với sin igh = n2/n1).",
+          "Phương án B là ĐÚNG."
+        ],
+        "explanation": "Điều kiện để xảy ra hiện tượng phản xạ toàn phần: 1. Ánh sáng truyền từ môi trường chiết quang hơn sang môi trường chiết quang kém (n1 > n2); 2. Góc tới lớn hơn hoặc bằng góc giới hạn phản xạ toàn phần (i ≥ igh)."
+      },
+      {
+        "id": 33,
+        "type": "single",
+        "text": "Đoạn mạch gồm hai điện trở R1 và R2 mắc nối tiếp thì điện trở tương đương Rtđ của đoạn mạch được tính bằng công thức:",
+        "options": [
+          "Rtđ = R1 + R2",
+          "Rtđ = R1 . R2",
+          "Rtđ = (R1 . R2) / (R1 + R2)",
+          "1 / Rtđ = R1 + R2"
+        ],
+        "correct": 0,
+        "hints": [
+          "Trong mạch nối tiếp, điện trở tương đương bằng tổng các điện trở thành phần.",
+          "Rtđ = R1 + R2."
+        ],
+        "explanation": "Đối với đoạn mạch gồm các điện trở mắc nối tiếp, điện trở tương đương của mạch bằng tổng các điện trở thành phần: Rtđ = R1 + R2."
+      },
+      {
+        "id": 34,
+        "type": "single",
+        "text": "Nội dung cơ bản của Định luật Ohm cho đoạn mạch phát biểu rằng: Cường độ dòng điện chạy qua dây dẫn:",
+        "options": [
+          "Tỉ lệ thuận với hiệu điện thế giữa hai đầu dây dẫn và tỉ lệ nghịch với điện trở của dây dẫn.",
+          "Tỉ lệ nghịch với hiệu điện thế giữa hai đầu dây dẫn và tỉ lệ thuận với điện trở của dây dẫn.",
+          "Tỉ lệ thuận với cả hiệu điện thế và điện trở của dây dẫn.",
+          "Tỉ lệ nghịch với cả hiệu điện thế và điện trở của dây dẫn."
+        ],
+        "correct": 0,
+        "hints": [
+          "Hệ thức I = U / R: tử số là U (tỉ lệ thuận), mẫu số là R (tỉ lệ nghịch).",
+          "Tỉ lệ thuận với U và tỉ lệ nghịch với R."
+        ],
+        "explanation": "Định luật Ohm: Cường độ dòng điện chạy qua dây dẫn tỉ lệ thuận với hiệu điện thế đặt vào hai đầu dây dẫn và tỉ lệ nghịch với điện trở của dây dẫn: I = U / R."
+      },
+      {
+        "id": 35,
+        "type": "single",
+        "text": "Có ba điện trở bằng nhau cùng có giá trị R1 = R2 = R3 = 30 Ω mắc song song với nhau vào mạch điện. Điện trở tương đương của đoạn mạch này là:",
         "options": [
           "90 Ω",
           "10 Ω",
@@ -3105,10 +3191,462 @@
         ],
         "correct": 1,
         "hints": [
-          "Mắc song song 3 điện trở bằng nhau: Rtd = R / 3.",
-          "Rtd = 30 / 3 = 10 Ω."
+          "3 điện trở giống nhau mắc song song: Rtđ = R / 3.",
+          "Rtđ = 30 / 3 = 10 Ω."
         ],
-        "explanation": "Ba điện trở mắc song song: 1/Rtd = 1/30 + 1/30 + 1/30 = 3/30 => Rtd = 10 Ω."
+        "explanation": "Công thức điện trở tương đương của mạch gồm 3 điện trở bằng nhau mắc song song: Rtđ = R / 3 = 30 / 3 = 10 Ω."
+      }
+    ]
+  },
+  {
+    "id": "khtn-9-de-cuong-bo-sung-va-tu-luan",
+    "title": "2. Đề Cương Bổ Sung & Chuyên Đề Tự Luận Trọng Tâm (26 Câu)",
+    "subject": "Khoa Học Tự Nhiên 9",
+    "difficulty": "Nâng cao",
+    "timeLimitMinutes": 35,
+    "description": "Bộ câu hỏi then chốt lấy điểm 9-10 từ Đề Cương Bổ Sung & Tự Luận: 18 câu trắc nghiệm bổ sung (Phễu thuỷ tinh, Bản bán trụ, Kính hiển vi quan sát NST, Cáp quang, Đoạn mạch song song, Định luật Ohm, Đồng hồ đa năng, Chiết suất tỉ đối) và 8 bài tập tự luận - thực tiễn (Bài toán 2 bóng đèn 220V, Chứng minh Rtd = 4R, Chuyển hóa cơ năng xích đu, Kính lúp đốt cháy giấy, Giải thích màu sắc hoa cúc vàng lá xanh).",
+    "questions": [
+      {
+        "id": 1,
+        "type": "single",
+        "text": "Dụng cụ thuỷ tinh có dạng hình nón loe miệng dùng để rót chất lỏng vào bình có cổ hẹp hoặc dùng trong phễu lọc gọi là gì?",
+        "options": [
+          "Phễu chiết chất lỏng.",
+          "Phễu thuỷ tinh.",
+          "Ống thuỷ tinh nối chữ U.",
+          "Phễu nhựa chịu nhiệt."
+        ],
+        "correct": 1,
+        "hints": [
+          "Dụng cụ thí nghiệm cơ bản bằng thuỷ tinh dùng để rót hóa chất hoặc đặt giấy lọc.",
+          "Phễu thuỷ tinh."
+        ],
+        "explanation": "Phễu thuỷ tinh là dụng cụ thí nghiệm phổ biến dùng để rót dung dịch lỏng vào bình hẹp cổ hoặc giữ giấy lọc trong các thí nghiệm tách chất kết tủa."
+      },
+      {
+        "id": 2,
+        "type": "single",
+        "text": "Trình tự các bước thực hiện đúng khi tiến hành một bài báo cáo khoa học là:",
+        "options": [
+          "Kết luận -> Thu thập thông tin -> Trình bày báo cáo.",
+          "Thu thập thông tin -> Xử lí thông tin -> Viết báo cáo -> Trình bày báo cáo.",
+          "Viết báo cáo -> Thu thập thông tin -> Đưa ra kết luận.",
+          "Trình bày báo cáo -> Thu thập dữ liệu -> Viết báo cáo."
+        ],
+        "correct": 1,
+        "hints": [
+          "Bắt đầu từ việc tìm kiếm, thu thập số liệu, sau đó phân tích xử lí, rồi viết và trình bày.",
+          "Thu thập thông tin -> Xử lí thông tin -> Viết báo cáo -> Trình bày báo cáo."
+        ],
+        "explanation": "Quy trình chuẩn khi thực hiện báo cáo khoa học: 1. Thu thập thông tin/số liệu; 2. Phân tích và xử lí thông tin; 3. Viết bản thảo báo cáo hoàn chỉnh; 4. Trình bày báo cáo trước tập thể."
+      },
+      {
+        "id": 3,
+        "type": "single",
+        "text": "Công thức tính công suất cơ học P theo công thực hiện A và thời gian thực hiện t là:",
+        "options": [
+          "P = F . t",
+          "P = A / t",
+          "P = t / A",
+          "P = A . t"
+        ],
+        "correct": 1,
+        "hints": [
+          "Công suất đo bằng công sinh ra trong 1 đơn vị thời gian: P = A / t.",
+          "P = A / t (Watt)."
+        ],
+        "explanation": "Công suất cơ học đặc trưng cho tốc độ sinh công: P = A / t, trong đó A là công thực hiện (J), t là thời gian thực hiện công (s), P là công suất (W)."
+      },
+      {
+        "id": 4,
+        "type": "single",
+        "text": "Trong bộ thí nghiệm khảo sát hiện tượng khúc xạ ánh sáng, bản bán trụ là dụng cụ có đặc điểm gì?",
+        "options": [
+          "Là một khối thuỷ tinh trong suốt có dạng nửa hình trụ đặt trên đĩa chia độ tròn.",
+          "Là một khối kim loại có thang chia độ vạch sẵn.",
+          "Là một khối thuỷ tinh có dạng lăng trụ tam giác đều.",
+          "Là một khối thuỷ tinh có dạng hình chóp tam giác."
+        ],
+        "correct": 0,
+        "hints": [
+          "Khối thuỷ tinh trong suốt hình bán nguyệt (nửa hình trụ) gắn trên đĩa chia độ.",
+          "Phương án A là ĐÚNG."
+        ],
+        "explanation": "Bản bán trụ trong phòng thí nghiệm quang học là một khối thuỷ tinh (hoặc nhựa trong suốt) có hình dạng một nửa hình trụ, dùng để khảo sát đường đi của tia sáng khi khúc xạ qua mặt phẳng và mặt cong bán trụ."
+      },
+      {
+        "id": 5,
+        "type": "single",
+        "text": "Chọn phát biểu ĐÚNG khi nói về bản chất của công cơ học trong Vật lí:",
+        "options": [
+          "Công cơ học là số đo phần năng lượng được truyền từ vật này sang vật khác trong tương tác giữa các vật.",
+          "Công cơ học luôn được thực hiện bất cứ khi nào có lực tác dụng vào vật kể cả khi vật đứng yên.",
+          "Công cơ học chỉ được thực hiện khi vật này truyền nhiệt năng cho vật khác.",
+          "Đơn vị đo chuẩn của công cơ học trong hệ SI là Oát (W)."
+        ],
+        "correct": 0,
+        "hints": [
+          "Công là thước đo sự chuyển hóa hoặc truyền năng lượng cơ học.",
+          "Công cơ học là số đo phần năng lượng được truyền từ vật này sang vật khác."
+        ],
+        "explanation": "Bản chất vật lí: Công cơ học là số đo phần năng lượng cơ học được truyền từ vật này sang vật khác trong quá trình tương tác (A = F.s)."
+      },
+      {
+        "id": 6,
+        "type": "single",
+        "text": "Để quan sát được hình thái và cấu trúc của nhiễm sắc thể (NST) ở tế bào, ta cần sử dụng các dụng cụ nào sau đây?",
+        "options": [
+          "Kính hiển vi quang học và các tiêu bản cố định tế bào chứa NST.",
+          "Kính lúp cầm tay và các tiêu bản cố định NST.",
+          "Kính thiên văn quang học phản xạ.",
+          "Nhiệt kế thuỷ ngân và lam kính thông thường."
+        ],
+        "correct": 0,
+        "hints": [
+          "Nhiễm sắc thể có kích thước siêu vi (micromet) chỉ nhìn thấy rõ dưới kính hiển vi có độ phóng đại từ vài trăm đến hàng nghìn lần.",
+          "Kính hiển vi và tiêu bản cố định NST."
+        ],
+        "explanation": "Do kích thước của tế bào và nhiễm sắc thể rất nhỏ bé nên cần sử dụng kính hiển vi quang học có độ phóng đại lớn kết hợp với tiêu bản mẫu nhuộm màu cố định để quan sát rõ rệt."
+      },
+      {
+        "id": 7,
+        "type": "single",
+        "text": "Công thức xác định chiết suất tuyệt đối n của một môi trường trong suốt là:",
+        "options": [
+          "n = c . v",
+          "n = c + v",
+          "n = v - c",
+          "n = c / v"
+        ],
+        "correct": 3,
+        "hints": [
+          "Chiết suất n luôn lớn hơn hoặc bằng 1, bằng c chia cho v.",
+          "n = c / v."
+        ],
+        "explanation": "Chiết suất tuyệt đối n của một môi trường là tỉ số giữa vận tốc ánh sáng trong chân không (c) và vận tốc ánh sáng trong môi trường đó (v): n = c / v."
+      },
+      {
+        "id": 8,
+        "type": "single",
+        "text": "Ánh sáng đơn sắc là loại ánh sáng có đặc điểm nào sau đây?",
+        "options": [
+          "Ánh sáng chỉ có 1 màu nhất định và không bị tán sắc khi đi qua lăng kính.",
+          "Ánh sáng gồm nhiều màu sắc phối hợp lại với nhau.",
+          "Ánh sáng luôn luôn có đúng 2 màu bổ sung.",
+          "Ánh sáng chỉ phát ra từ các vật phát sáng màu đỏ."
+        ],
+        "correct": 0,
+        "hints": [
+          "Đơn sắc nghĩa là 'một màu'.",
+          "Ánh sáng chỉ có 1 màu nhất định và không bị tán sắc khi qua lăng kính."
+        ],
+        "explanation": "Ánh sáng đơn sắc là ánh sáng có một bước sóng xác định, chỉ có một màu nhất định và không bị tán sắc thành các màu khác khi truyền qua lăng kính."
+      },
+      {
+        "id": 9,
+        "type": "single",
+        "text": "Ánh sáng có thể truyền đi rất xa trong lõi sợi quang (cáp quang) với độ suy hao năng lượng rất nhỏ là vì nguyên nhân nào?",
+        "options": [
+          "Vì ánh sáng truyền thẳng tuyệt đối trong lõi sợi quang.",
+          "Vì tia sáng liên tục bị phản xạ toàn phần nhiều lần ở mặt trong thành sợi quang.",
+          "Vì ánh sáng được khúc xạ liên tục truyền ra ngoài không khí.",
+          "Vì lõi sợi quang hấp thụ hoàn toàn năng lượng nhiệt của ánh sáng."
+        ],
+        "correct": 1,
+        "hints": [
+          "Ứng dụng nổi tiếng nhất của hiện tượng phản xạ toàn phần trong viễn thông.",
+          "Tia sáng bị phản xạ toàn phần liên tiếp dọc theo chiều dài sợi quang."
+        ],
+        "explanation": "Sợi quang học có lõi trong suốt có chiết suất lớn hơn lớp vỏ bọc bên ngoài. Tia sáng chiếu vào lõi với góc tới lớn hơn góc giới hạn nên liên tục xảy ra hiện tượng phản xạ toàn phần, giúp truyền dẫn tín hiệu quang đi xa mà rất ít hao phí."
+      },
+      {
+        "id": 10,
+        "type": "single",
+        "text": "Điện trở tương đương Rtđ của đoạn mạch gồm hai điện trở R1 và R2 mắc song song với nhau được tính bằng công thức:",
+        "options": [
+          "Rtđ = R1 + R2",
+          "Rtđ = (R1 . R2) / (R1 + R2)",
+          "Rtđ = R1 . R2",
+          "Rtđ = R1 - R2"
+        ],
+        "correct": 1,
+        "hints": [
+          "Từ 1/Rtđ = 1/R1 + 1/R2 quy đồng mẫu số được Rtđ = (R1.R2)/(R1+R2).",
+          "Rtđ = (R1 . R2) / (R1 + R2)."
+        ],
+        "explanation": "Từ công thức tổng quát 1/Rtđ = 1/R1 + 1/R2 = (R1 + R2)/(R1.R2), nghịch đảo lại ta có công thức tính nhanh: Rtđ = (R1.R2) / (R1 + R2)."
+      },
+      {
+        "id": 11,
+        "type": "single",
+        "text": "Công thức diễn tả đúng định luật Ohm cho một đoạn dây dẫn điện trở là:",
+        "options": [
+          "I = R / U",
+          "I = U / R",
+          "R = U . I",
+          "D = R / I"
+        ],
+        "correct": 1,
+        "hints": [
+          "Cường độ dòng điện I tỉ lệ thuận với hiệu điện thế U và tỉ lệ nghịch với R.",
+          "I = U / R."
+        ],
+        "explanation": "Định luật Ohm: Cường độ dòng điện chạy qua dây dẫn bằng hiệu điện thế chia cho điện trở: I = U / R (với I đo bằng Ampe, U đo bằng Vôn, R đo bằng Ohm)."
+      },
+      {
+        "id": 12,
+        "type": "single",
+        "text": "Công thức tính điện trở của dây dẫn phụ thuộc vào chiều dài l, tiết diện S và điện trở suất ρ của vật liệu là:",
+        "options": [
+          "R = (R . S) / ρ",
+          "R = ρ . (l / S)",
+          "R = l . ρ . S",
+          "R = 1 / (l . S . ρ)"
+        ],
+        "correct": 1,
+        "hints": [
+          "Điện trở tỉ lệ thuận với chiều dài l và điện trở suất ρ, tỉ lệ nghịch với tiết diện S.",
+          "R = ρ . (l / S)."
+        ],
+        "explanation": "Điện trở của một dây dẫn hình trụ đồng chất được xác định theo công thức: R = ρ.(l/S), trong đó ρ là điện trở suất (Ω.m), l là chiều dài dây (m), S là tiết diện dây (m²)."
+      },
+      {
+        "id": 13,
+        "type": "single",
+        "text": "Khi tác dụng một lực F không đổi làm vật dịch chuyển một quãng đường s theo hướng của lực, công cơ học A được tính theo công thức:",
+        "options": [
+          "A = F . s",
+          "A = F / s",
+          "A = s / F",
+          "A = F + s"
+        ],
+        "correct": 0,
+        "hints": [
+          "Công bằng tích của lực tác dụng và quãng đường vật dịch chuyển.",
+          "A = F . s (Joule)."
+        ],
+        "explanation": "Công cơ học được tính bằng tích của độ lớn lực tác dụng F và quãng đường dịch chuyển s theo hướng của lực: A = F.s (đơn vị là Joule - J)."
+      },
+      {
+        "id": 14,
+        "type": "single",
+        "text": "Đồng hồ đo điện đa năng (đồng hồ vạn năng điện tử) có thể được dùng để đo những đại lượng nào sau đây?",
+        "options": [
+          "Đo cường độ dòng điện trong mạch điện.",
+          "Đo hiệu điện thế giữa hai điểm trong mạch.",
+          "Đo giá trị điện trở của các linh kiện.",
+          "Cả A, B và C đều đúng."
+        ],
+        "correct": 3,
+        "hints": [
+          "Đồng hồ vạn năng (Multimeter) tích hợp nhiều chức năng đo lường điện tử.",
+          "Đo được cả I, U và R."
+        ],
+        "explanation": "Đồng hồ đo điện đa năng tích hợp chức năng của Ampe kế, Vôn kế và Ôm kế nên có thể đo được cả cường độ dòng điện (I), hiệu điện thế (U) và giá trị điện trở (R)."
+      },
+      {
+        "id": 15,
+        "type": "single",
+        "text": "Đơn vị nào sau đây là đơn vị đo chuẩn của công suất trong Hệ đo lường quốc tế (SI)?",
+        "options": [
+          "Joule (J).",
+          "Oát (W).",
+          "Newton (N).",
+          "Mét (m)."
+        ],
+        "correct": 1,
+        "hints": [
+          "1 W = 1 J / s, mang tên nhà phát minh máy hơi nước James Watt.",
+          "Oát (W)."
+        ],
+        "explanation": "Đơn vị đo chuẩn của công suất là Oát (kí hiệu là W). Ngoài ra còn dùng Kilôoát (1 kW = 1000 W) hoặc Mã lực (HP)."
+      },
+      {
+        "id": 16,
+        "type": "single",
+        "text": "Trục chính của một thấu kính quang học được định nghĩa là đường thẳng:",
+        "options": [
+          "Đi qua quang tâm O và vuông góc với mặt của thấu kính.",
+          "Nối hai tiêu điểm nằm ở hai bên ngoài thấu kính.",
+          "Tiếp tuyến với mặt cầu cong của thấu kính.",
+          "Bất kì đi chéo qua quang tâm của thấu kính."
+        ],
+        "correct": 0,
+        "hints": [
+          "Trục chính là trục đối xứng quang học của thấu kính, đi qua quang tâm và vuông góc với mặt thấu kính.",
+          "Đáp án A."
+        ],
+        "explanation": "Trục chính (kí hiệu Δ) của thấu kính là đường thẳng đi qua tâm của các mặt cầu giới hạn thấu kính, tức là đi qua quang tâm O và vuông góc với bề mặt thấu kính."
+      },
+      {
+        "id": 17,
+        "type": "single",
+        "text": "Trong hiện tượng khúc xạ ánh sáng, chiết suất tỉ đối n21 của môi trường 2 (chứa tia khúc xạ) đối với môi trường 1 (chứa tia tới) được xác định bằng tỉ số:",
+        "options": [
+          "n21 = n1 / n2",
+          "n21 = n2 / n1",
+          "n21 = n1 . n2",
+          "n21 = n1 + n2"
+        ],
+        "correct": 1,
+        "hints": [
+          "n21 = n2 / n1 (chiết suất môi trường 2 so với môi trường 1).",
+          "n21 = n2 / n1."
+        ],
+        "explanation": "Chiết suất tỉ đối của môi trường 2 đối với môi trường 1 bằng tỉ số giữa chiết suất tuyệt đối của môi trường 2 và môi trường 1: n21 = n2 / n1."
+      },
+      {
+        "id": 18,
+        "type": "single",
+        "text": "Trong các ánh sáng đơn sắc nhìn thấy, chiết suất của thuỷ tinh lăng kính đối với ánh sáng màu nào là nhỏ nhất và màu nào là lớn nhất?",
+        "options": [
+          "Nhỏ nhất đối với ánh sáng màu đỏ, lớn nhất đối với ánh sáng màu tím.",
+          "Nhỏ nhất đối với ánh sáng màu tím, lớn nhất đối với ánh sáng màu đỏ.",
+          "Bằng nhau đối với tất cả các ánh sáng đơn sắc.",
+          "Nhỏ nhất đối với ánh sáng màu vàng, lớn nhất đối với màu lục."
+        ],
+        "correct": 0,
+        "hints": [
+          "Ánh sáng đỏ bị lệch ít nhất (chiết suất nhỏ nhất); ánh sáng tím bị lệch nhiều nhất (chiết suất lớn nhất).",
+          "Nhỏ nhất: màu đỏ; Lớn nhất: màu tím."
+        ],
+        "explanation": "Chiết suất của môi trường trong suốt phụ thuộc vào bước sóng ánh sáng: n đỏ < n cam < n vàng < n lục < n lam < n chàm < n tím. Do đó n nhỏ nhất với ánh sáng màu đỏ và lớn nhất với ánh sáng màu tím."
+      },
+      {
+        "id": 19,
+        "type": "single",
+        "text": "[TỰ LUẬN - CƠ NĂNG] Khi một vật chuyển động chỉ chịu tác dụng của trọng lực (bỏ qua ma sát và sức cản không khí), sự chuyển hóa năng lượng của vật tuân theo quy luật nào sau đây?",
+        "options": [
+          "Tổng động năng và thế năng của vật không đổi (cơ năng bảo toàn); khi động năng giảm thì thế năng tăng tương ứng và ngược lại.",
+          "Cơ năng liên tục tăng dần theo thời gian khi vật rơi tự do xuống dưới.",
+          "Động năng và thế năng luôn đồng thời tăng hoặc đồng thời giảm.",
+          "Thế năng của vật luôn bằng không ở mọi vị trí trên quỹ đạo chuyển động."
+        ],
+        "correct": 0,
+        "hints": [
+          "Định luật bảo toàn cơ năng: W = Wđ + Wt = const.",
+          "Khi động năng giảm thì thế năng tăng và ngược lại, tổng cơ năng không đổi."
+        ],
+        "explanation": "Khi cơ năng được bảo toàn (bỏ qua ma sát), năng lượng chỉ chuyển hóa qua lại giữa động năng và thế năng: W = Wđ + Wt = const. Khi vật lên cao, vận tốc giảm -> động năng giảm, thế năng tăng; khi vật hạ thấp, độ cao giảm -> thế năng giảm, động năng tăng."
+      },
+      {
+        "id": 20,
+        "type": "single",
+        "text": "[TỰ LUẬN - THỰC TIỄN] Giải thích sự chuyển hóa năng lượng giữa động năng và thế năng khi chơi trò chơi xích đu trong công viên?",
+        "options": [
+          "Khi xích đu lên cao nhất: vận tốc bằng 0 nên động năng cực tiểu, thế năng cực đại; khi hạ xuống vị trí thấp nhất: vận tốc lớn nhất nên động năng cực đại, thế năng cực tiểu.",
+          "Khi xích đu lên cao nhất thì cả động năng và thế năng đều đạt giá trị cực đại.",
+          "Khi xích đu xuống vị trí thấp nhất thì thế năng đạt giá trị cực đại.",
+          "Cơ năng của xích đu luôn bị tiêu biến hoàn toàn ngay sau mỗi chu kì chuyển động."
+        ],
+        "correct": 0,
+        "hints": [
+          "Ở vị trí cao nhất: độ cao h max -> Wt max, vận tốc v = 0 -> Wđ = 0. Ở vị trí thấp nhất: độ cao h min -> Wt min, vận tốc v max -> Wđ max.",
+          "Phương án A là câu trả lời chính xác và đầy đủ nhất."
+        ],
+        "explanation": "Sự chuyển hóa cơ năng ở xích đu: Khi xích đu bay lên cao, độ cao tăng nên thế năng tăng, vận tốc giảm nên động năng giảm. Tại điểm cao nhất, động năng bằng 0, thế năng cực đại. Khi đu hạ xuống, độ cao giảm nên thế năng chuyển hóa thành động năng. Tại vị trí thấp nhất, vận tốc lớn nhất nên động năng cực đại."
+      },
+      {
+        "id": 21,
+        "type": "single",
+        "text": "[TỰ LUẬN - CHỨNG MINH] Đoạn mạch gồm 4 điện trở bằng nhau R1 = R2 = R3 = R4 = R mắc nối tiếp. Điện trở tương đương Rtđ của đoạn mạch được chứng minh là:",
+        "options": [
+          "Rtđ = R1 + R2 + R3 + R4 = R + R + R + R = 4R.",
+          "Rtđ = R / 4 do các điện trở phân bố đều.",
+          "Rtđ = R^4 do tích lũy điện trở liên tiếp.",
+          "Rtđ = (R1 . R2 . R3 . R4) / 4 = R^4 / 4."
+        ],
+        "correct": 0,
+        "hints": [
+          "Mạch nối tiếp: điện trở tương đương bằng tổng các điện trở thành phần.",
+          "Rtđ = R + R + R + R = 4R."
+        ],
+        "explanation": "Chứng minh: Theo quy tắc đoạn mạch nối tiếp, điện trở tương đương bằng tổng các điện trở thành phần: Rtđ = R1 + R2 + R3 + R4. Do R1 = R2 = R3 = R4 = R => Rtđ = R + R + R + R = 4R."
+      },
+      {
+        "id": 22,
+        "type": "single",
+        "text": "[TỰ LUẬN - BÀI TOÁN BÓNG ĐÈN 1] Trên hai bóng đèn có ghi: Đèn 1 (220 V - 30 W) và Đèn 2 (220 V - 80 W). Ý nghĩa của các số ghi trên mỗi bóng đèn là gì?",
+        "options": [
+          "220 V là hiệu điện thế định mức; 30 W và 80 W là công suất định mức của mỗi đèn khi hoạt động bình thường ở đúng hiệu điện thế 220 V.",
+          "220 V là hiệu điện thế tối thiểu; 30 W và 80 W là nhiệt lượng toả ra trong 1 giây.",
+          "220 V là điện trở của đèn; 30 W và 80 W là cường độ dòng điện định mức.",
+          "220 V là hiệu điện thế xoay chiều; 30 W và 80 W là điện năng tiêu thụ trong 1 tháng."
+        ],
+        "correct": 0,
+        "hints": [
+          "U định mức (V) và P định mức (W) được nhà sản xuất in trên nhãn thiết bị.",
+          "220 V là hiệu điện thế định mức; 30 W và 80 W là công suất định mức."
+        ],
+        "explanation": "Ý nghĩa số ghi trên bóng đèn: 220 V là hiệu điện thế định mức cần cung cấp cho bóng đèn hoạt động bình thường; 30 W (đèn 1) và 80 W (đèn 2) là công suất điện định mức (tiêu thụ) của bóng đèn khi được cấp đúng 220 V."
+      },
+      {
+        "id": 23,
+        "type": "single",
+        "text": "[TỰ LUẬN - BÀI TOÁN BÓNG ĐÈN 2] Mắc hai bóng đèn (220 V - 30 W) và (220 V - 80 W) vào cùng nguồn điện 220 V để cả hai hoạt động bình thường. Đèn nào sáng hơn và trong 1 giờ đèn nào tiêu thụ điện năng nhiều hơn?",
+        "options": [
+          "Đèn 2 sáng hơn vì công suất định mức lớn hơn (80 W > 30 W); Đèn 2 tiêu thụ điện năng nhiều hơn (A = P.t, 80 W.h > 30 W.h).",
+          "Đèn 1 sáng hơn vì có điện trở lớn hơn; Đèn 1 tiêu thụ nhiều điện năng hơn.",
+          "Hai đèn sáng bằng nhau vì cùng cắm vào nguồn điện có hiệu điện thế 220 V.",
+          "Đèn 2 sáng hơn nhưng đèn 1 tiêu thụ nhiều điện năng hơn do điện trở lớn."
+        ],
+        "correct": 0,
+        "hints": [
+          "Khi hoạt động ở đúng U định mức: Công suất càng lớn thì đèn càng sáng và tiêu thụ càng nhiều điện (A = P.t).",
+          "Đèn 2 sáng hơn và tiêu thụ nhiều điện hơn."
+        ],
+        "explanation": "1. So sánh độ sáng: Khi hoạt động bình thường ở đúng hiệu điện thế định mức 220 V, đèn 2 có công suất lớn hơn (P2 = 80 W > P1 = 30 W) nên đèn 2 sáng hơn.\n2. So sánh điện năng tiêu thụ: Trong cùng thời gian t = 1 h, điện năng tiêu thụ A = P.t => A2 = 80 W.h > A1 = 30 W.h nên đèn 2 tiêu thụ nhiều điện năng hơn."
+      },
+      {
+        "id": 24,
+        "type": "single",
+        "text": "[TỰ LUẬN - QUANG HỌC THỰC TIỄN] Quan sát một bông hoa cúc dưới ánh sáng mặt trời (ánh sáng trắng), hãy giải thích vì sao ta nhìn thấy cánh hoa có màu vàng còn lá cây lại có màu xanh lục?",
+        "options": [
+          "Vì cánh hoa hấp thụ các ánh sáng màu khác và chỉ phản xạ ánh sáng vàng đến mắt; lá cây hấp thụ các màu khác và phản xạ ánh sáng xanh lục đến mắt.",
+          "Vì cánh hoa tự phát ra ánh sáng vàng và lá cây tự phát ra ánh sáng xanh lục.",
+          "Vì ánh sáng mặt trời chỉ có hai màu duy nhất là màu vàng và màu xanh lục.",
+          "Vì mắt người chỉ cảm nhận được hai dải sóng màu vàng và màu xanh trong tự nhiên."
+        ],
+        "correct": 0,
+        "hints": [
+          "Ánh sáng mặt trời là ánh sáng trắng. Vật màu nào phản xạ ánh sáng màu đó và hấp thụ các màu còn lại.",
+          "Cánh hoa phản xạ màu vàng; lá cây chứa diệp lục phản xạ màu xanh lục."
+        ],
+        "explanation": "Giải thích: Ánh sáng mặt trời là ánh sáng trắng gồm nhiều ánh sáng đơn sắc. Cánh hoa cúc hấp thụ hầu hết các màu ánh sáng khác và phản xạ chùm sáng màu vàng đến mắt ta nên ta thấy hoa màu vàng. Ngược lại, chất diệp lục trong lá cây hấp thụ các màu khác và phản xạ chùm sáng màu xanh lục đến mắt ta nên ta thấy lá có màu xanh."
+      },
+      {
+        "id": 25,
+        "type": "single",
+        "text": "[TỰ LUẬN - ỨNG DỤNG QUANG HỌC] Bằng kiến thức về thấu kính hội tụ và kính lúp, hãy giải thích vì sao khi dùng kính lúp hứng chùm ánh sáng mặt trời ngoài trời nắng, người ta có thể tạo ra đốm sáng đốt cháy được tờ giấy hoặc đám cỏ khô?",
+        "options": [
+          "Vì kính lúp là thấu kính hội tụ; chùm ánh sáng mặt trời song song khi qua kính sẽ hội tụ toàn bộ năng lượng tại một điểm (tiêu điểm F) làm nhiệt độ tăng rất cao đủ gây cháy.",
+          "Vì kính lúp phản xạ ngược toàn bộ nhiệt lượng của ánh sáng mặt trời về phía mặt đất.",
+          "Vì kính lúp là thấu kính phân kì làm tán rộng các tia nhiệt mặt trời trên mặt phẳng tờ giấy.",
+          "Vì thuỷ tinh của kính lúp chứa các chất xúc tác hoá học tự bắt lửa khi gặp ánh nắng."
+        ],
+        "correct": 0,
+        "hints": [
+          "Kính lúp là thấu kính hội tụ. Chùm sáng mặt trời song song hội tụ tại tiêu điểm ảnh F', tập trung năng lượng nhiệt rất lớn.",
+          "Phương án A là giải thích khoa học chính xác."
+        ],
+        "explanation": "Giải thích: Kính lúp là một thấu kính hội tụ có tiêu cự ngắn. Ánh sáng mặt trời chiếu tới kính lúp là chùm tia sáng song song với trục chính. Sau khi khúc xạ qua kính lúp, chùm sáng hội tụ tại tiêu điểm F của kính. Năng lượng ánh sáng và nhiệt lượng bị tập trung vào một điểm rất nhỏ làm nhiệt độ tại điểm đó tăng vọt lên hàng trăm độ C, đủ để làm bắt lửa đốt cháy tờ giấy hoặc cỏ khô."
+      },
+      {
+        "id": 26,
+        "type": "single",
+        "text": "[TỰ LUẬN - HIỆN TƯỢNG ĐỔI MÀU] Dưới ánh nắng ban ngày ta thấy hoa có màu đỏ. Nhưng khi đêm xuống, nếu rọi đèn pin có kính lọc màu lục vào bông hoa đó thì ta sẽ thấy hoa có màu gì? Vì sao?",
+        "options": [
+          "Màu Đen; vì cánh hoa màu đỏ hấp thụ ánh sáng màu lục và không có ánh sáng phản xạ nào tới mắt ta.",
+          "Màu Đỏ rực; vì màu đỏ luôn nổi bật hơn bất kì ánh sáng màu nào chiếu tới.",
+          "Màu Lục; vì ánh sáng màu lục chiếu vào làm cánh hoa đổi thành màu xanh lá cây.",
+          "Màu Vàng; vì màu đỏ phối hợp với màu lục sẽ tạo ra cảm giác màu vàng."
+        ],
+        "correct": 0,
+        "hints": [
+          "Vật màu đỏ chỉ phản xạ ánh sáng đỏ, hấp thụ ánh sáng lục.",
+          "Không có ánh sáng phản xạ tới mắt -> Mắt thấy màu Đen."
+        ],
+        "explanation": "Cánh hoa màu đỏ chỉ phản xạ tốt ánh sáng màu đỏ. Khi chiếu chùm ánh sáng màu lục tới, cánh hoa hấp thụ hoàn toàn ánh sáng màu lục và không cho ánh sáng nào phản xạ đến mắt người quan sát. Do đó mắt ta sẽ nhìn thấy bông hoa có màu đen."
       }
     ]
   },
@@ -4646,45 +5184,133 @@
   {
     "id": 29,
     "box": 1,
-    "cat": "KHTN - Quang",
-    "front": "Định luật khúc xạ ánh sáng",
-    "back": "Tia khúc xạ nằm trong mặt phẳng tới. Hệ thức: n1 . sin i = n2 . sin r (sin i / sin r = n2/n1).",
+    "cat": "Dụng cụ KHTN",
+    "front": "Dụng cụ cơ bản trong phòng thí nghiệm KHTN 9",
+    "back": "• Ống dẫn thuỷ tinh: Lắp ráp bộ thí nghiệm.\n• Ống cao su: Kết nối ống thuỷ tinh.\n• Nút cao su: Nút lọ hoá chất & lắp ráp.\n• Ống hút nhỏ giọt: Lấy lượng nhỏ hoá chất lỏng.\n• Phễu thuỷ tinh: Rót dung dịch, giữ giấy lọc.",
     "subject": "Khoa Học Tự Nhiên 9"
   },
   {
     "id": 30,
     "box": 1,
-    "cat": "KHTN - Quang",
-    "front": "Điều kiện phản xạ toàn phần",
-    "back": "1. Ánh sáng truyền từ môi trường chiết quang hơn sang kém hơn (n1 > n2).\n2. Góc tới i ≥ igh (với sin igh = n2/n1).",
+    "cat": "Quang học",
+    "front": "Bản bán trụ & Kính hiển vi quan sát NST",
+    "back": "• Bản bán trụ: Khối thuỷ tinh trong suốt dạng nửa hình trụ trên đĩa chia độ dùng khảo sát khúc xạ & phản xạ toàn phần.\n• Quan sát NST: Cần dùng kính hiển vi quang học có độ phóng đại lớn và tiêu bản cố định nhuộm màu.",
     "subject": "Khoa Học Tự Nhiên 9"
   },
   {
     "id": 31,
     "box": 1,
-    "cat": "KHTN - Điện",
-    "front": "Định luật Ohm cho đoạn mạch",
-    "back": "Cường độ dòng điện I tỉ lệ thuận với hiệu điện thế U và tỉ lệ nghịch với điện trở R: I = U / R.",
+    "cat": "Quang học",
+    "front": "Chiết suất tuyệt đối & Chiết suất tỉ đối",
+    "back": "• Chiết suất tuyệt đối: n = c / v (c = 3.10^8 m/s; n ≥ 1).\n• Chiết suất tỉ đối: n21 = n2 / n1.\n• Định luật khúc xạ: n1 . sin i = n2 . sin r <=> (sin i) / (sin r) = n2 / n1.",
     "subject": "Khoa Học Tự Nhiên 9"
   },
   {
     "id": 32,
     "box": 1,
-    "cat": "KHTN - Điện",
-    "front": "Điện trở mạch song song",
-    "back": "1/Rtd = 1/R1 + 1/R2. Nếu hai điện trở: Rtd = (R1.R2)/(R1 + R2). Rtd luôn nhỏ hơn từng điện trở thành phần.",
+    "cat": "Quang học",
+    "front": "Điều kiện phản xạ toàn phần & Cáp quang",
+    "back": "1. Ánh sáng truyền từ môi trường chiết quang hơn sang kém hơn (n1 > n2).\n2. Góc tới i ≥ igh (sin igh = n2 / n1).\n• Ứng dụng: Cáp quang truyền ánh sáng đi xa với hao phí rất nhỏ nhờ phản xạ toàn phần liên tiếp.",
     "subject": "Khoa Học Tự Nhiên 9"
   },
   {
     "id": 33,
     "box": 1,
-    "cat": "KHTN - Cơ",
-    "front": "Công thức công và công suất cơ học",
-    "back": "Công cơ học: A = F . s (Joule).\nCông suất: P = A / t = F . v (Watt).",
+    "cat": "Quang học",
+    "front": "Tán sắc ánh sáng qua lăng kính",
+    "back": "Ánh sáng trắng qua lăng kính bị tách thành 7 màu chính: Đỏ, cam, vàng, lục, lam, chàm, tím.\n• Ánh sáng đỏ: Lệch ít nhất (chiết suất n nhỏ nhất).\n• Ánh sáng tím: Lệch nhiều nhất (chiết suất n lớn nhất).",
     "subject": "Khoa Học Tự Nhiên 9"
   },
   {
     "id": 34,
+    "box": 1,
+    "cat": "Quang học",
+    "front": "Màu sắc của vật dưới ánh sáng",
+    "back": "• Vật màu nào phản xạ tốt ánh sáng màu đó và hấp thụ các màu khác.\n• Vật màu đen hấp thụ tất cả các màu ánh sáng.\n• Dưới ánh sáng đỏ, hoa cúc vàng hấp thụ ánh sáng đỏ -> ta thấy màu Đen.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 35,
+    "box": 1,
+    "cat": "Quang học",
+    "front": "Thấu kính hội tụ (TKHT)",
+    "back": "• Đặc điểm: Phần rìa mỏng hơn phần giữa.\n• Chùm tia tới song song trục chính cho chùm tia ló hội tụ tại tiêu điểm F'.\n• Tia tới đi qua quang tâm O truyền thẳng.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 36,
+    "box": 1,
+    "cat": "Quang học",
+    "front": "Kính lúp & Cách sử dụng",
+    "back": "• Cấu tạo: Thấu kính hội tụ có tiêu cự ngắn (f < 25 cm).\n• Cách dùng: Đặt vật trong khoảng tiêu cự (d < f) để mắt nhìn thấy ảnh ảo, cùng chiều và lớn hơn vật.\n• Đốt cháy giấy/cỏ: Hội tụ nhiệt lượng mặt trời tại tiêu điểm F.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 37,
+    "box": 1,
+    "cat": "Điện học",
+    "front": "Định luật Ohm cho đoạn mạch",
+    "back": "Cường độ dòng điện I chạy qua dây dẫn tỉ lệ thuận với hiệu điện thế U và tỉ lệ nghịch với điện trở R của dây:\nI = U / R (Ampe, Vôn, Ohm).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 38,
+    "box": 1,
+    "cat": "Điện học",
+    "front": "Công thức điện trở dây dẫn",
+    "back": "R = ρ . (l / S)\n• R: Điện trở (Ω)\n• ρ: Điện trở suất (Ω.m)\n• l: Chiều dài dây (m) => l = (R . S) / ρ\n• S: Tiết diện dây (m²).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 39,
+    "box": 1,
+    "cat": "Điện học",
+    "front": "Đoạn mạch nối tiếp",
+    "back": "• I = I1 = I2\n• U = U1 + U2\n• Rtđ = R1 + R2\n• Nếu có 4 điện trở bằng nhau R mắc nối tiếp: Rtđ = 4R.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 40,
+    "box": 1,
+    "cat": "Điện học",
+    "front": "Đoạn mạch song song",
+    "back": "• U = U1 = U2\n• I = I1 + I2\n• 1/Rtđ = 1/R1 + 1/R2 => Rtđ = (R1.R2)/(R1+R2)\n• Rtđ luôn nhỏ hơn từng điện trở thành phần.\n• n điện trở R song song: Rtđ = R / n.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 41,
+    "box": 1,
+    "cat": "Điện học",
+    "front": "Ý nghĩa số ghi trên thiết bị điện",
+    "back": "Ví dụ (220 V - 80 W):\n• 220 V: Hiệu điện thế định mức để thiết bị hoạt động bình thường.\n• 80 W: Công suất định mức khi cắm đúng 220 V.\n• Đèn công suất lớn hơn sáng hơn và tốn điện hơn (A = P.t).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 42,
+    "box": 1,
+    "cat": "Cơ học",
+    "front": "Công cơ học",
+    "back": "A = F . s (Joule - J)\n• Điều kiện có công: Có lực F tác dụng và vật dịch chuyển quãng đường s theo hướng của lực.\n• Bản chất: Số đo năng lượng truyền từ vật này sang vật khác.",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 43,
+    "box": 1,
+    "cat": "Cơ học",
+    "front": "Công suất cơ học",
+    "back": "P = A / t (Watt - W)\n• Đặc trưng cho tốc độ thực hiện công nhanh hay chậm của người hoặc máy trong 1 đơn vị thời gian (1 W = 1 J/s; 1 kW = 1000 W).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 44,
+    "box": 1,
+    "cat": "Cơ học",
+    "front": "Cơ năng & Bảo toàn cơ năng (Xích đu)",
+    "back": "Cơ năng W = Wđ + Wt.\n• Bỏ qua ma sát: Cơ năng bảo toàn, động năng giảm thì thế năng tăng và ngược lại.\n• Khi xích đu lên cao: Vận tốc giảm -> Wđ giảm, Wt tăng (lên đỉnh: Wt max, Wđ = 0).",
+    "subject": "Khoa Học Tự Nhiên 9"
+  },
+  {
+    "id": 45,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "14 nước đế quốc tấn công nước Nga Xô Viết (1917)",
@@ -4692,7 +5318,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 35,
+    "id": 46,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Thành tựu xây dựng CNXH ở Liên Xô (1922 - 1945)",
@@ -4700,7 +5326,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 36,
+    "id": 47,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Chính sách mới (New Deal) của Mĩ (1933)",
@@ -4708,7 +5334,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 37,
+    "id": 48,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Khối Trục phát xít trong CTTG 2",
@@ -4716,7 +5342,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 38,
+    "id": 49,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Sự kiện bãi công Ba Son (Tháng 8 - 1925)",
@@ -4724,7 +5350,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 39,
+    "id": 50,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Bản Yêu sách của nhân dân An Nam (6/1919)",
@@ -4732,7 +5358,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 40,
+    "id": 51,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Hội nghị thành lập ĐCSVN (6/1/1930)",
@@ -4740,7 +5366,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 41,
+    "id": 52,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Quốc tế Cộng sản (1919 - 1943)",
@@ -4748,7 +5374,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 42,
+    "id": 53,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Lớp huấn luyện cán bộ Quảng Châu (1925 - 1927)",
@@ -4756,7 +5382,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 43,
+    "id": 54,
     "box": 1,
     "cat": "Lịch Sử 9",
     "front": "Nguyễn Thái Học & Khí phách khởi nghĩa Yên Bái (1930)",
@@ -4764,7 +5390,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 44,
+    "id": 55,
     "box": 1,
     "cat": "Địa Lí 9",
     "front": "Đặc điểm Dân số Việt Nam (2024)",
@@ -4772,7 +5398,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 45,
+    "id": 56,
     "box": 1,
     "cat": "Địa Lí 9",
     "front": "Cơ cấu Cây trồng & Hai vùng chuyên canh lớn",
@@ -4780,7 +5406,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 46,
+    "id": 57,
     "box": 1,
     "cat": "Địa Lí 9",
     "front": "Tài nguyên Rừng Việt Nam (2024)",
@@ -4788,7 +5414,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 47,
+    "id": 58,
     "box": 1,
     "cat": "Địa Lí 9",
     "front": "Ngành Thủy sản Việt Nam (2022)",
@@ -4796,7 +5422,7 @@
     "subject": "Lịch Sử & Địa Lí 9"
   },
   {
-    "id": 48,
+    "id": 59,
     "box": 1,
     "cat": "Tin Học 9",
     "front": "4 tiêu chí đánh giá chất lượng thông tin",
@@ -4804,7 +5430,7 @@
     "subject": "Tin Học 9"
   },
   {
-    "id": 49,
+    "id": 60,
     "box": 1,
     "cat": "Tin Học 9",
     "front": "Ứng xử chuẩn mực trong môi trường số",
@@ -5110,9 +5736,9 @@
         id: 'Khoa Học Tự Nhiên 9',
         name: 'Khoa Học Tự Nhiên 9',
         icon: '🔬',
-        badge: 'Vật Lí • Hoá Học • KHTN',
-        tagline: 'Quang học • Điện học • Công cơ học & An toàn phòng thí nghiệm',
-        desc: '30 câu hỏi chuẩn đề cương giữa kì 1: Khúc xạ ánh sáng, thấu kính hội tụ - phân kì, định luật Ohm, điện trở dây dẫn, công và công suất cơ học, dụng cụ hoá học và thao tác an toàn.'
+        badge: 'Trọn Bộ Đề Cương 61 Câu',
+        tagline: '61 câu chuẩn ma trận: 35 câu trắc nghiệm chính + 26 câu Đề cương bổ sung & Tự luận',
+        desc: 'Bao quát 100% đề cương chính và đề cương bổ sung: An toàn phòng thí nghiệm, Bản bán trụ, Kính hiển vi quan sát NST, Khúc xạ ánh sáng, Phản xạ toàn phần, Tán sắc, Màu sắc của vật, Thấu kính hội tụ, Kính lúp, Định luật Ohm, Mạch nối tiếp (chứng minh 4R), Mạch song song, Bài toán 2 bóng đèn 220V, Chuyển hóa cơ năng xích đu và Kính lúp đốt cháy giấy.'
       },
       {
         id: 'Lịch Sử & Địa Lí 9',
@@ -5136,14 +5762,14 @@
       quizzes: [], currentSubject: 'all', searchQuery: '',
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v7_lsdl_full_50_cau_chuan_ma_tran') {
+        if (ver !== 'v8_khtn_9_full_61_cau_va_de_cuong_bo_sung') {
           this.quizzes = DEFAULT_QUIZZES;
           Storage.set('quizzes', this.quizzes);
           Storage.set('flashcards', DEFAULT_FLASHCARDS);
           Storage.set('wrong_questions', []);
           Storage.set('flagged_questions', []);
           Storage.remove('pending_quiz_session');
-          Storage.set('app_data_version', 'v7_lsdl_full_50_cau_chuan_ma_tran');
+          Storage.set('app_data_version', 'v8_khtn_9_full_61_cau_va_de_cuong_bo_sung');
         } else {
           const saved = Storage.get('quizzes', null);
           this.quizzes = (saved && Array.isArray(saved) && saved.length > 0) ? saved : DEFAULT_QUIZZES;
@@ -5874,7 +6500,7 @@
       cards: [], currentIndex: 0, isFlipped: false, currentSubject: 'all', filteredCards: [],
       init() {
         const ver = Storage.get('app_data_version', null);
-        if (ver !== 'v7_lsdl_full_50_cau_chuan_ma_tran') {
+        if (ver !== 'v8_khtn_9_full_61_cau_va_de_cuong_bo_sung') {
           this.cards = DEFAULT_FLASHCARDS;
           Storage.set('flashcards', this.cards);
         } else {
